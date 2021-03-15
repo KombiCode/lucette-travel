@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  name: MyString
+  description: MyText
+  date: 2021-03-15
+  price: 1.5
+  rating: 1
+  done: false
+  address: MyString
+  trip: one
+
+two:
+  category: MyString
+  name: MyString
+  description: MyText
+  date: 2021-03-15
+  price: 1.5
+  rating: 1
+  done: false
+  address: MyString
+  trip: two
