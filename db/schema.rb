@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_15_163254) do
+ActiveRecord::Schema.define(version: 2021_03_15_164512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.string "category"
+    t.string "name"
+    t.datetime "begin_date"
+    t.datetime "end_date"
+    t.float "price"
+    t.string "address"
+    t.bigint "trip_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["trip_id"], name: "index_bookings_on_trip_id"
+  end
+
+  create_table "to_dos", force: :cascade do |t|
+    t.string "category"
+    t.string "name"
+    t.text "description"
+    t.boolean "done"
+    t.bigint "trip_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["trip_id"], name: "index_to_dos_on_trip_id"
+  end
 
   create_table "trips", force: :cascade do |t|
     t.string "name"
@@ -44,5 +68,7 @@ ActiveRecord::Schema.define(version: 2021_03_15_163254) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "trips"
+  add_foreign_key "to_dos", "trips"
   add_foreign_key "trips", "users"
 end
