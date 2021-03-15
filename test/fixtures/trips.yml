@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  country: MyString
+  city: MyString
+  begin_date: 2021-03-15
+  end_date: 2021-03-15
+  language: MyString
+  devise: MyString
+
+two:
+  name: MyString
+  country: MyString
+  city: MyString
+  begin_date: 2021-03-15
+  end_date: 2021-03-15
+  language: MyString
+  devise: MyString
