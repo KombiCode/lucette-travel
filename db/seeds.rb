@@ -1,3 +1,4 @@
+TripActivity.destroy_all
 Activity.destroy_all
 Booking.destroy_all
 ToDo.destroy_all
