@@ -1,3 +1,3 @@
 class Activity < ApplicationRecord
-  belongs_to :trip
+  has_many :trips, through: :activities_trips
 end
