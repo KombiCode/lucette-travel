@@ -5,7 +5,17 @@
 <%= @trip.city %>
 
 </br></br></br>
-  <a href="../">
-    <input type="button" class="bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" value="Homepage">
-  </a>
-</br></br></br>
+
+<!-- <a href="../">
+  <input type="button" class="bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" value="Homepage">
+</a> -->
+<%= link_to "Homepage", trip_bookings_path(@trip), class: "bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+
+<%= link_to "Bookings", trip_bookings_path(@trip), class: "bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+
+<%= link_to "Activities", activities_path, class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+
+
+<!-- <a href="/bookings/id">
+  <input type="button" class="bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" value="Bookings">
+</a> -->
