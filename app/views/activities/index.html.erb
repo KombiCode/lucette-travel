@@ -1,9 +1,11 @@
-<div class="bg-indigo-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
-  <% @activities.each do |activity| %>
-    <h2 class="font-black text-6xl text-center"><%= activity.name %></h2>
-    <%= link_to 'Details', activity_path(activity.id), class: "px-8" %>
-  <% end %>
-  <div>
-    <%= link_to 'Add', new_activity_path, class: "px-8" %>
+<% @activities.each do |activity| %>
+  <div class="bg-indigo-400 p-4 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
+      <h2 class="font-black text-6xl text-center"><%= activity.name %></h2>
+      <%= link_to 'Details', activity_path(activity.id), class: "px-2" %>
+    <div>
+    </div>
   </div>
+<% end %>
+<div class="bg-indigo-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
+  <%= link_to 'Add', new_activity_path, class: "px-2" %>
 </div>
