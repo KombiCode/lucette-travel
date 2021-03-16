@@ -1,0 +1,9 @@
+<h2><%= @user.firstname %></h2>
+<h2><%= @user.lastname %></h2>
+<p><%= @user.email %></p>
+<p><%= @user.phone %></p>
+
+<%= link_to "Delete #{@user.firstname, @user.lastname}",
+            user_path(@user),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
