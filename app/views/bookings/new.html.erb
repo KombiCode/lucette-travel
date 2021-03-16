@@ -1,0 +1,7 @@
+<%= form_for([@trip, @booking]) do |f| %>
+  <%= f.label :category %>
+  <%= f.text_field :category %>
+  <%= f.label :name %>
+  <%= f.number_field :name %>
+  <%= f.submit "Add a booking" %>
+<% end %>
