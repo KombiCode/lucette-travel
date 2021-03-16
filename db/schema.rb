@@ -24,15 +24,8 @@ ActiveRecord::Schema.define(version: 2021_03_16_110125) do
     t.integer "rating"
     t.boolean "done"
     t.string "address"
-    t.bigint "trip_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["trip_id"], name: "index_activities_on_trip_id"
-  end
-
-  create_table "activities_trips", id: false, force: :cascade do |t|
-    t.bigint "trip_id", null: false
-    t.bigint "activity_id", null: false
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -97,7 +90,6 @@ ActiveRecord::Schema.define(version: 2021_03_16_110125) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "activities", "trips"
   add_foreign_key "bookings", "trips"
   add_foreign_key "to_dos", "trips"
   add_foreign_key "trip_activities", "activities"
