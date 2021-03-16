@@ -1,15 +1,11 @@
-<% @trips.each do |trip| %>
-  <%= trip.name %>
-  </br>
-  <%= trip.country %>
-  </br>
-  <%= trip.city %>
-<% end %>
+<%= @trip.name %>
+</br>
+<%= @trip.country %>
+</br>
+<%= @trip.city %>
 
 </br></br></br>
   <a href="../">
     <input type="button" class="bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" value="Homepage">
   </a>
 </br></br></br>
-
-<%= link_to "My Other Trips", root_path %>
