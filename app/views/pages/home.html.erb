@@ -1,10 +1,10 @@
-<div class="bg-indigo-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
+<div class="bg-indigo-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32 ">
   <h1 class="font-black text-6xl text-center">Welcome to Lucette Travel!</h1>
 </div>
 
 <ol>
   <% @trips.each do |trip| %>
-    <li class="bg-green-400 rounded-lg text-center text-white color-white text-3xl p-4">
+    <li class="bg-green-300 rounded-lg text-center text-white color-white text-3xl p-4 mt-2 hover:bg-purple-500 tracking-wide duration-500 ">
       <%= link_to trip.name, trip_path(trip) %>
     </li>
   <% end %>
