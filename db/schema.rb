@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_110125) do
+ActiveRecord::Schema.define(version: 2021_03_17_134219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(version: 2021_03_16_110125) do
     t.date "date"
     t.float "price"
     t.integer "rating"
-    t.boolean "done"
     t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "duration"
+    t.string "opening_hours"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(version: 2021_03_16_110125) do
     t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "done", default: false
     t.index ["activity_id"], name: "index_trip_activities_on_activity_id"
     t.index ["trip_id"], name: "index_trip_activities_on_trip_id"
   end

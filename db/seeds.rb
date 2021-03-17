@@ -89,10 +89,9 @@ activity1 = Activity.create(
   description: "The majestic ruins of an ancient Greek building, known for its dignified white marble columns and perfect sense of proportion.",
   date: "",
   duration: "> 3h",
-  Opening_hours: "Sun Sat 8.00am - 8.00pm",
+  opening_hours: "Sun Sat 8.00am - 8.00pm",
   price: "",
-  rating: 4,5,
-  done: false,
+  rating: 4.5,
   address: "Acropolis Top of Dionyssiou Areopagitou, Athens 105 58 Greece"
   )
 
@@ -103,10 +102,9 @@ activity2 = Activity.create(
   description: "The most famous site in all of Athens, this large hill lies in the center of the city and contains a cluster of ancient ruins.",
   date: "",
   duration: "1h",
-  Opening_hours: "all day",
+  opening_hours: "all day",
   price: 13,
   rating: 4.5,
-  done: false,
   address: "via Dionysiou Areopagitou str., Athens 105 58 Greece"
   )
 
@@ -116,10 +114,9 @@ activity2bis = Activity.create(
   description: "Modern, uptodate building on the foot of the Acropolis housing important ancient Greek statues and much more.",
   date: "",
   duration: "2/3h",
-  Opening_hours: "",
+  opening_hours: "",
   price: 7.50,
   rating: 4.5,
-  done: false,
   address: "Dionysiou Areopagitou 15, Athens 117 42 Greece"
   )
 
@@ -129,10 +126,9 @@ activity3 = Activity.create(
   description: "A dynamic cultural institution in the centre of Athens, the Museum of Cycladic Art focuses on promoting the ancient cultures of the Aegean and Cyprus, with particular emphasis on Cycladic art of the third millennium BC. The Museum’s permanent collections include 3000 Cycladic, ancient Greek, and ancient Cypriot artefacts, witnesses to the cultures that flourished in the Aegean and the Eastern Mediterranean from the fourth millennium BC to approximately the sixth century AD. The Museum of Cycladic Art’s temporary exhibitions focus on archaeology and modern and contemporary art with the aim to familiarize the public with important twentieth and twenty-first century artists and to explore the relations between ancient cultures and modern art. Salvador Dali, Pablo Picasso, Thomas Struth, Louise Bourgeois, Sarah Lucas, Ugo Rondinone, Jannis Kounellis, Mario Merz, Ai Weiwei, and Cy Twombly are among the artists hosted.",
   date: "",
   duration: "1/2h",
-  Opening_hours: "Sun 11.00am - 5.00pm Mon Wed-Sat 10.00am - 5.00pm",
+  opening_hours: "Sun 11.00am - 5.00pm Mon Wed-Sat 10.00am - 5.00pm",
   price: 7,
   rating: 4,
-  done: false,
   address: "4 Neofytou Douka str., Athens 106 74 Greece"
   )
 
@@ -142,10 +138,9 @@ activity4 = Activity.create(
   description: "Lively flea market neighborhood with lots of small tavernas serving good-value local snacks.",
   date: "",
   duration: "2/3h",
-  Opening_hours: "all day",
+  opening_hours: "all day",
   price: 0,
   rating: 4,
-  done: false,
   address: "Monastikari Square"
   )
 
@@ -156,7 +151,6 @@ activity4 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -166,7 +160,6 @@ activity4 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -176,10 +169,9 @@ activity7 = Activity.create(
   description: "Walk or take the funicular tramway to the top of this hill for the best views of Athens",
   date: "",
   duration: "1/2h",
-  Opening_hours: "All day",
+  opening_hours: "All day",
   price: 0,
   rating: 4.5,
-  done: false,
   address: "Mount Lycabettus, Athens 114 71, Greece"
   )
 
@@ -189,10 +181,9 @@ activity8 = Activity.create(
   description: "Historic neighborhood located at the base of the hill topped by the Acropolis.",
   date: "",
   duration: "2/3h",
-  Opening_hours: "All day",
+  opening_hours: "All day",
   price: 0,
   rating: 4.5,
-  done: false,
   address: "Athens 10556 Greece"
   )
 
@@ -203,7 +194,6 @@ activity8 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -214,7 +204,6 @@ activity8 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -225,7 +214,6 @@ activity8 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -235,12 +223,11 @@ activity12 = Activity.create(
   description: "The National Archaeological Museum in Athens houses some of the most important artifacts from a variety of archaeological locations around Greece from prehistory to late antiquity. It is considered one of the greatest museums in the world and contains the richest collection of artifacts from Greek antiquity worldwide.",
   date: "",
   duration: "2/3h",
-  Opening_hours: "From April until October 31st: Tu 1.00pm - 8.00pm Wed-Mon 8.00am - 8.00pm",
+  opening_hours: "From April until October 31st: Tu 1.00pm - 8.00pm Wed-Mon 8.00am - 8.00pm",
   price: 12,
   rating: 4.5,
-  done: false,
   address: "28is Oktovriou 44, Athina 106 82, Greece"
-#   )
+  )
 
 # activity13 = Activity.create(
 #   category: "",
@@ -249,7 +236,6 @@ activity12 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -260,7 +246,6 @@ activity12 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -271,7 +256,6 @@ activity12 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -282,7 +266,6 @@ activity12 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -293,7 +276,6 @@ activity12 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -303,10 +285,9 @@ activity18 = Activity.create(
   description: "The Old Olympic Stadium in Athens Greece, built of granite in late 19th century on the site of ancient Athens from the 4th Century; hosted the first modern games in 1896.",
   date: "",
   duration: "1h",
-  Opening_hours: "Sun - Sat 8.00am - 7.00pm",
+  opening_hours: "Sun - Sat 8.00am - 7.00pm",
   price: 0,
   rating: 4.5,
-  done: false,
   address: "Vassileos Konstantinou Avenue opposite the statue of Myron Discobolus, Athens 116 35 Greece"
   )
 
@@ -317,7 +298,6 @@ activity18 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -328,7 +308,6 @@ activity18 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -339,7 +318,6 @@ activity18 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -350,7 +328,6 @@ activity18 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -361,7 +338,6 @@ activity18 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -372,7 +348,6 @@ activity18 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -383,7 +358,6 @@ activity18 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -394,7 +368,6 @@ activity18 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -405,7 +378,6 @@ activity18 = Activity.create(
 #   date: "01/02/2021",
 #   price: 45,
 #   rating: 3,
-#   done: false,
 #   address: "8 Rue du foie"
 #   )
 
@@ -501,7 +473,6 @@ Activity.create(
   date: Faker::Date.between(from: 2.days.ago, to: Date.today),
   price: 45,
   rating: rand(1..5),
-  done: [true, false].sample,
   address: "8 Rue du foie"
   )
 
