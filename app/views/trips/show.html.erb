@@ -1,21 +1,19 @@
-<%= @trip.name %>
+<h1 class="text-6xl text-blue-800 border-blue-800 bg-blue-400"><%= @trip.name %></h1>
+
 </br>
-<%= @trip.country %>
-</br>
-<%= @trip.city %>
+<!-- class="text-4xl text-blue-700" -->
+<h2><%= @trip.country %>, <%= @trip.city %></h2>
 
 </br></br></br>
 
-<!-- <a href="../">
-  <input type="button" class="bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" value="Homepage">
-</a> -->
-<%= link_to "Homepage", trip_bookings_path(@trip), class: "bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+<%= link_to "Homepage", root_path, class: "bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 hover:p-6 shadow-md" %>
 
 <%= link_to "Bookings", trip_bookings_path(@trip), class: "bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
 
 <%= link_to "Activities", activities_path, class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
 
+</br></br></br>
+Booking.today
 
-<!-- <a href="/bookings/id">
-  <input type="button" class="bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" value="Bookings">
-</a> -->
+</br></br></br>
+Todos list

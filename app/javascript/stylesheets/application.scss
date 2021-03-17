@@ -2,3 +2,19 @@
 @import "tailwindcss/components";
 /* Our custom styles here */
 @import "tailwindcss/utilities";
+
+
+h1 {
+  font-family: Arial;
+  background-color: red;
+}
+
+h2 {
+  font-family: serif;
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
