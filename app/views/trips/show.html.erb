@@ -1,19 +1,47 @@
-<h1 class="text-6xl text-blue-800 border-blue-800 bg-blue-400"><%= @trip.name %></h1>
-
+<h1 class="text-4xl text-blue-800 border-blue-800"><%= @trip.name %></h1>
+<h2 class="text-xl text-gray-600"><%= @trip.country %>, <%= @trip.city %></h2>
+<!-- <img src="../../assets/images/acropole.jpg" alt=""> -->
+Todos list button
 </br>
-<!-- class="text-4xl text-blue-700" -->
-<h2><%= @trip.country %>, <%= @trip.city %></h2>
-
-</br></br></br>
-
-<%= link_to "Homepage", root_path, class: "bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 hover:p-6 shadow-md" %>
-
-<%= link_to "Bookings", trip_bookings_path(@trip), class: "bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
-
-<%= link_to "Activities", activities_path, class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
-
-</br></br></br>
-Booking.today
-
-</br></br></br>
-Todos list
+<div id="set-height-wrapper">
+  <div data-controller="carousel" class="swiper-container h-full">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide bg-blue-400">
+        Activity D-Day
+        <div class="day-wrapper">
+          <div class="card-activity">
+            <%= image_tag "acropole.jpg", alt: "Morning activity", class: "rounded-2xl shadow-xl" %>
+            <p>Description of the activity</p>
+            <div>
+              reviews with stars
+            </div>
+          </div>
+        </div>
+        <div class="day-wrapper">
+          <div class="card-activity">
+            <%= image_tag "lycabette.jpg", alt: "Afternoon activity", class: "rounded-2xl shadow-md" %>
+            <p>Description of the activity</p>
+            <div>
+              reviews with stars
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide bg-red-400">
+        Activity D+1
+      </div>
+      <div class="swiper-slide bg-green-400">
+        Activity D+2
+      </div>
+      <div class="swiper-slide bg-yellow-400">
+        Activity D+3
+      </div>
+    </div>
+  </div>
+</div>
+</br></br>
+<div class="container inline-flex justify-around">
+  <%= link_to "Homepage", root_path, class: "bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 hover:p-6 shadow-md" %>
+  <%= link_to "Bookings", trip_bookings_path(@trip), class: "bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+  <%= link_to "Activities", activities_path, class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+</div>
