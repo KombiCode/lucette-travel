@@ -27,18 +27,18 @@ trips1 = Trip.create(
   end_date: "02/04/2021",
   language: "Greek - English",
   devise: "€",
-  user: User.find_by(email: "louis@gmail.com")
+  user: user1
   )
 
 trips2 = Trip.create(
   name: "Island",
   country: "Island",
   city: "Reykjavík",
-  begin_date: "15/01/2020",
-  end_date: "25/01/2021",
+  begin_date: "15/03/2020",
+  end_date: "25/03/2021",
   language: "English",
   devise: "€",
-  user: User.find_by(email: "louis@gmail.com")
+  user: user1
   )
 
 p "#{Trip.count} trips created"
@@ -49,35 +49,35 @@ to_dos1 = ToDo.create(
   name: "Visa",
   description: "Check if you need a visa",
   done: true,
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 to_dos2 = ToDo.create(
   name: "Passport",
   description: "Take it for both of us",
   done: true,
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 to_dos3 = ToDo.create(
   name: "Souvenirs",
   description: "Bring Back souvenirs",
   done: false,
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 to_dos4 = ToDo.create(
   name: "Bath suit",
   description: "Buy a bath suit for Paros",
   done: false,
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 to_dos5 = ToDo.create(
   name: "Luggage",
   description: "Smartphone charger, glasses, tablet, headphones",
   done: true,
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 p "#{ToDo.count} todos created"
@@ -144,15 +144,15 @@ activity4 = Activity.create(
   address: "Monastikari Square"
   )
 
-# activity5 = Activity.create(
-#   category: "",
-#   name: "Varvakios Agora",
-#   description: "Nice place to stay and a good view of the city",
-#   date: "01/02/2021",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
+activity5 = Activity.create(
+  category: "",
+  name: "Varvakios Agora",
+  description: "Nice place to stay and a good view of the city",
+  date: "01/02/2021",
+  price: 45,
+  rating: 3,
+  address: "8 Rue du foie"
+  )
 
 # activity6 = Activity.create(
 #   name: "The Acropolis",
@@ -229,25 +229,29 @@ activity12 = Activity.create(
   address: "28is Oktovriou 44, Athina 106 82, Greece"
   )
 
-# activity13 = Activity.create(
-#   category: "",
-#   name: "Temple of Hephaestus",
-#   description: "Nice place to stay and a good view of the city",
-#   date: "01/02/2021",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
+activity13 = Activity.create(
+  category: "Museum",
+  name: "Principal",
+  description: "Nice place to stay and a good view of the city",
+  date: "17/03/2021",
+  duration: "2/3h",
+  opening_hours: "From April until October 31st: Tu 1.00pm - 8.00pm Wed-Mon 8.00am - 8.00pm",
+  price: 45,
+  rating: 3,
+  address: "8 Rue du foie"
+  )
 
-# activity14 = Activity.create(
-#   category: "",
-#   name: "Museum of Cycladic Art",
-#   description: "Nice place to stay and a good view of the city",
-#   date: "01/02/2021",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
+activity14 = Activity.create(
+  category: "Museum",
+  name: "Principal 2",
+  description: "Nice place to stay and a good view of the city",
+  date: "18/03/2021",
+  duration: "2/3h",
+  opening_hours: "From April until October 31st: Tu 1.00pm - 8.00pm Wed-Mon 8.00am - 8.00pm",
+  price: 45,
+  rating: 3,
+  address: "8 Rue du foie"
+  )
 
 # activity15 = Activity.create(
 #   category: "",
@@ -381,7 +385,9 @@ activity18 = Activity.create(
 #   address: "8 Rue du foie"
 #   )
 
-Trip.find_by(name: "Greece").activities << activity1
+trips2.activities << activity13
+trips2.activities << activity14
+trips1.activities << activity1
 
 p "#{Activity.count} activities created"
 
@@ -394,7 +400,7 @@ hotel1 = Booking.create(
   end_date: "26/03/2021",
   price: 152,
   address: " Theofilopoulou 18, Kallirois Avenue, 11743, Athenes, 11743, Greece",
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 flat1 = Booking.create(
@@ -404,7 +410,7 @@ flat1 = Booking.create(
   end_date: "01/04/2021",
   price: 480,
   address: "Eparchiaki Odos Pontis-Messogis, Strongylí, 49084, Greece",
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 hotel2 = Booking.create(
@@ -414,7 +420,7 @@ hotel2 = Booking.create(
   end_date: "02/04/2021",
   price: 74,
   address: "Webster 10 & Robertou Galli, Athenes, 11742, Greece",
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 plane1 = Booking.create(
@@ -424,7 +430,7 @@ plane1 = Booking.create(
   end_date: "25/03/2021, 1h05",
   price: 263.40,
   address: "Lyon-Saint Exupéry Airport (LYS), Colombier-Saugnieu",
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 plane2 = Booking.create(
@@ -434,7 +440,7 @@ plane2 = Booking.create(
   end_date: "02/04/2021, 10h55",
   price: 233.40,
   address: "Athenes Elefthérios-Venizélos International Airport (ATH), Attiki Odos, Spata-Artémis, Grèce",
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 ferry1 = Booking.create(
@@ -444,7 +450,7 @@ ferry1 = Booking.create(
   end_date: "26/03/2021, 21h45",
   price: 60,
   address: "Port of Piraeus, Pirée, Greece",
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 ferry2 = Booking.create(
@@ -454,7 +460,7 @@ ferry2 = Booking.create(
   end_date: "01/04/2021, 15h00",
   price: 65,
   address: "Paros 844 00, Greece",
-  trip: Trip.find_by(name: "Greece")
+  trip: trips1
   )
 
 p "#{Booking.count} bookings created"
