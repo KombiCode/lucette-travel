@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :trips, only: [ :index, :show ] do
     # resources :trip_activities, only: [ :new, :create, :index ]
     resources :bookings, only: [ :new, :create, :index, :show ]
-    resources :to_dos, only: [ :new, :create, :index, :show ]
+    resources :tasks, only: [ :new, :create, :index, :show ]
   end
   resources :activities, only: [ :new, :create, :index, :show ]
 end

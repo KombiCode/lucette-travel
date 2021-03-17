@@ -1,13 +1,13 @@
-<div data-controller="todolist">
+<div data-controller="tasklist">
   <div id="myDIV" class="header">
     <h2 style="margin:5px">My To Do List with Stimulus.js</h2>
-    <form data-action="submit->todolist#newElement">
-      <input type="text" data-target="todolist.myinput" placeholder="Title..." tabindex="1">
+    <form data-action="submit->tasklist#newElement">
+      <input type="text" data-target="tasklist.myinput" placeholder="Title..." tabindex="1">
       <input type="submit" value="Add" class="addBtn" tabindex="2" >
     </form>
   </div>
 
-  <ul data-target="todolist.mylist">
+  <ul data-target="tasklist.mylist">
     <li>Hit the gym</li>
     <li class="checked">Pay bills</li>
     <li>Meet George</li>
@@ -16,8 +16,8 @@
 
   <div><br><br>
     <label>Number of Tasks :</label>
-    <span data-target="todolist.nbre">6</span><br>
+    <span data-target="tasklist.nbre">6</span><br>
     <label>Tasks done :</label>
-    <span data-target="todolist.nbreal">x</span><br>
+    <span data-target="tasklist.nbreal">x</span><br>
   </div>
-</div><!-- End of data-controller="todolist" -->
+</div><!-- End of data-controller="tasklist" -->
