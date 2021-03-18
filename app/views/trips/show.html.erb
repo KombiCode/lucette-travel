@@ -3,30 +3,54 @@
 <!-- <img src="../../assets/images/acropole.jpg" alt=""> -->
 Tasks list button
 </br>
-<div id="set-height-wrapper">
+<div id="wrapper-day">
   <div data-controller="carousel" class="swiper-container h-full">
     <div class="swiper-wrapper">
-      <div class="swiper-slide bg-blue-400">
-        Activity D-Day
-        <div class="day-wrapper">
-          <div class="card-activity">
-            <%= image_tag "acropole.jpg", alt: "Morning activity", class: "rounded-2xl shadow-xl" %>
-            <p>Description of the activity</p>
-            <div>
-              reviews with stars
-            </div>
+      <div class="swiper-slide">
+          <div class="wrapper-activity border-2 border-black rounded-2xl">
+            <%= link_to "#" do %> <!-- trip_booking_path(@trip) !-->
+              <div class="wrapper-image rounded-xl box-shadow">
+                <%= image_tag "acropole.jpg", alt: "Acropole", class: "" %>
+              </div>
+              <div class="pt-3 pl-5">
+                <p>trip.booking.title</p>
+                <div class="flex justify-between pr-5">
+                  <div class="">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  10h30
+                </div>
+              </div>
+            <% end %>
           </div>
-        </div>
-        <div class="day-wrapper">
-          <div class="card-activity">
-            <%= image_tag "lycabette.jpg", alt: "Afternoon activity", class: "rounded-2xl shadow-md" %>
-            <p>Description of the activity</p>
-            <div>
-              reviews with stars
-            </div>
+
+          <div class="wrapper-activity border-2 border-black rounded-2xl">
+            <%= link_to "#" do %> <!-- trip_booking_path(@trip) !-->
+              <div class="wrapper-image rounded-xl box-shadow">
+                <%= image_tag "lycabette.jpg", alt: "Lycabette", class: "" %>
+              </div>
+              <div class="pt-3 pl-4">
+                <p>trip.booking.title</p>
+                <div class="flex justify-between pr-5">
+                  <div class="">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  14h30
+                </div>
+              </div>
+            <% end %>
           </div>
-        </div>
+
       </div>
+
       <div class="swiper-slide bg-red-400">
         Activity D+1
       </div>

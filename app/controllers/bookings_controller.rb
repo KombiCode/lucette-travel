@@ -8,14 +8,13 @@ class BookingsController < ApplicationController
     # @todays_bookings = today_bookings(@trip)
   end
 
-  # def show
-  #   @booking = Booking.new
-
-  #   # @booking.trip = @trip
-  #   # raise
-  #   booking.begin_date
-  #   # # Date.now
-  # end
+  def show
+    @booking = Booking.new
+    @trip = Trip.find(params[:id])
+    @booking.trip = @trip
+    # booking.begin_date
+    # # Date.now
+  end
 
   def new
     @trip = Trip.find(params[:trip_id])
