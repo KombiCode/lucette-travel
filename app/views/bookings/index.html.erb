@@ -1,10 +1,26 @@
-<ul>
-  <% @all_bookings.each do |booking| %>
-    <li><%= booking.category %></li>
-    <li><%= booking.name %></li>
-    <li><%= booking.begin_date %>-</li>
-    <li><%= booking.end_date %></li>
-    <li><%= booking.price %></li>
-    <li><%= booking.address %></li>
-  <% end %>
-</ul>
+
+<div class="my-6 rounded-2xl border-b-4 p-2">
+	<% @all_bookings.each do |booking| %>
+	<div class="container justify-around">
+		<%= image_tag "olympion.jpg", alt: "olympion", class: "rounded-2xl shadow-xl " %>
+		<ul>
+			<div class="container inline-flex justify-between">
+			    <li><%= booking.name %></li>
+			    <li><%= booking.address %></li>
+			</div>
+		    <div class="container inline-flex justify-between">
+			    <li><%= booking.category %></li>
+			    <li ><%= booking.price %></li>
+		    </div>
+		    <div class="container inline-flex justify-between">
+			    <li><%= booking.begin_date %></li>
+			    <li><%= booking.end_date %></li>
+		    </div>
+		</ul>
+	</div>
+	<% end %>
+</div>
+<div class="container inline-flex justify-around">
+  <%= link_to "Homepage", root_path, class: "bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 hover:p-6 shadow-md" %>
+  <%= link_to "Trip", trip_path(@trip), class: "w-24 text-center bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+</div>
