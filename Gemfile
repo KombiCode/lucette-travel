@@ -43,6 +43,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'faker'
+  gem 'bullet'
   gem 'rails_admin', '~> 2.0'
   gem 'amazing_print'
 end
