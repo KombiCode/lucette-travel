@@ -88,11 +88,11 @@ def opened_or_close
 end
 
 def rand_morning_open
-  "0#{rand(7..9)}:#{[00, 15, 30, 45].sample}"
+  "0#{rand(7..9)}:#{['00', '15', '30', '45'].sample}"
 end
 
 def rand_afternoon_close
-  "1#{rand(7..9)}:#{[00, 15, 30, 45].sample}"
+  "1#{rand(7..9)}:#{['00', '15', '30', '45'].sample}"
 end
 
 activity_opening_hours =

@@ -9,6 +9,6 @@ class User < ApplicationRecord
 
 
   def has_tomorrow_activities?
-    current_trip.activities.tomorrow_activities.any?
+    current_trip.trip_activities.tomorrow_activities.any?
   end
 end
