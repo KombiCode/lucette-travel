@@ -1,3 +1,4 @@
+puts "Cleaning database"
 TripActivity.destroy_all
 Activity.destroy_all
 Booking.destroy_all
@@ -5,8 +6,7 @@ Task.destroy_all
 Trip.destroy_all
 User.destroy_all
 
-# CATEGORIES ["Points of interest & Lookouts", "Flea & Street Markets" "Beaches", Museums", "Historic sites", "Neighborhoods", "Gardens", "Marinas", "Churches", "Wineyards"]
-p "creating User"
+puts "Creating Users"
 
 user1 = User.create(
   firstname: "Louis",
@@ -14,10 +14,10 @@ user1 = User.create(
   phone: "0687676735",
   email: "louis@gmail.com",
   password: "azerty"
-  )
+)
 
-p "#{User.count} users created"
-p "creating trip"
+puts "#{User.count} users created"
+puts "Creating trips"
 
 trip1 = Trip.create(
   name: "Greece",
@@ -41,9 +41,9 @@ trip2 = Trip.create(
   user: user1
   )
 
-p "#{Trip.count} trips created"
+puts "#{Trip.count} trips created"
 
-p "creating to-do"
+puts "Creating Tasks"
 
 task1 = Task.create(
   name: "Visa",
@@ -80,290 +80,77 @@ task5 = Task.create(
   trip: trip1
   )
 
-p "#{Task.count} tasks created"
-p "creating Activity"
+puts "#{Task.count} tasks created"
+puts "Creating Activities"
 
-activity1 = Activity.create(
-  category: "Historic site",
-  name: "Parthenon",
-  description: "The majestic ruins of an ancient Greek building, known for its dignified white marble columns and perfect sense of proportion.",
-  duration: "> 3h",
-  opening_hours: "Sun Sat 8.00am - 8.00pm",
-  price: "",
-  rating: 4.5,
-  address: "Acropolis Top of Dionyssiou Areopagitou, Athens 105 58 Greece"
+def opened_or_close
+  rand(0..1) == 1 ? [] : [{open: "09:00", close: "12:00"}, {open: "14:00", close: rand_afternoon_close}]
+end
+
+def rand_morning_open
+  "0#{rand(7..9)}:#{[00, 15, 30, 45].sample}"
+end
+
+def rand_afternoon_close
+  "1#{rand(7..9)}:#{[00, 15, 30, 45].sample}"
+end
+
+activity_opening_hours =
+{
+  monday: opened_or_close,
+  tuesday: [
+      {open: rand_morning_open, close: "12:00"},
+      {open: "14:00", close: rand_afternoon_close}
+  ],
+  wednesday: opened_or_close,
+  thursday: [
+    {open: rand_morning_open, close: "12:00"},
+    {open: "14:00", close: rand_afternoon_close}
+  ],
+  friday: [
+    {open: rand_morning_open, close: "12:00"},
+    {open: "14:00", close: rand_afternoon_close}
+  ],
+  saturday: [
+    {open: rand_morning_open, close: "12:00"},
+    {open: "14:00", close: rand_afternoon_close}
+  ],
+  sunday: [
+    {open: rand_morning_open, close: "12:00"}
+  ]
+}
+
+activity_categories = ["Points of interest & Lookouts",
+  "Flea & Street Markets" "Beaches",
+  "Museums",
+  "Historic sites",
+  "Neighborhoods",
+  "Gardens",
+  "Marinas",
+  "Churches",
+  "Wineyards"
+]
+
+activity_images = ["acropole.jpg", "lycabette.jpg", "olympion.jpg", "parthenon.jpg"]
+
+100.times do
+Activity.create(
+  category: activity_categories.sample,
+  name: Faker::Name.name,
+  description: Faker::Movie.title,
+  price: rand(4..150),
+  duration: "0#{rand(0..4)}:#{[00, 15, 30, 45].sample}:00",
+  opening_hours: activity_opening_hours,
+  rating: rand(1..5),
+  address: Faker::Address,
+  photo_title: activity_images.sample
   )
 
+end
 
-activity2 = Activity.create(
-  category: "Historic site",
-  name: "The Acropolis",
-  description: "The most famous site in all of Athens, this large hill lies in the center of the city and contains a cluster of ancient ruins.",
-  duration: "1h",
-  opening_hours: "all day",
-  price: 13,
-  rating: 4.5,
-  address: "via Dionysiou Areopagitou str., Athens 105 58 Greece"
-  )
+puts "#{Activity.count} activities created"
 
-activity2bis = Activity.create(
-  category: "Museum",
-  name: "Acropolis Museum",
-  description: "Modern, uptodate building on the foot of the Acropolis housing important ancient Greek statues and much more.",
-  duration: "2/3h",
-  opening_hours: "",
-  price: 7.50,
-  rating: 4.5,
-  address: "Dionysiou Areopagitou 15, Athens 117 42 Greece"
-  )
-
-activity3 = Activity.create(
-  category: "Museum",
-  name: "Museum of Cycladic Art",
-  description: "A dynamic cultural institution in the centre of Athens, the Museum of Cycladic Art focuses on promoting the ancient cultures of the Aegean and Cyprus, with particular emphasis on Cycladic art of the third millennium BC. The Museum’s permanent collections include 3000 Cycladic, ancient Greek, and ancient Cypriot artefacts, witnesses to the cultures that flourished in the Aegean and the Eastern Mediterranean from the fourth millennium BC to approximately the sixth century AD. The Museum of Cycladic Art’s temporary exhibitions focus on archaeology and modern and contemporary art with the aim to familiarize the public with important twentieth and twenty-first century artists and to explore the relations between ancient cultures and modern art. Salvador Dali, Pablo Picasso, Thomas Struth, Louise Bourgeois, Sarah Lucas, Ugo Rondinone, Jannis Kounellis, Mario Merz, Ai Weiwei, and Cy Twombly are among the artists hosted.",
-  duration: "1/2h",
-  opening_hours: "Sun 11.00am - 5.00pm Mon Wed-Sat 10.00am - 5.00pm",
-  price: 7,
-  rating: 4,
-  address: "4 Neofytou Douka str., Athens 106 74 Greece"
-  )
-
-activity4 = Activity.create(
-  category: "Neighbourhood",
-  name: "Monastiraki Neighbourhood",
-  description: "Lively flea market neighborhood with lots of small tavernas serving good-value local snacks.",
-  duration: "2/3h",
-  opening_hours: "all day",
-  price: 0,
-  rating: 4,
-  address: "Monastikari Square"
-  )
-
-activity5 = Activity.create(
-  category: "",
-  name: "Varvakios Agora",
-  description: "Nice place to stay and a good view of the city",
-  price: 45,
-  rating: 3,
-  address: "8 Rue du foie"
-  )
-
-# activity6 = Activity.create(
-#   name: "The Acropolis",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-activity7 = Activity.create(
-  category: "Points of interest & Lookouts",
-  name: "Lycabettus Hill",
-  description: "Walk or take the funicular tramway to the top of this hill for the best views of Athens",
-  duration: "1/2h",
-  opening_hours: "All day",
-  price: 0,
-  rating: 4.5,
-  address: "Mount Lycabettus, Athens 114 71, Greece"
-  )
-
-activity8 = Activity.create(
-  category: "Neighbourhood",
-  name: "Plaka Neighbourhood",
-  description: "Historic neighborhood located at the base of the hill topped by the Acropolis.",
-  duration: "2/3h",
-  opening_hours: "All day",
-  price: 0,
-  rating: 4.5,
-  address: "Athens 10556 Greece"
-  )
-
-# activity9 = Activity.create(
-#   category: "",
-#   name: "Temple of Poseidon",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity10 = Activity.create(
-#   category: "",
-#   name: "The National Museum of Contemporary Art in Athens",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity11 = Activity.create(
-#   category: "",
-#   name: "Erechtheion",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-activity12 = Activity.create(
-  category: "Museum",
-  name: "National Archaeological Museum",
-  description: "The National Archaeological Museum in Athens houses some of the most important artifacts from a variety of archaeological locations around Greece from prehistory to late antiquity. It is considered one of the greatest museums in the world and contains the richest collection of artifacts from Greek antiquity worldwide.",
-  duration: "2/3h",
-  opening_hours: "From April until October 31st: Tu 1.00pm - 8.00pm Wed-Mon 8.00am - 8.00pm",
-  price: 12,
-  rating: 4.5,
-  address: "28is Oktovriou 44, Athina 106 82, Greece"
-  )
-
-activity13 = Activity.create(
-  category: "Museum",
-  name: "Principal",
-  description: "Nice place to stay and a good view of the city",
-  duration: "2/3h",
-  opening_hours: "From April until October 31st: Tu 1.00pm - 8.00pm Wed-Mon 8.00am - 8.00pm",
-  price: 45,
-  rating: 3,
-  address: "8 Rue du foie"
-  )
-
-activity14 = Activity.create(
-  category: "Museum",
-  name: "Principal 2",
-  description: "Nice place to stay and a good view of the city",
-  duration: "2/3h",
-  opening_hours: "From April until October 31st: Tu 1.00pm - 8.00pm Wed-Mon 8.00am - 8.00pm",
-  price: 45,
-  rating: 3,
-  address: "8 Rue du foie"
-  )
-
-# activity15 = Activity.create(
-#   category: "",
-#   name: "Temple of Athena Nike",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity16 = Activity.create(
-#   category: "",
-#   name: "Temple of Olympian Zeus",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity17 = Activity.create(
-#   category: "",
-#   name: "Ancient Agora of Athens",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-activity18 = Activity.create(
-  category: "Historic sites",
-  name: "Panathenaic Stadium",
-  description: "The Old Olympic Stadium in Athens Greece, built of granite in late 19th century on the site of ancient Athens from the 4th Century; hosted the first modern games in 1896.",
-  duration: "1h",
-  opening_hours: "Sun - Sat 8.00am - 7.00pm",
-  price: 0,
-  rating: 4.5,
-  address: "Vassileos Konstantinou Avenue opposite the statue of Myron Discobolus, Athens 116 35 Greece"
-  )
-
-# activity19 = Activity.create(
-#   category: "",
-#   name: "Odeon of Herodes Atticus",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity20 = Activity.create(
-#   category: "",
-#   name: "Philopappos Monument",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity21 = Activity.create(
-#   category: "",
-#   name: "Philopappos Monument",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity22 = Activity.create(
-#   category: "",
-#   name: "Byzantine and Christian Museum",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity23 = Activity.create(
-#   category: "",
-#   name: "Kapnikarea",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity23 = Activity.create(
-#   category: "",
-#   name: "Kapnikarea",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity24 = Activity.create(
-#   category: "",
-#   name: "National Garden",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity25 = Activity.create(
-#   category: "",
-#   name: "Theatre of Dionysus",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-# activity26 = Activity.create(
-#   category: "",
-#   name: "Aeropagus",
-#   description: "Nice place to stay and a good view of the city",
-#   price: 45,
-#   rating: 3,
-#   address: "8 Rue du foie"
-#   )
-
-trip2.activities << activity13
-trip2.activities << activity14
-trip1.activities << activity1
-
-p "#{Activity.count} activities created"
-
-p "creating booking"
+puts "Creating bookings"
 
 hotel1 = Booking.create(
   category: "Hotel",
@@ -435,26 +222,13 @@ ferry2 = Booking.create(
   trip: trip1
   )
 
-p "#{Booking.count} bookings created"
-p "finish"
+puts "#{Booking.count} bookings created"
 
+trip2.activities << Activity.first
+trip2.activities << Activity.last
+trip1.activities << Activity.second
 
-
-
-
-
-100.times do
-Activity.create(
-  category: "",
-  name: Faker::Name.name,
-  description: "Nice place to stay and a good view of the city",
-  # date: Faker::Date.between(from: 2.days.ago, to: Date.today),
-  price: 45,
-  rating: rand(1..5),
-  address: "8 Rue du foie"
-  )
-
-end
+puts "Database ready"
 
 
 # booking = Booking.where(user_id: User.find(8));
