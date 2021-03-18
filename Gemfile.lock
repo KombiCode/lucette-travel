@@ -291,7 +291,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.5)
-  rails_admin (~> 2.0)
+  rails_admin
   sass-rails (>= 6)
   selenium-webdriver
   sidekiq
