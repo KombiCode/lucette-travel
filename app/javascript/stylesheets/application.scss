@@ -17,6 +17,21 @@ h3 {
   font-size: 1.5em;
 }
 
-#set-height-wrapper {
+#wrapper-day {
   height: 500px;
+  width: 100vw;
+}
+
+.wrapper-activity {
+  height: 250px;
+}
+
+.wrapper-image {
+  width: auto;
+  height: 175px;
+  overflow: hidden;
+}
+
+.box-shadow {
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
 }
