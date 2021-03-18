@@ -131,7 +131,8 @@ activity_categories = ["Points of interest & Lookouts",
   "Wineyards"
 ]
 
-activity_images = ["acropole.jpg", "lycabette.jpg", "olympion.jpg", "parthenon.jpg"]
+activity_images = ["acropole", "lycabette", "olympion", "parthenon"]
+# image_loaded = File.open("app/assets/images/acropole.jpg")
 
 100.times do
 Activity.create(
@@ -144,7 +145,7 @@ Activity.create(
   rating: rand(1..5),
   address: Faker::Address,
   photo_title: activity_images.sample
-  )
+)
 
 end
 
