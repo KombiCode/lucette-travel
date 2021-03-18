@@ -16,6 +16,7 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+import "stylesheets/tailwind"
 import "stylesheets/application"
 import "controllers"
 import 'swiper/swiper-bundle.min.css'
