@@ -8,6 +8,10 @@ class User < ApplicationRecord
   has_one :current_trip, -> { current_trip }, class_name: 'Trip'
 
 
+  def has_today_activities?
+    current_trip.trip_activities.today_activities.any?
+  end
+
   def has_tomorrow_activities?
     current_trip.trip_activities.tomorrow_activities.any?
   end
