@@ -63,3 +63,5 @@ gem 'devise'
 
 gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'
+
+gem 'dotenv-rails'
