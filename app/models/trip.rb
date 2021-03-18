@@ -5,7 +5,5 @@ class Trip < ApplicationRecord
   has_many :tasks
   belongs_to :user
 
-
   scope :current_trip, -> { where("begin_date <= ?", Date.current).where("end_date >= ?", Date.current) }
 end
-
