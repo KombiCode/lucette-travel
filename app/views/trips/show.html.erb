@@ -1,18 +1,23 @@
-<div class="wrapper-title flex items-end px-2 border-2 border-black rounded-2xl">
-  <h1 class="text-4xl text-blue-800 border-blue-800"><%= @trip.name %></h1>
-  <h2 class="text-xl text-gray-600"><%= @trip.country %>, <%= @trip.city %></h2>
+<div class="wrapper-header flex justify-between items-center pr-4 text-3xl">
+  <div class="wrapper-title flex items-end px-2">
+    <h1 class="text-6xl text-blue-800 pt-4"><%= @trip.name %></h1>
+    <h2 class="text-xl text-gray-600 pl-3"><%= @trip.country %>, <%= @trip.city %></h2>
+  </div>
+  <%= link_to trip_task_path(@trip) do %>
+    <i class="fas fa-tasks"></i>
+  <% end %>
 </div>
 <div id="wrapper-day">
   <!-- Start Caroussel controller-wrapper -->
-  <div data-controller="carousel" class="swiper-container bg-gray-100 rounded-2xl">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
+  <div data-controller="carousel" class="swiper-container rounded-2xl">
+    <div class="swiper-wrapper px-4">
+      <div class="swiper-slide pr-8">
   <!-- End Caroussel controller-wrapper -->
         <% 5.times do %>
-          <div class="wrapper-activity border-2 border-black rounded-2xl">
+          <div class="wrapper-activity border-black shadow-md rounded-2xl py-4">
             <% @trip.activities.each do |activity| %>
               <%= link_to activity_path(activity.id) do %>
-                <div class="wrapper-image rounded-xl box-shadow">
+                <div class="wrapper-image rounded-xl shadow">
                   <% if activity.photo_title.present? %>
                     <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "" %>
                   <% end %>
@@ -35,19 +40,96 @@
             <% end %>
           </div>
         <% end %>
-
       </div>
 
-      <div class="swiper-slide bg-red-400">
-        Activity D+1
+      <div class="swiper-slide pr-8">
+        <% 5.times do %>
+          <div class="wrapper-activity border-black shadow-md rounded-2xl py-4">
+            <% @trip.activities.each do |activity| %>
+              <%= link_to activity_path(activity.id) do %>
+                <div class="wrapper-image rounded-xl shadow">
+                  <% if activity.photo_title.present? %>
+                    <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "" %>
+                  <% end %>
+                </div>
+                <div class="pt-3 pl-5">
+                  <h4><%= activity.name %></h4>
+                  <div class="flex justify-between pr-5">
+                    <!-- Convert ratings into stars or display them as a x/5 -->
+                    <div class="">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                     10h45 <!-- Something like that => trip_activities.date(@trip)-->
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
 
-      <div class="swiper-slide bg-green-400">
-        Activity D+2
+      <div class="swiper-slide pr-8">
+        <% 5.times do %>
+          <div class="wrapper-activity border-black shadow-md rounded-2xl py-4">
+            <% @trip.activities.each do |activity| %>
+              <%= link_to activity_path(activity.id) do %>
+                <div class="wrapper-image rounded-xl shadow">
+                  <% if activity.photo_title.present? %>
+                    <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "" %>
+                  <% end %>
+                </div>
+                <div class="pt-3 pl-5">
+                  <h4><%= activity.name %></h4>
+                  <div class="flex justify-between pr-5">
+                    <!-- Convert ratings into stars or display them as a x/5 -->
+                    <div class="">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                     10h45 <!-- Something like that => trip_activities.date(@trip)-->
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
 
-      <div class="swiper-slide bg-yellow-400">
-        Activity D+3
+      <div class="swiper-slide pr-8">
+        <% 5.times do %>
+          <div class="wrapper-activity border-black shadow-md rounded-2xl py-4">
+            <% @trip.activities.each do |activity| %>
+              <%= link_to activity_path(activity.id) do %>
+                <div class="wrapper-image rounded-xl shadow">
+                  <% if activity.photo_title.present? %>
+                    <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "" %>
+                  <% end %>
+                </div>
+                <div class="pt-3 pl-5">
+                  <h4><%= activity.name %></h4>
+                  <div class="flex justify-between pr-5">
+                    <!-- Convert ratings into stars or display them as a x/5 -->
+                    <div class="">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                     10h45 <!-- Something like that => trip_activities.date(@trip)-->
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
 
     </div>
@@ -61,5 +143,7 @@
     </div>
   <% end %>
 </div>
-
-<%= render 'shared/buttons-navigation' %>
+<div class="container inline-flex justify-around">
+  <%= link_to "Bookings", trip_bookings_path(@trip), class: "bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+  <%= link_to "Activities", activities_path, class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+</div>
