@@ -3,6 +3,8 @@ class Activity < ApplicationRecord
 
   validates :name, presence: true
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   def is_open_tomorrow?
     day_names = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']

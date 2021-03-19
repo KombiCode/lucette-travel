@@ -133,8 +133,16 @@ activity_categories = ["Points of interest & Lookouts",
 
 activity_images = ["acropole", "lycabette", "olympion", "parthenon"]
 # image_loaded = File.open("app/assets/images/acropole.jpg")
+activity_addresses = ["4 Neofytou Douka str., Athens 106 74 Greece",
+  "Mount Lycabettus, Athens 114 71, Greece",
+  "28is Oktovriou 44, Athina 106 82, Greece",
+  "Vassileos Konstantinou Avenue opposite the statue of Myron Discobolus, Athens 116 35 Greece",
+  "Theofilopoulou 18, Kallirois Avenue, 11743, Athenes, 11743, Greece",
+  "Eparchiaki Odos Pontis-Messogis, Strongylí, 49084, Greece",
+  "Webster 10 & Robertou Galli, Athenes, 11742, Greece"
+]
 
-100.times do
+10.times do
 Activity.create(
   category: activity_categories.sample,
   name: Faker::Name.name,
@@ -143,7 +151,7 @@ Activity.create(
   duration: "0#{rand(0..4)}:#{[00, 15, 30, 45].sample}:00",
   opening_hours: activity_opening_hours,
   rating: rand(1..5),
-  address: Faker::Address,
+  address: activity_addresses.sample,
   photo_title: activity_images.sample
 )
 
@@ -153,6 +161,7 @@ puts "#{Activity.count} activities created"
 
 puts "Creating bookings"
 
+
 hotel1 = Booking.create(
   category: "Hotel",
   name: "B4B Athens Signature Hotel",
@@ -160,7 +169,8 @@ hotel1 = Booking.create(
   end_date: "26/03/2021",
   price: 152,
   address: " Theofilopoulou 18, Kallirois Avenue, 11743, Athenes, 11743, Greece",
-  trip: trip1
+  trip: trip1,
+  photo_title: "hotelathens"
   )
 
 flat1 = Booking.create(
@@ -170,7 +180,8 @@ flat1 = Booking.create(
   end_date: "01/04/2021",
   price: 480,
   address: "Eparchiaki Odos Pontis-Messogis, Strongylí, 49084, Greece",
-  trip: trip1
+  trip: trip1,
+  photo_title: "hotelathens"
   )
 
 hotel2 = Booking.create(
@@ -180,7 +191,8 @@ hotel2 = Booking.create(
   end_date: "02/04/2021",
   price: 74,
   address: "Webster 10 & Robertou Galli, Athenes, 11742, Greece",
-  trip: trip1
+  trip: trip1,
+  photo_title: "hotelathens"
   )
 
 plane1 = Booking.create(
@@ -190,7 +202,8 @@ plane1 = Booking.create(
   end_date: "25/03/2021, 1h05",
   price: 263.40,
   address: "Lyon-Saint Exupéry Airport (LYS), Colombier-Saugnieu",
-  trip: trip1
+  trip: trip1,
+  photo_title: "klm"
   )
 
 plane2 = Booking.create(
@@ -200,7 +213,8 @@ plane2 = Booking.create(
   end_date: "02/04/2021, 10h55",
   price: 233.40,
   address: "Athenes Elefthérios-Venizélos International Airport (ATH), Attiki Odos, Spata-Artémis, Grèce",
-  trip: trip1
+  trip: trip1,
+  photo_title: "klm"
   )
 
 ferry1 = Booking.create(
@@ -210,7 +224,8 @@ ferry1 = Booking.create(
   end_date: "26/03/2021, 21h45",
   price: 60,
   address: "Port of Piraeus, Pirée, Greece",
-  trip: trip1
+  trip: trip1,
+  photo_title: "klm"
   )
 
 ferry2 = Booking.create(
@@ -220,7 +235,8 @@ ferry2 = Booking.create(
   end_date: "01/04/2021, 15h00",
   price: 65,
   address: "Paros 844 00, Greece",
-  trip: trip1
+  trip: trip1,
+  photo_title: "klm"
   )
 
 puts "#{Booking.count} bookings created"
