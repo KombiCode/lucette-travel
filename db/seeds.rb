@@ -224,7 +224,8 @@ ferry1 = Booking.create(
   end_date: "26/03/2021, 21h45",
   price: 60,
   address: "Port of Piraeus, Pirée, Greece",
-  trip: trip1
+  trip: trip1,
+  photo_title: "klm"
   )
 
 ferry2 = Booking.create(
