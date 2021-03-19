@@ -1,3 +1,8 @@
+# Below is necessary in order to have interval type supported by rails admin 
+class RailsAdmin::Config::Fields::Types::Interval < RailsAdmin::Config::Fields::Base
+  RailsAdmin::Config::Fields::Types::register(self)
+end
+
 RailsAdmin.config do |config|
 
   ### Popular gems integration
