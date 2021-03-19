@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_19_105931) do
+ActiveRecord::Schema.define(version: 2021_03_19_140527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_03_19_105931) do
     t.string "photo_title"
     t.float "latitude"
     t.float "longitude"
+    t.index ["latitude", "longitude"], name: "index_activities_on_latitude_and_longitude"
   end
 
   create_table "bookings", force: :cascade do |t|
