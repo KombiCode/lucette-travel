@@ -8,7 +8,7 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
   <!-- End Caroussel controller-wrapper -->
-        <% 10.times do %>
+        <% 5.times do %>
           <div class="wrapper-activity border-2 border-black rounded-2xl">
             <% @trip.activities.each do |activity| %>
               <%= link_to activity_path(activity.id) do %>
@@ -28,7 +28,7 @@
                       <i class="fas fa-star"></i>
                       <i class="far fa-star"></i>
                     </div>
-                     10h45 <!-- Sometjhing like that => trip_activities.date(@trip)-->
+                     10h45 <!-- Something like that => trip_activities.date(@trip)-->
                   </div>
                 </div>
               <% end %>
@@ -62,8 +62,4 @@
   <% end %>
 </div>
 
-<div class="container inline-flex justify-around">
-  <%= link_to "Homepage", root_path, class: "bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 hover:p-6 shadow-md" %>
-  <%= link_to "Bookings", trip_bookings_path(@trip), class: "bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
-  <%= link_to "Activities", activities_path, class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
-</div>
+<%= render 'shared/buttons-navigation' %>
