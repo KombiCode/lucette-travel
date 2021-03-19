@@ -1,5 +1,6 @@
-<div class="bg-indigo-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
+<div class="bg-gray-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
   <h2 class="font-black text-6xl text-center"><%= @activity.description %></h2>
+  <%= image_tag "acropole.jpg", alt: "acropole", class: "" %>
   <h3>Opening hours</h3>
   <% show_opening_hours(@activity.opening_hours).each do |oh| %>
     <p><%= oh %></p>
