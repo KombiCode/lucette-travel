@@ -1,5 +1,5 @@
 class Activity < ApplicationRecord
-  has_many :trips
+  has_many :trip_activities
 
   validates :name, presence: true
 
