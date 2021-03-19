@@ -1,32 +1,26 @@
 
-<div class="my-6 rounded-2xl border-b-8 p-2 border-solid border-pink-500">
+<div class="container flex flex-col rounded-2xl w-full">
+	<div class="flex flex-row-reverse">
 	<% @all_bookings.each do |booking| %>
-	<div class="container justify-around">
-		<%= image_tag "#{booking.photo_title}", alt: "#{booking.name}", class: "rounded-2xl shadow-xl w-32 " %>
-		<ul>
-			<div class="container inline-flex justify-between">
-			    <li><%= booking.name %></li>
-			    <li><%= booking.address %></li>
+		<div class="">
+			<%= image_tag "#{booking.photo_title}", alt: "#{booking.name}"%>
+			<div class="w-6">
+				<p><%= booking.category %></p>
+			    <p><%= booking.price  %>
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+	  			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z" />
+				</svg>
+				</p>
 			</div>
-		    <div class="container inline-flex justify-between">
-			    <li><%= booking.category %></li>
-			    <div class="inline-flex ">
-				    <li><%= booking.price %>
-				    	<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-	  					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z" />
-						</svg>
-					</li>
-			    </div>
-		    </div>
-		    <div class="container inline-flex justify-between">
-			    <li><%= booking.begin_date %></li>
-			    <li><%= booking.end_date %></li>
-		    </div>
-		</ul>
+	    </div>
+		<div class="w-64 ">
+			<p><%= booking.name %></p>
+			<p><%= booking.address %></p>
+			<div class="">
+			    <p><%= booking.begin_date %></p>
+			    <p><%= booking.end_date %></p>
+			</div>
+		</div>
 	</div>
 	<% end %>
-</div>
-<div class="container inline-flex justify-around">
-  <%= link_to "Homepage", root_path, class: "bg-blue-400 rounded-md p-3 text-white hover:bg-opacity-40 hover:p-6 shadow-md" %>
-  <%= link_to "Trip", trip_path(@trip), class: "w-24 text-center bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
 </div>
