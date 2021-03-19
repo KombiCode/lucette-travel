@@ -8,9 +8,11 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
   end
- 
+
   def show
-    @task = Task.find(params[:id])
+    @trip = Trip.find(params[:id])
+    @task = Task.new
+    @task.trip = @trip
   end
 
 
@@ -43,6 +45,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name )
+    params.require(:task).permit(:name)
   end
 end

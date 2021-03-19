@@ -20,3 +20,4 @@ import "stylesheets/tailwind"
 import "stylesheets/application"
 import "controllers"
 import 'swiper/swiper-bundle.min.css'
+import 'stylesheets/googlefont'

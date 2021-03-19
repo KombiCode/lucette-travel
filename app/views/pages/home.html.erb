@@ -1,11 +1,11 @@
 <div class="container p-10">
 <div class="bg-yellow-500 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center ">
-  <h1 class="font-black text-3xl text-center">Welcome to Lucette Travel !</h1>
+  <h1 class="text-5xl text-center">Welcome to Lucette Travel !</h1>
 </div>
 <ol>
   <% @trips.each do |trip| %>
     <li class="bg-yellow-300 rounded-lg text-center text-white color-white text-xl p-4 m-4">
-      <%= link_to trip.name, trip_path(trip) %>
+      <h2 class="text-3xl"><%= link_to trip.name, trip_path(trip) %></h2>
     </li>
   <% end %>
     <li class="w-20 h-20 bg-center bg-yellow-300 rounded-full text-6xl text-center text-white color-white text-3xl shadow-lg mx-auto mt-2">
