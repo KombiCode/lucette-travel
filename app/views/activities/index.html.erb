@@ -1,14 +1,15 @@
+<div class="flex wrapper-total p-4">
+  <div class="wrapper-tinder">
+    <% @activities.each do |activity| %>
+      <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "rotate-card p-4 rotate-card-transform" %>
+            <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "rotate-card p-4 opacity-2 opacity-30" %>
+    <% end %>
+  </div>
+</div>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 <div id="map"
   style="width: 100%; height: 300px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-<% @activities.each do |activity| %>
-  <div class="bg-indigo-400 p-4 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
-      <h2 class="font-black text-6xl text-center"><%= activity.name %></h2>
-      <%= link_to 'Details', activity_path(activity.id), class: "px-2" %>
-  </div>
-<% end %>
-<div class="bg-indigo-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
-  <%= link_to 'Add', new_activity_path, class: "px-2" %>
-</div>
+

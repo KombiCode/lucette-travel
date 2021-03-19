@@ -32,3 +32,18 @@ h3 {
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
+.rotate-card {
+  /*transform-origin: bottom left 20px;*/
+  position: absolute;
+  top: 50;
+  left: 0
+}
+
+.rotate-card-transform {
+  transform: rotate(8deg);
+  transform-origin: 20% 40%;
+}
+
+.wrapper-tinder {
+  width: 400px;
+}
