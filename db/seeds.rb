@@ -133,8 +133,16 @@ activity_categories = ["Points of interest & Lookouts",
 
 activity_images = ["acropole", "lycabette", "olympion", "parthenon"]
 # image_loaded = File.open("app/assets/images/acropole.jpg")
+activity_addresses = ["4 Neofytou Douka str., Athens 106 74 Greece",
+  "Mount Lycabettus, Athens 114 71, Greece",
+  "28is Oktovriou 44, Athina 106 82, Greece",
+  "Vassileos Konstantinou Avenue opposite the statue of Myron Discobolus, Athens 116 35 Greece",
+  "Theofilopoulou 18, Kallirois Avenue, 11743, Athenes, 11743, Greece",
+  "Eparchiaki Odos Pontis-Messogis, Strongylí, 49084, Greece",
+  "Webster 10 & Robertou Galli, Athenes, 11742, Greece"
+]
 
-100.times do
+10.times do
 Activity.create(
   category: activity_categories.sample,
   name: Faker::Name.name,
@@ -143,7 +151,7 @@ Activity.create(
   duration: "0#{rand(0..4)}:#{[00, 15, 30, 45].sample}:00",
   opening_hours: activity_opening_hours,
   rating: rand(1..5),
-  address: Faker::Address,
+  address: activity_addresses.sample,
   photo_title: activity_images.sample
 )
 
