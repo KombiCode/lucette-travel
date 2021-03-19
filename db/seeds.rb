@@ -81,7 +81,6 @@ task5 = Task.create(
   )
 
 puts "#{Task.count} tasks created"
-puts "Creating Activities"
 
 def opened_or_close
   rand(0..1) == 1 ? [] : [{open: "09:00", close: "12:00"}, {open: "14:00", close: rand_afternoon_close}]
@@ -142,8 +141,12 @@ activity_addresses = ["4 Neofytou Douka str., Athens 106 74 Greece",
   "Webster 10 & Robertou Galli, Athenes, 11742, Greece"
 ]
 
-10.times do
-Activity.create(
+puts "Creating Activities"
+
+all_activities = []
+
+30.times do
+activity = Activity.create(
   category: activity_categories.sample,
   name: Faker::Name.name,
   description: Faker::Movie.title,
@@ -154,10 +157,28 @@ Activity.create(
   address: activity_addresses.sample,
   photo_title: activity_images.sample
 )
+all_activities << activity
+end
 
+all_activities.each_with_index do |activity, index|
+  if index < 8 && index >=0
+    trip1.activities << activity
+  end
+  if index >= 8 && index <= 20
+    trip2.activities << activity
+  end
 end
 
 puts "#{Activity.count} activities created"
+puts "#{trip1.activities.count} activities assigned to trip1"
+puts "#{trip2.activities.count} activities assigned to trip2"
+no_assigned = Activity.count - trip1.activities.count - trip2.activities.count
+puts "#{no_assigned} activities not assigned to any trip"
+
+
+
+
+
 
 puts "Creating bookings"
 
@@ -243,7 +264,7 @@ puts "#{Booking.count} bookings created"
 
 trip2.activities << Activity.first
 trip2.activities << Activity.last
-trip1.activities << Activity.second
+
 
 puts "Database ready"
 
