@@ -67,3 +67,4 @@ gem 'dotenv-rails'
 
 gem 'rails_admin'
 gem 'postmark-rails'
+gem 'geocoder'
