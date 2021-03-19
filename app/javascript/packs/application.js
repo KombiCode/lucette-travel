@@ -20,3 +20,12 @@ import "stylesheets/tailwind"
 import "stylesheets/application"
 import "controllers"
 import 'swiper/swiper-bundle.min.css'
+
+// CSS
+import 'mapbox-gl/dist/mapbox-gl.css';
+// internal imports
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
