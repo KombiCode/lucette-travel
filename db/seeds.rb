@@ -349,7 +349,6 @@ activity9 = Activity.create(
   opening_hours: {
     monday: [{open: "08:00", close: "20:00"}],
     tuesday: [{open: "13:00", close: "20:00"}],
-    tuesday: [{open: "08:00", close: "20:00"}],
     wednesday: [{open: "08:00", close: "20:00"}],
     thursday: [{open: "08:00", close: "20:00"}],
     friday: [{open: "08:00", close: "20:00"}],
