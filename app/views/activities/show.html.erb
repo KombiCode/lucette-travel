@@ -1,21 +1,25 @@
-<main class="p-10 rounded-lg shadow-lg max-w-lg mx-auto text-gray text-center mt-8">
-    <h2 class="font-gray text-4xl text-center"><%= @activity.name %></h2>
+<main class="p-4 rounded-lg shadow-lg max-w-lg mx-auto text-gray text-center mt-2">
+    <h2 class="font-bold text-4xl text-center"><%= @activity.name %></h2>
     <div class="mw-full rounded overflow-hidden shadow-lg my-2">
     <%= image_tag "#{@activity.photo_title}.jpg", alt: "#{@activity.name}", class: "" %>
     </div>
 
     <div class="grid place-items-center">
-      <section class="flex flex-col md:flex-row gap-11 py-10 px-5">
+      <section class="flex flex-col md:flex-row gap-11 py-2 px-5">
         <div class="text-gray-500 flex flex-col justify-between">
-          <h3> <%= @activity.category %> </h3>
         <h5 class="text-justify mt-2"> <%= @activity.description %> </h5>
         </div>
       </section>
     </div>
 
-  <div class="grid place-items-center">
-      <section class="flex flex-col md:flex-row">
-        <div class="text-gray-500 flex flex-col justify-between">
+  <div class="flex">
+     <div class="flex-auto p-3">
+            <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border mt-8">
+            <div class="text-sm text-gray-500">
+              <i class="fa fa-map-marker" aria-hidden="true"> <%= @activity.address %></i>
+            </div>
+          </div>
+        <div class="flex-auto p-1 text-gray-500">
           <h4 class="font-bold">Opening hours</h4>
           <div class="text-sm">
           <% show_opening_hours(@activity.opening_hours).each do |oh| %>
@@ -23,25 +27,12 @@
           <% end %>
           </div>
         </div>
-        <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border mt-8">
-          <div class="flex-grow p-3">
-
-            <div class="text-sm text-gray-500">
-              <i class="fa fa-map-marker" aria-hidden="true"> <%= @activity.address %></i>
-            </div>
-          </div>
         </div>
         <!-- attention : mettre le rating  -->
-      </section>
     </div>
-
-
-<div class="container mx-auto max-w-sm h-screen flex flex-col">
-
-  <div class="container inline-flex justify-around p-10">
+  <div class="container inline-flex justify-around p-2">
     <%= link_to 'Back to my trip', "#", class: "px-8 py-4 bg-gray-900 rounded-md text-white text-sm focus:border-transparent" %>
   </div>
- </div>
 <!-- attention le lien n'est pas bon : trip_path(@trip) manque une fonction dans controller -->
   </div>
 </main>
