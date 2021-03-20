@@ -61,3 +61,70 @@ carte pour les to dos
   </div>
 </div>
 </div>
+
+#historique seed FAKER
+
+# 2.times do
+# activity = Activity.create(
+#   category: activity_categories.sample,
+#   name: Faker::Name.name,
+#   description: Faker::Movie.title,
+#   price: rand(4..150),
+#   duration: "0#{rand(0..4)}:#{[00, 15, 30, 45].sample}:00",
+#   opening_hours: activity_opening_hours,
+#   rating: rand(1..5),
+#   address: activity_addresses.sample,
+#   photo_title: activity_images.sample
+# )
+# end
+
+
+# def close
+#   rand(0..1) == 1 ? [] : [{open: "09:00", close: "12:00"}, {open: "14:00", close: rand_afternoon_close}]
+# end
+
+# def rand_morning_open
+#   "0#{rand(7..9)}:#{['00', '15', '30', '45'].sample}"
+# end
+
+# def rand_afternoon_close
+#   "1#{rand(7..9)}:#{['00', '15', '30', '45'].sample}"
+# end
+
+# activity_opening_hours =
+# {
+#   monday: opened_or_close,
+#   tuesday: [
+#       {open: rand_morning_open, close: "12:00"},
+#       {open: "14:00", close: rand_afternoon_close}
+#   ],
+#   wednesday: opened_or_close,
+#   thursday: [
+#     {open: rand_morning_open, close: "12:00"},
+#     {open: "14:00", close: rand_afternoon_close}
+#   ],
+#   friday: [
+#     {open: rand_morning_open, close: "12:00"},
+#     {open: "14:00", close: rand_afternoon_close}
+#   ],
+#   saturday: [
+#     {open: rand_morning_open, close: "12:00"},
+#     {open: "14:00", close: rand_afternoon_close}
+#   ],
+#   sunday: [
+#     {open: rand_morning_open, close: "12:00"}
+#   ]
+# }
+
+#historique activity images
+
+# activity_images = ["acropole", "lycabette", "olympion", "parthenon"]
+# # image_loaded = File.open("app/assets/images/acropole.jpg")
+# activity_addresses = ["4 Neofytou Douka str., Athens 106 74 Greece",
+#   "Mount Lycabettus, Athens 114 71, Greece",
+#   "28is Oktovriou 44, Athina 106 82, Greece",
+#   "Vassileos Konstantinou Avenue opposite the statue of Myron Discobolus, Athens 116 35 Greece",
+#   "Theofilopoulou 18, Kallirois Avenue, 11743, Athenes, 11743, Greece",
+#   "Eparchiaki Odos Pontis-Messogis, Strongylí, 49084, Greece",
+#   "Webster 10 & Robertou Galli, Athenes, 11742, Greece"
+# ]
