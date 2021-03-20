@@ -18,14 +18,23 @@ class Activity < ApplicationRecord
     open = false
     oh = opening_hours[day_names[week_day-1]]
     if !oh.empty?
-      ftime_now = datetime.to_time.strftime("%H%M")
-      ftime_mop = oh[0]['open'].to_time.strftime("%H%M")
-      ftime_mcl = oh[0]['close'].to_time.strftime("%H%M")
-      ftime_aop = oh[1]['open'].to_time.strftime("%H%M")
-      ftime_acl = oh[1]['close'].to_time.strftime("%H%M")
-      if (ftime_now >= ftime_mop && ftime_now <= ftime_mcl) ||
-         (ftime_now >= ftime_aop && ftime_now <= ftime_acl)
-         open = true
+      if !oh[0].nil? && !oh[1].nil?
+        ftime_now = datetime.to_time.strftime("%H%M")
+        ftime_mop = oh[0]['open'].to_time.strftime("%H%M")
+        ftime_mcl = oh[0]['close'].to_time.strftime("%H%M")
+        ftime_aop = oh[1]['open'].to_time.strftime("%H%M")
+        ftime_acl = oh[1]['close'].to_time.strftime("%H%M")
+        if (ftime_now >= ftime_mop && ftime_now <= ftime_mcl) ||
+          (ftime_now >= ftime_aop && ftime_now <= ftime_acl)
+          open = true
+        end
+      elsif !oh[0].nil?
+        ftime_now = datetime.to_time.strftime("%H%M")
+        ftime_op = oh[0]['open'].to_time.strftime("%H%M")
+        ftime_cl = oh[0]['close'].to_time.strftime("%H%M")
+        if (ftime_now >= ftime_op && ftime_now <= ftime_cl)
+          open = true
+        end
       end
     end
     open
