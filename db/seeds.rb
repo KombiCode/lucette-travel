@@ -16,6 +16,16 @@ user1 = User.create(
   password: "azerty"
 )
 
+# Do not remove : this is user admin
+User.create(
+  firstname: "Admin",
+  lastname: "Admin",
+  phone: "0707070707",
+  email: "admin@gmail.com",
+  password: "lucette",
+  admin: true
+)
+
 puts "#{User.count} users created"
 puts "Creating trips"
 
