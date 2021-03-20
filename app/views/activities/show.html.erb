@@ -1,19 +1,41 @@
-<div class="bg-gray-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
-  <h2 class="font-black text-6xl text-center"><%= @activity.description %></h2>
-  <%= image_tag "acropole.jpg", alt: "acropole", class: "" %>
-  <h3>Opening hours</h3>
-  <% show_opening_hours(@activity.opening_hours).each do |oh| %>
-    <p><%= oh %></p>
-  <% end %>
-  <h4>
-    <% if @activity.is_open(DateTime.now) %>
-      Open
-    <% else %>
-      Close
-      <% if @activity.is_open_tomorrow? %>
-      , but open tomorrow
-      <% end %>
-    <% end %>
-  </h4>
-  <%= link_to 'Back', activities_path, class: "px-5" %>
-</div>
+<main class="p-4 rounded-lg shadow-lg max-w-lg mx-auto text-gray text-center mt-2">
+    <h2 class="font-bold text-4xl text-center"><%= @activity.name %></h2>
+    <div class="mw-full rounded overflow-hidden shadow-lg my-2">
+    <%= image_tag "#{@activity.photo_title}.jpg", alt: "#{@activity.name}", class: "" %>
+    </div>
+
+    <div class="grid place-items-center">
+      <section class="flex flex-col md:flex-row gap-11 py-2 px-5">
+        <div class="text-gray-500 flex flex-col justify-between">
+        <h5 class="text-justify mt-2"> <%= @activity.description %> </h5>
+        </div>
+      </section>
+    </div>
+
+  <div class="flex">
+     <div class="flex-auto p-3">
+            <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border mt-8">
+            <div class="text-sm text-gray-500">
+              <i class="fa fa-map-marker" aria-hidden="true"> <%= @activity.address %></i>
+            </div>
+          </div>
+        <div class="flex-auto p-1 text-gray-500">
+          <h4 class="font-bold">Opening hours</h4>
+          <div class="text-sm">
+          <% show_opening_hours(@activity.opening_hours).each do |oh| %>
+            <p><%= oh %></p>
+          <% end %>
+          </div>
+        </div>
+        </div>
+        <!-- attention : mettre le rating  -->
+    </div>
+  <div class="container inline-flex justify-around p-2">
+    <%= link_to 'Back to my trip', "#", class: "px-8 py-4 bg-gray-900 rounded-md text-white text-sm focus:border-transparent" %>
+  </div>
+<!-- attention le lien n'est pas bon : trip_path(@trip) manque une fonction dans controller -->
+  </div>
+</main>
+
+
+
