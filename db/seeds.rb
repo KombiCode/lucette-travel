@@ -33,8 +33,8 @@ trip1 = Trip.create(
   name: "Greece",
   country: "Greece",
   city: "Athens",
-  begin_date: "24/03/2021",
-  end_date: "02/04/2021",
+  begin_date: Date.current - 1,
+  end_date: Date.current + 8,
   language: "Greek - English",
   devise: "€",
   user: user1
@@ -44,8 +44,8 @@ trip2 = Trip.create(
   name: "Island",
   country: "Island",
   city: "Reykjavík",
-  begin_date: "15/03/2021",
-  end_date: "25/03/2021",
+  begin_date: Date.new(2021, 4, 8),
+  end_date: Date.new(2021, 4, 25),
   language: "English",
   devise: "€",
   user: user1
@@ -187,12 +187,16 @@ activity1 = Activity.create(
     sunday: [{open: "08:00", close: "20:00"}]
   },
   price: 0,
-  rating: 4.5,
+  rating: 4,
   address: "Acropolis Top of Dionyssiou Areopagitou, Athens 105 58 Greece",
   photo_title: "parthenon"
     )
-
-trip1.activities << activity1
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity1.id,
+  date: Date.current - 1,
+  start_hour: "10:00"
+)
 
 activity2 = Activity.create(
   category: "Historic site",
@@ -209,13 +213,17 @@ activity2 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 13,
-  rating: 4.5,
+  rating: 5,
   address: "via Dionysiou Areopagitou str., Athens 105 58 Greece",
   photo_title: "acropole"
-    )
+  )
 
-
-trip1.activities << activity2
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity2.id,
+  date: Date.current,
+  start_hour: "13:00"
+)
 
 activity3 = Activity.create(
   category: "Museum",
@@ -232,14 +240,18 @@ activity3 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 13,
-  rating: 4.5,
+  rating: 3,
   address: "via Dionysiou Areopagitou str., Athens 105 58 Greece",
   photo_title: "acropole"
     )
 
-
-trip1.activities << activity3
-
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity3.id,
+  date: Date.current,
+  start_hour: "18:20"
+)
+    
 activity4 = Activity.create(
   category: "Museum",
   name: "Acropolis Museum",
@@ -255,13 +267,18 @@ activity4 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 7.50,
-  rating: 4.5,
+  rating: 4,
   address: "Dionysiou Areopagitou 15, Athens 117 42 Greece",
   photo_title: "acropolismuseum"
     )
 
 
-trip1.activities << activity4
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity4.id,
+  date: Date.current + 1,
+  start_hour: "11:45"
+)
 
 activity5 = Activity.create(
   category: "Museum",
@@ -283,8 +300,13 @@ activity5 = Activity.create(
   photo_title: "cycladicmuseum"
     )
 
-trip1.activities << activity5
-
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity5.id,
+  date: Date.current + 1,
+  start_hour: "14:00"
+)
+    
 activity6 = Activity.create(
   category: "Neighbourhood",
   name: "Monastiraki Neighbourhood",
@@ -300,12 +322,18 @@ activity6 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 0,
-  rating: 4,
+  rating: 3,
   address: "Monastikari Square",
   photo_title: "monastikari"
     )
 
-trip1.activities << activity6
+
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity6.id,
+  date: Date.current + 1,
+  start_hour: "16:30"
+)
 
 activity7 = Activity.create(
   category: "Points of interest & Lookouts",
@@ -322,12 +350,18 @@ activity7 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 0,
-  rating: 4.5,
+  rating: 3,
   address: "Mount Lycabettus, Athens 114 71, Greece",
   photo_title: "lycabette"
     )
 
-trip1.activities << activity7
+
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity7.id,
+  date: Date.current + 2,
+  start_hour: "09:00"
+)
 
 activity8 = Activity.create(
   category: "Neighbourhood",
@@ -344,12 +378,17 @@ activity8 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 0,
-  rating: 4.5,
+  rating: 4,
   address: "Plaka, Athens, Greece",
   photo_title: "plaka"
     )
 
-trip1.activities << activity8
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity8.id,
+  date: Date.current + 2,
+  start_hour: "16:15"
+)
 
 activity9 = Activity.create(
   category: "Museum",
@@ -366,12 +405,18 @@ activity9 = Activity.create(
     sunday: [{open: "08:00", close: "20:00"}]
   },
   price: 12,
-  rating: 4.5,
+  rating: 3,
   address: "8is Oktovriou 44, Athina 106 82, Greece",
   photo_title: "archaeologicalmuseum"
     )
 
-trip1.activities << activity9
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity9.id,
+  date: Date.current + 2,
+  start_hour: "19:00"
+)
+
 
 activity10 = Activity.create(
   category: "Historic sites",
@@ -393,7 +438,6 @@ activity10 = Activity.create(
   photo_title: "panathenaic"
     )
 
-trip1.activities << activity10
 
 activity11 = Activity.create(
   category: "Historic sites",
@@ -415,7 +459,6 @@ activity11 = Activity.create(
   photo_title: "herodatticus"
     )
 
-trip1.activities << activity11
 
 activity12 = Activity.create(
   category: "Parks & Gardens",
@@ -437,7 +480,6 @@ activity12 = Activity.create(
   photo_title: "philopappos"
     )
 
-trip1.activities << activity12
 
 activity13 = Activity.create(
   category: "Historic sites",
@@ -459,7 +501,6 @@ activity13 = Activity.create(
   photo_title: "hephaestus"
     )
 
-trip1.activities << activity13
 
 activity14 = Activity.create(
   category: "Parks & Gardens",
@@ -481,7 +522,6 @@ activity14 = Activity.create(
   photo_title: "nationalgarden"
     )
 
-trip1.activities << activity14
 
 activity15 = Activity.create(
   category: "Flea & Street Markets",
@@ -503,7 +543,6 @@ activity15 = Activity.create(
   photo_title: "marketmunicipal"
     )
 
-trip1.activities << activity15
 
  # "Aeropagus","Theatre of Dionysus", "Kapnikarea", "Byzantine and Christian Museum", "Philopappos Monument", Odeon of Herodes Atticus", "Temple of Olympian Zeus", "Temple of Athena Nike", "Temple of Hephaestus", "Erechtheion", "The National Museum of Contemporary Art in Athens", "Temple of Poseidon", "Varvakios Agora",
 
@@ -595,9 +634,6 @@ ferry2 = Booking.create(
   )
 
 puts "#{Booking.count} bookings created"
-
-trip2.activities << Activity.first
-trip2.activities << Activity.last
 
 
 puts "Database ready"

@@ -6,4 +6,20 @@ class Trip < ApplicationRecord
   belongs_to :user
 
   scope :current_trip, -> { where("begin_date <= ?", Date.current).where("end_date >= ?", Date.current) }
+
+  def today_activities
+    trip_activities.today_activities
+  end
+
+  def day_activities(day_date)
+    trip_activities.day_activities(day_date)
+  end
+
+  def number_of_days
+    nd = (end_date - begin_date).to_i
+  end
+
+  def date_for_day(index)
+    begin_date + index
+  end
 end
