@@ -43,19 +43,21 @@
               <% end %>
             </div>
           <% end %>
+          <div class="wrapper-booking">
+            <% @trip.day_bookings(index).each do |booking| %>
+              <%= link_to trip_booking_path(@trip.id, booking.id) do %>
+                <div class="p-4 border-2 border-black rounded-2xl mt-4 shadow">
+                  <%= "#{booking.name}" %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
         </div>
       <% end %>
     </div>
   </div>
 </div>
 
-<div class="wrapper-booking">
-  <%= link_to "#" do %> <!-- booking_path(@booking) !-->
-    <div class="p-4 border-2 border-black rounded-2xl mt-4 shadow">
-      booking.name
-    </div>
-  <% end %>
-</div>
 <div class="container inline-flex justify-around">
   <%= link_to "Bookings", trip_bookings_path(@trip), class: "bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
   <%= link_to "Activities", activities_path, class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
