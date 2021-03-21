@@ -1,0 +1,134 @@
+:root {
+  --black-transparent:;
+  --transition-time: .2s;
+}
+
+.wrapper-container {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 42px;
+}
+
+.wrapper-main {
+  width: 300px;
+  /*max-width: 90%;*/
+}
+
+/*img {
+  max-width: 100%;
+}*/
+
+.profiles {
+  width: 100%;
+  position: relative;
+  height: 250px;
+}
+
+.profile {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  border-radius: 12px;
+  /*overflow: hidden;*/
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.profiles::before {
+  content: "No more activities at the moment";
+  color: #acacac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.profile-image {
+  /*height: 100%;*/
+  height: 300px;
+  /*padding-bottom: 150%;*/
+  object-fit: cover;
+  object-position: center center;
+}
+
+.profile-infos {
+  padding: 12px;
+  position: absolute;
+  bottom: 0px;
+  /*background: linear-gradient(0deg, black, transparent);*/
+  width: 100%;
+}
+
+.profile-name {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  text-shadow: 0 0 5px black;
+}
+
+.profile__description {
+  color: white;
+  font-size: 13px;
+}
+
+.profile--match {
+  transition: var(--transition-time);
+  transform: translateX(1500px) translateY(600px) rotate(90deg);
+}
+
+.profile--next {
+  transition: var(--transition-time);
+  transform: translateX(-1500px) translateY(600px) rotate(-90deg);
+}
+
+.profile--back {
+  transition: var(--transition-time);
+}
+
+.profile--matching::after {
+  content: "Let's go!";
+  font-weight: bold;
+  font-size: 28px;
+  padding: 8px 12px;
+  border: solid 2px #4CAF50;
+  color: #4CAF50;
+  /*text-shadow: 0, 0, 10px, white;*/
+  background-color: rgba(0, 0, 0, 0.8);
+  /*transition: all .4s ease;*/
+  position: absolute;
+  top: 24px;
+  left: 12px;
+  border-radius: 4px;
+  transform: rotate(-14deg);
+}
+
+/*.profile--nexting {
+  background-color: rgb(0,0,0);
+}*/
+
+.profile--nexting::after {
+  content: "No!";
+  font-weight: bold;
+  font-size: 28px;
+  padding: 8px 12px;
+  border: solid 2px #FF5252;
+  color: #FF5252;
+  /*background: rgba(0, 0, 0, 0.8);*/
+  position: absolute;
+  top: 24px;
+  right: 12px;
+  border-radius: 4px;
+  transform: rotate(14deg);
+}
