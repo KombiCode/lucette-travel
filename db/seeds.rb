@@ -37,18 +37,22 @@ trip1 = Trip.create(
   end_date: Date.current + 8,
   language: "Greek - English",
   devise: "€",
-  user: user1
+  user: user1,
+  photo_title: "greece",
+  description: ""
   )
 
 trip2 = Trip.create(
-  name: "Island",
-  country: "Island",
+  name: "Iceland",
+  country: "Iceland",
   city: "Reykjavík",
   begin_date: Date.new(2021, 4, 8),
   end_date: Date.new(2021, 4, 25),
   language: "English",
   devise: "€",
-  user: user1
+  user: user1,
+  photo_title: "iceland",
+  description: ""
   )
 
 puts "#{Trip.count} trips created"
