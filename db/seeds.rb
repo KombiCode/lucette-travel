@@ -33,8 +33,8 @@ trip1 = Trip.create(
   name: "Greece",
   country: "Greece",
   city: "Athens",
-  begin_date: "24/03/2021",
-  end_date: "02/04/2021",
+  begin_date: Date.current - 1,
+  end_date: Date.current + 8,
   language: "Greek - English",
   devise: "€",
   user: user1
@@ -44,8 +44,8 @@ trip2 = Trip.create(
   name: "Island",
   country: "Island",
   city: "Reykjavík",
-  begin_date: "15/03/2020",
-  end_date: "25/03/2020",
+  begin_date: Date.new(2021, 4, 8),
+  end_date: Date.new(2021, 4, 25),
   language: "English",
   devise: "€",
   user: user1
@@ -123,12 +123,17 @@ athenes1 = Activity.create(
     sunday: [{open: "08:00", close: "20:00"}]
   },
   price: 0,
-  rating: 4.5,
+  rating: 4,
   address: "Acropolis Top of Dionyssiou Areopagitou, Athens 105 58 Greece",
   photo_title: "parthenon"
     )
 
-trip1.activities << athenes1
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity1.id,
+  date: Date.current - 1,
+  start_hour: "10:00"
+)
 
 athenes2 = Activity.create(
   category: "Historic site",
@@ -145,13 +150,17 @@ athenes2 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 13,
-  rating: 4.5,
+  rating: 5,
   address: "via Dionysiou Areopagitou str., Athens 105 58 Greece",
   photo_title: "acropole"
-    )
+  )
 
-
-trip1.activities << athenes2
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity2.id,
+  date: Date.current,
+  start_hour: "13:00"
+)
 
 athenes3 = Activity.create(
   category: "Museum",
@@ -168,14 +177,19 @@ athenes3 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 13,
-  rating: 4.5,
+  rating: 3,
   address: "via Dionysiou Areopagitou str., Athens 105 58 Greece",
   photo_title: "acropole"
     )
 
-trip1.activities << athenes3
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity3.id,
+  date: Date.current,
+  start_hour: "18:20"
+)
 
-athenes4 = Activity.create(
+activity4 = Activity.create(
   category: "Museum",
   name: "Acropolis Museum",
   description: "Modern, uptodate building on the foot of the Acropolis housing important ancient Greek statues and much more.",
@@ -190,13 +204,17 @@ athenes4 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 7.50,
-  rating: 4.5,
+  rating: 4,
   address: "Dionysiou Areopagitou 15, Athens 117 42 Greece",
   photo_title: "acropolismuseum"
     )
 
-
-trip1.activities << athenes4
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity4.id,
+  date: Date.current + 1,
+  start_hour: "11:45"
+)
 
 athenes5 = Activity.create(
   category: "Museum",
@@ -218,9 +236,14 @@ athenes5 = Activity.create(
   photo_title: "cycladicmuseum"
     )
 
-trip1.activities << athenes5
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity5.id,
+  date: Date.current + 1,
+  start_hour: "14:00"
+)
 
-athenes6 = Activity.create(
+activity6 = Activity.create(
   category: "Neighbourhood",
   name: "Monastiraki Neighbourhood",
   description: "Lively flea market neighborhood with lots of small tavernas serving good-value local snacks.",
@@ -235,12 +258,17 @@ athenes6 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 0,
-  rating: 4,
+  rating: 3,
   address: "Monastikari Square",
   photo_title: "monastikari"
     )
 
-trip1.activities << athenes6
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity6.id,
+  date: Date.current + 1,
+  start_hour: "16:30"
+)
 
 athenes7 = Activity.create(
   category: "Points of interest & Lookouts",
@@ -257,12 +285,17 @@ athenes7 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 0,
-  rating: 4.5,
+  rating: 3,
   address: "Mount Lycabettus, Athens 114 71, Greece",
   photo_title: "lycabette"
     )
 
-trip1.activities << athenes7
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity7.id,
+  date: Date.current + 2,
+  start_hour: "09:00"
+)
 
 athenes8 = Activity.create(
   category: "Neighbourhood",
@@ -279,12 +312,17 @@ athenes8 = Activity.create(
     sunday: [{open: "00:00", close: "23:59"}]
   },
   price: 0,
-  rating: 4.5,
+  rating: 4,
   address: "Plaka, Athens, Greece",
   photo_title: "plaka"
     )
 
-trip1.activities << athenes8
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity8.id,
+  date: Date.current + 2,
+  start_hour: "16:15"
+)
 
 athenes9 = Activity.create(
   category: "Museum",
@@ -301,12 +339,18 @@ athenes9 = Activity.create(
     sunday: [{open: "08:00", close: "20:00"}]
   },
   price: 12,
-  rating: 4.5,
+  rating: 3,
   address: "8is Oktovriou 44, Athina 106 82, Greece",
   photo_title: "archaeologicalmuseum"
     )
 
-trip1.activities << athenes9
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: activity9.id,
+  date: Date.current + 2,
+  start_hour: "19:00"
+)
+
 
 athenes10 = Activity.create(
   category: "Historic sites",
@@ -328,8 +372,6 @@ athenes10 = Activity.create(
   photo_title: "panathenaic"
     )
 
-trip1.activities << athenes10
-
 athenes11 = Activity.create(
   category: "Historic sites",
   name: "Herod Atticus Odeon",
@@ -350,7 +392,6 @@ athenes11 = Activity.create(
   photo_title: "herodatticus"
     )
 
-trip1.activities << athenes11
 
 athenes12 = Activity.create(
   category: "Parks & Gardens",
@@ -372,8 +413,6 @@ athenes12 = Activity.create(
   photo_title: "philopappos"
     )
 
-trip1.activities << athenes12
-
 athenes13 = Activity.create(
   category: "Historic sites",
   name: "Temple of Hephaestus",
@@ -394,7 +433,6 @@ athenes13 = Activity.create(
   photo_title: "hephaestus"
     )
 
-trip1.activities << athenes13
 
 athenes14 = Activity.create(
   category: "Parks & Gardens",
@@ -416,7 +454,6 @@ athenes14 = Activity.create(
   photo_title: "nationalgarden"
     )
 
-trip1.activities << athenes14
 
 athenes15 = Activity.create(
   category: "Flea & Street Markets",
@@ -437,8 +474,6 @@ athenes15 = Activity.create(
   address: "Athinas, Athina 105 51, Greece",
   photo_title: "marketmunicipal"
     )
-
-trip1.activities << athenes15
 
 athenes16 = Activity.create(
   category: "Neighbourhood",
@@ -605,8 +640,6 @@ paros1 = Activity.create(
   photo_title: "lefkes"
     )
 
-trip2.activities <<
-
 paros2 = Activity.create(
   category: "Beach",
   name: "Kolymbithres Beach",
@@ -717,9 +750,6 @@ ferry2 = Booking.create(
   )
 
 puts "#{Booking.count} bookings created"
-
-trip2.activities << Activity.first
-trip2.activities << Activity.last
 
 
 puts "Database ready"
