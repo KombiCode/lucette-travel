@@ -1,8 +1,8 @@
 class TasksController < ApplicationController
 
-
   def index
     @tasks = Task.all
+    @tasks_done = Task.where(done: true)
   end
 
   def new
