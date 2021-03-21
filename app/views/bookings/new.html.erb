@@ -1,7 +1,15 @@
-<%= form_for([@trip, @booking]) do |f| %>
-  <%= f.label :category %>
-  <%= f.text_field :category %>
-  <%= f.label :name %>
-  <%= f.number_field :name %>
-  <%= f.submit "Add a booking" %>
-<% end %>
+<div class="border-2 border-black flex items-center justify-center">
+  <%= form_for([@trip, @booking]) do |f| %>
+    <div class="py-5 text-center border-2 border-blue-500 ">
+      <div class="pb-5 border-2 border-yellow-500">
+        <%= f.label :category %>
+        <%= f.text_field :category, class: "border-2 border-gray-500" %>
+      </div>
+      <div class="pb-5 border-2 border-red-500">
+        <%= f.label :name %>
+        <%= f.number_field :name, class: "border-2 border-gray-500" %>
+      </div>
+      <%= f.submit "Book now", class: "bg-green-500 text-white px-4 py-2 rounded-xl" %>
+    </div>
+  <% end %>
+</div>

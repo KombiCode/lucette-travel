@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'hammerjs-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -44,7 +44,7 @@ group :development do
   gem 'bullet'
   gem 'amazing_print'
 end
-# Temporary move Faker gem here 
+# Temporary move Faker gem here
 gem 'faker'
 
 group :test do
