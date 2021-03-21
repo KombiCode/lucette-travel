@@ -6,9 +6,22 @@ class Activity < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
+  def valid_rating
+    vr = rating
+    if vr < 0
+      vr = 0
+    elsif vr > 5
+      vr = 5
+    end
+    vr
+  end
+
   def is_open_tomorrow?
     day_names = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     tomorrow_week_day = Date.current.cwday + 1
+    if tomorrow_week_day > 7
+      tomorrow_week_day = 1
+    end
     opened = !opening_hours[day_names[tomorrow_week_day-1]].empty?
   end
 
