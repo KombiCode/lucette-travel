@@ -12,7 +12,7 @@ class Trip < ApplicationRecord
   end
 
   def day_activities(day_date)
-    trip_activities.day_activities(day_date)
+    trip_activities.day_activities(day_date).order(start_hour: :asc)
   end
 
   def number_of_days
