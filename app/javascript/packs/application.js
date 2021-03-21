@@ -7,6 +7,19 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+// require("hammer.min.js")
+require ("plugins/hammer")
+// = require("hammer.min")
+
+// = require jquery.hammer
+
+// = require angular.hammer
+// = require angular.hammer.min
+
+// = require hammer-time
+// = require hammer-time.min
+
+// = require touch-emulator
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -21,6 +34,7 @@ import "stylesheets/application"
 import "controllers"
 import 'swiper/swiper-bundle.min.css'
 import 'stylesheets/googlefont'
+import 'stylesheets/style_tinder'
 
 // CSS
 import 'mapbox-gl/dist/mapbox-gl.css';

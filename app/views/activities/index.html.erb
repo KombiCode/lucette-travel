@@ -1,15 +1,27 @@
-<div class="flex wrapper-total p-4">
-  <div class="wrapper-tinder">
-    <% @activities.each do |activity| %>
-      <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "rotate-card p-4 rotate-card-transform" %>
-            <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "rotate-card p-4 opacity-2 opacity-30" %>
-    <% end %>
+<div class="wrapper-container">
+  <div class="wrapper-main">
+    <div class="profiles">
+      <% @activities.each do |activity| %>
+        <div class="profile">
+          <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "profile-image rounded-xl" %>
+          <div class="profile-infos">
+            <div class="profile-name">
+              <%= activity.name %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
-</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-<div id="map"
+
+
+<!-- desactivated to faster the loading of tinder app -->
+
+<!-- </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> -->
+<!-- <div id="map"
   style="width: 100%; height: 300px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+</div> -->
 
