@@ -1,16 +1,20 @@
 <div class="container p-10">
-<div class="bg-yellow-500 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center ">
-  <h1 class="text-5xl text-center">Welcome to Lucette Travel !</h1>
+  <div class="text-gray-700 text-center text-3xl">
+    <h1>Welcome to Lucette Travel !</h1>
+  </div>
+  <div>
+    <% @trips.each do |trip| %>
+      <div class="bg-gray-100 rounded-lg text-center text-gray-700 p-2 m-2">
+        <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "" %>
+        <h4><%= link_to trip.name, trip_path(trip) %></h4>
+      </div>
+    <% end %>
+      <div class="container inline-flex justify-around p-2">
+        <a role="button" class="bg-gray-600 hover:bg-red-700 text-white text-sm px-4 py-2 border rounded-full" href="/trips/new">
+    Create event
+        </a>
+      </div>
+  </div>
 </div>
-<ol>
-  <% @trips.each do |trip| %>
-    <li class="bg-yellow-300 rounded-lg text-center text-white color-white text-xl p-4 m-4">
-      <h2 class="text-3xl"><%= link_to trip.name, trip_path(trip) %></h2>
-    </li>
-  <% end %>
-    <li class="w-20 h-20 bg-center bg-yellow-300 rounded-full text-6xl text-center text-white color-white text-3xl shadow-lg mx-auto mt-2">
-    	<%= link_to "+", '#' %>
-    </li>
-</ol>
 
-</div>
+
