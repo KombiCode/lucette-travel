@@ -64,7 +64,7 @@ task1 = Task.create(
 
 task2 = Task.create(
   name: "Passport",
-  description: "Take it for both of us",
+  description: "Take passport for both of us",
   done: true,
   trip: trip1
   )
@@ -103,6 +103,8 @@ activity_categories = ["Points of interest & Lookouts",
   "Churches",
   "Wineyards"
 ]
+
+
 
 puts "Creating Activities"
 
