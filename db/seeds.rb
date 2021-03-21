@@ -189,7 +189,7 @@ TripActivity.create(
   start_hour: "18:20"
 )
 
-activity4 = Activity.create(
+athenes4 = Activity.create(
   category: "Museum",
   name: "Acropolis Museum",
   description: "Modern, uptodate building on the foot of the Acropolis housing important ancient Greek statues and much more.",
