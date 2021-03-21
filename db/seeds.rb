@@ -130,7 +130,7 @@ athenes1 = Activity.create(
 
 TripActivity.create(
   trip_id: trip1.id,
-  activity_id: activity1.id,
+  activity_id: athenes1.id,
   date: Date.current - 1,
   start_hour: "10:00"
 )
@@ -157,7 +157,7 @@ athenes2 = Activity.create(
 
 TripActivity.create(
   trip_id: trip1.id,
-  activity_id: activity2.id,
+  activity_id: athenes2.id,
   date: Date.current,
   start_hour: "13:00"
 )
@@ -184,7 +184,7 @@ athenes3 = Activity.create(
 
 TripActivity.create(
   trip_id: trip1.id,
-  activity_id: activity3.id,
+  activity_id: athenes3.id,
   date: Date.current,
   start_hour: "18:20"
 )
@@ -211,7 +211,7 @@ activity4 = Activity.create(
 
 TripActivity.create(
   trip_id: trip1.id,
-  activity_id: activity4.id,
+  activity_id: athenes4.id,
   date: Date.current + 1,
   start_hour: "11:45"
 )
@@ -238,7 +238,7 @@ athenes5 = Activity.create(
 
 TripActivity.create(
   trip_id: trip1.id,
-  activity_id: activity5.id,
+  activity_id: athenes5.id,
   date: Date.current + 1,
   start_hour: "14:00"
 )
@@ -265,7 +265,7 @@ activity6 = Activity.create(
 
 TripActivity.create(
   trip_id: trip1.id,
-  activity_id: activity6.id,
+  activity_id: athenes6.id,
   date: Date.current + 1,
   start_hour: "16:30"
 )
@@ -292,7 +292,7 @@ athenes7 = Activity.create(
 
 TripActivity.create(
   trip_id: trip1.id,
-  activity_id: activity7.id,
+  activity_id: athenes7.id,
   date: Date.current + 2,
   start_hour: "09:00"
 )
@@ -319,7 +319,7 @@ athenes8 = Activity.create(
 
 TripActivity.create(
   trip_id: trip1.id,
-  activity_id: activity8.id,
+  activity_id: athenes8.id,
   date: Date.current + 2,
   start_hour: "16:15"
 )
@@ -346,7 +346,7 @@ athenes9 = Activity.create(
 
 TripActivity.create(
   trip_id: trip1.id,
-  activity_id: activity9.id,
+  activity_id: athenes9.id,
   date: Date.current + 2,
   start_hour: "19:00"
 )
