@@ -1,23 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :find_activity, only: [:show]
 
-  def index
-    @planned_at = params[:planned_at]
-    @localisation = params[:address]
-    # @localisation_user = Trip.where(city: @trip, params[:planned_at]) # => recuper le lieu ou est le user
-    # @date_user = @localisation_user(params[:planned_at])
-    # return a localisation avec le date en params
-    @activities = Activity.near(@localisation, 100)
-    @markers = @activities.geocoded.map do |activity|
-      {
-        lat: activity.latitude,
-        lng: activity.longitude,
-        infoWindow: render_to_string(partial: "activity_info_window", locals: { activity: activity }),
-        image_url: helpers.asset_url('local_activity.png')
-      }
-    end
-  end
-
   def show
   end
 

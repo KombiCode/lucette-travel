@@ -47,9 +47,9 @@
           <% end %>
           </br></br>
 
-          <% localisation = @trip.day_bookings(index)&.first&.address %>
 
-          <%= link_to "Add Activity", activities_path(params: {planned_at: @trip.date_for_day(index), address: localisation}), class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+
+          <%= link_to "Add Activity", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)), class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
 
           <div class="wrapper-booking">
             <% @trip.day_bookings(index).each do |booking| %>

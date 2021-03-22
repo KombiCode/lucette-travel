@@ -40,10 +40,12 @@ import 'stylesheets/style_tinder'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 // internal imports
-import { initMapbox } from '../plugins/init_mapbox';
+import { initMapbox, showActivity } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initTinder } from '../plugins/init_tinder';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutocomplete();
+  initTinder(showActivity);
 })

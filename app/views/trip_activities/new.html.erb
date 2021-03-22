@@ -2,7 +2,7 @@
   <div class="wrapper-main">
     <div class="profiles">
       <% @activities.each do |activity| %>
-        <div class="profile">
+        <div class="profile" data-activity-id="<%= activity.id %>">
           <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "profile-image rounded-xl" %>
           <div class="profile-infos">
             <div class="profile-name">
@@ -33,6 +33,6 @@
 <div id="map"
   style="width: 100%; height: 450px;"
   data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%#= ENV['MAPBOX_API_KEY'] %>">
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
