@@ -1,11 +1,7 @@
 <div class="wrapper-header flex justify-between items-center pr-4 text-3xl">
   <div class="wrapper-title flex items-end px-2">
     <h1 class="text-6xl text-blue-800 pt-4"><%= @trip.name %></h1>
-    <h2 class="text-xl text-gray-600 pl-3"><%= @trip.country %>, <%= @trip.city %></h2>
   </div>
-  <%= link_to trip_task_path(@trip) do %>
-    <i class="fas fa-tasks"></i>
-  <% end %>
 </div>
 
 <div id="wrapper-day">
@@ -68,7 +64,3 @@
   </div>
 </div>
 <%= render 'shared/footer' %>
-<div class="container inline-flex justify-around">
-  <%= link_to "Bookings", trip_bookings_path(@trip), class: "bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
-  <!-- <%= link_to "Activities", activities_path, class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %> !-->
-</div>
