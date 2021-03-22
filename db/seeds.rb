@@ -769,6 +769,187 @@ There's also kids' play areas, an outdoor gym and much more. A variety of free a
   photo_title: "stavros"
     )
 
+
+athenes22 = Activity.create(
+  category: "Ancient ruins",
+  name: "Theater of Dionysus",
+  description: "Theatre of Dionysus, prototype of Greek theatres, situated on the south side of the Acropolis in Athens, in which all extant classical Greek plays were first presented.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "08:00", close: "17:00"}],
+    tuesday: [{open: "08:00", close: "17:00"}],
+    wednesday: [{open: "08:00", close: "17:00"}],
+    thursday: [{open: "08:00", close: "17:00"}],
+    friday: [{open: "08:00", close: "17:00"}],
+    saturday: [{open: "08:00", close: "17:00"}],
+    sunday: [{open: "08:00", close: "17:00"}]
+  },
+  price: 14.5,
+  rating: 4.5,
+  address: "Mitseon 25, Athènes 105 58 Grèce",
+  photo_title: "dionysus"
+  )
+
+athenes23 = Activity.create(
+  category: "Museum",
+  name: "Byzantine and Christian Museum",
+  description: "The scenography of the Byzantine museum is interesting. The museum is arranged in chronological order and covers a period from the 3rd to the 20th century.",
+  duration: "02:00",
+  opening_hours: {
+    monday: [{open: "10:00", close: "16:00"}],
+    tuesday: [{open: "09:30", close: "17:30"}],
+    wednesday: [{open: "09:30", close: "17:30"}],
+    thursday: [{open: "09:30", close: "17:30"}],
+    friday: [{open: "09:30", close: "17:30"}],
+    saturday: [{open: "09:30", close: "17:30"}],
+    sunday: [{open: "09:30", close: "17:30"}]
+  },
+  price: 4,
+  rating: 4.5,
+  address: "Leof. Vasilissis Sofias 22, Athènes 10675 Grèce",
+  photo_title: "byzantine"
+  )
+
+athenes24 = Activity.create(
+  category: "Ancient ruins",
+  name: "Temple of Athena Nike",
+  description: "The Temple of Athena Nike is the smallest structure on the Athenian Acropolis, but holds no less importance than its neighboring shrines. Built to honor Athena Nike, the goddess of victory, the site upon which the temple was constructed has ceremonial roots that date back to the Bronze Age.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "08:00", close: "17:00"}],
+    tuesday: [{open: "08:00", close: "17:00"}],
+    wednesday: [{open: "08:00", close: "17:00"}],
+    thursday: [{open: "08:00", close: "17:00"}],
+    friday: [{open: "08:00", close: "17:00"}],
+    saturday: [{open: "08:00", close: "17:00"}],
+    sunday: [{open: "08:00", close: "17:00"}]
+  },
+  price: 14.5,
+  rating: 4.5,
+  address: "Acropolis, Dionysiou Areopagitou Acropolis, Athènes 10558 Grèce",
+  photo_title: "athena"
+  )
+
+athenes25 = Activity.create(
+  category: "Ancient ruins",
+  name: "Erechtheion",
+  description: "The Erechtheion is an ancient Greek temple of Ionic order located on the Acropolis of Athens, north of the Parthenon. It is the last monument erected on the Acropolis before the end of the 5th century BC. AD and it is renowned for its architecture both elegant and unusual.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "10:30", close: "16:30"}],
+    tuesday: [{open: "10:30", close: "16:30"}],
+    wednesday: [{open: "10:30", close: "16:30"}],
+    thursday: [{open: "10:30", close: "16:30"}],
+    friday: [{open: "10:30", close: "16:30"}],
+    saturday: [{open: "10:30", close: "16:30"}],
+    sunday: [{open: "10:30", close: "16:30"}]
+  },
+  price: 14.5,
+  rating: 4.5,
+  address: "Acropolis, Athènes 10558 Grèce",
+  photo_title: "erechtheion"
+  )
+
+athenes26 = Activity.create(
+  category: "Ancient ruins",
+  name: "Varvakios Agora",
+  description: "In ancient Greece, the agora first designated the meeting of the whole people or the council of a city for the exercise of their political rights, before designating the public square which bears the same name.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "08:00", close: "17:00"}],
+    tuesday: [{open: "08:00", close: "17:00"}],
+    wednesday: [{open: "08:00", close: "17:00"}],
+    thursday: [{open: "08:00", close: "17:00"}],
+    friday: [{open: "08:00", close: "17:00"}],
+    saturday: [{open: "08:00", close: "17:00"}],
+    sunday: [{open: "08:00", close: "17:00"}]
+  },
+  price: 8.5,
+  rating: 4.5,
+  address: "Adrianou 24, Athènes 105 55 Grèce",
+  photo_title: "agoraa"
+  )
+
+iceland1 = Activity.create(
+  category: "Church",
+  name: "Hallgrimskirkja",
+  description: "Located in the center of Reykjavik, the Hallgrímskirkja is one of the city's best-known landmarks. Its construction was decided in 1937. The architect Guðjón Samúelsson was inspired by the basalt columns, mountains and glaciers of the Icelandic landscape.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "11:00", close: "16:00"}],
+    tuesday: [{open: "11:00", close: "16:00"}],
+    wednesday: [{open: "11:00", close: "16:00"}],
+    thursday: [{open: "11:00", close: "16:00"}],
+    friday: [{open: "11:00", close: "16:00"}],
+    saturday: [{open: "11:00", close: "16:00"}],
+    sunday: [{open: "10:00", close: "16:00"}]
+  },
+  price: 0,
+  rating: 4.5,
+  address: "Hallgrimstorgi 1, Reykjavik 101 Islande",
+  photo_title: "hallgrimskirkja"
+  )
+
+iceland2 = Activity.create(
+  category: "Museum",
+  name: "Perlan",
+  description: "The Perlan, an Icelandic toponym literally meaning “the pearl” in French, is an Icelandic building located in Reykjavik, the country's capital, on Öskjuhlíð hill. It is 25.7 m high. The building is originally a reservoir where hot water of geothermal origin is stored.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "10:00", close: "18:00"}],
+    tuesday: [{open: "10:00", close: "18:00"}],
+    wednesday: [{open: "10:00", close: "18:00"}],
+    thursday: [{open: "10:00", close: "18:00"}],
+    friday: [{open: "10:00", close: "18:00"}],
+    saturday: [{open: "10:00", close: "18:00"}],
+    sunday: [{open: "10:00", close: "18:00"}]
+  },
+  price: 19.00,
+  rating: 4.5,
+  address: "Varmahlid 1 Oskjuhlid, Reykjavik 105 Islande",
+  photo_title: "perlan"
+  )
+
+iceland3 = Activity.create(
+  category: "Water places",
+  name: "Jokulsarlon Lagoon",
+  description: "The Blue Lagoon, in Icelandic Bláa Lónið, is the name of a spa resort located in southwest Iceland, on the Reykjanesskagi, four kilometers from Grindavík and forty minutes southwest of the capital Reykjavik. Its water comes from the Svartsengi geothermal power station.",
+  duration: "03:00",
+  opening_hours: {
+    monday: [{open: "11:00", close: "16:00"}],
+    tuesday: [{open: "11:00", close: "16:00"}],
+    wednesday: [{open: "11:00", close: "16:00"}],
+    thursday: [{open: "11:00", close: "16:00"}],
+    friday: [{open: "11:00", close: "16:00"}],
+    saturday: [{open: "11:00", close: "16:00"}],
+    sunday: [{open: "10:00", close: "16:00"}]
+  },
+  price: 135.00,
+  rating: 5,
+  address: "Skaftafell National Park Route 1, Jokulsarlon 781 Islande",
+  photo_title: "jokulsarlon"
+  )
+
+iceland4 = Activity.create(
+  category: "ice cave",
+  name: "Crystal Blue Ice Cave Adventure",
+  description: "This fascinating ice cave adventure is perfect for travelers keen to experience Iceland's natural wonders.",
+  duration: "05:00",
+  opening_hours: {
+    monday: [{open: "11:00", close: "16:00"}],
+    tuesday: [{open: "11:00", close: "16:00"}],
+    wednesday: [{open: "11:00", close: "16:00"}],
+    thursday: [{open: "11:00", close: "16:00"}],
+    friday: [{open: "11:00", close: "16:00"}],
+    saturday: [{open: "11:00", close: "16:00"}],
+    sunday: [{open: "10:00", close: "16:00"}]
+  },
+  price: 158.00,
+  rating: 5,
+  address: "Glacier Lagoon, Skaftafell National Park Route 1, Jokulsarlon 781 Iceland",
+  photo_title: "crystal"
+  )
+
 paros1 = Activity.create(
   category: "Flea & Street Markets",
   name: "Lefkes",
