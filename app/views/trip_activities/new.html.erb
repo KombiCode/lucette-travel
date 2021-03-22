@@ -19,8 +19,8 @@
   <%= simple_form_for [TripActivity.new], url: root_path, method: :get do |f| %>
     <%= f.input :date, input_html: {value: @planned_at}, html5: true %>
     <%= f.label :start_hour, "Start hour" %>
-    <%#= f.input :start_hour %>
-    <%#= f.input :trip_id, as: :hidden, value: @current_trip %>
+    <%= f.time_select :start_hour %>
+    <%= f.input :trip_id, as: :hidden, value: @current_trip %>
     <%= f.input :activity_id, value: nil %>
     <%= f.submit %>
   <% end %>
