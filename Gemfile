@@ -68,3 +68,6 @@ gem 'dotenv-rails'
 gem 'rails_admin'
 gem 'postmark-rails'
 gem 'geocoder'
+gem 'simple_form-tailwind'
+
+gem "simple_form", "~> 5.1"
