@@ -1,0 +1,32 @@
+<div class="bg-gray-200 p-4 rounded-lg text-gray-700 text-center mt-16 m-4">
+  <%= form_for @trip, url: {action: "create"} do |f| %>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :country %><br />
+      <%= f.text_field :country %>
+    </div>
+        <div class="field">
+      <%= f.label :city %><br />
+      <%= f.text_field :city %>
+    </div>
+        <div class="field">
+      <%= f.label :begin_date %><br />
+      <%= f.text_field :begin_date %>
+    </div>
+    <div class="field">
+      <%= f.label :end_date %><br />
+      <%= f.text_field :end_date %>
+    </div>
+    <div class="field">
+      <%= f.label :photo_title %><br />
+      <%= f.text_field :photo_title %>
+    </div>
+
+    <div class = "button mt-4 text-gray-700">
+    <%= f.submit "Create" %>
+    </div>
+  <% end %>
+</div>
