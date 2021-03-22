@@ -6,22 +6,20 @@
       <i class="fas fa-dollar-sign text-gray-600 text-2xl"></i>
     <% end %>
 
-    <%= link_to "#" do %>
+    <%= link_to trip_bookings_path(@trip) do %>
       <i class="fas fa-map text-gray-600 text-2xl"></i>
     <% end %>
 
-    <%= link_to trip_task_path(@trip) do %>
+    <%= link_to trip_tasks_path(@trip) do %>
       <i class="fas fa-tasks text-gray-700 text-2xl"></i>
     <% end %>
 
     <%= link_to user_session_path do %>
       <i class="far fa-user text-gray-600 text-2xl"></i>
     <% end %>
-
-
   </div>
 </footer>
 
-trip_bookings_path(@trip)
 
 trip_activities_path(@trip)
+

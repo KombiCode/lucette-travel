@@ -3,7 +3,7 @@
     <h1 class="text-6xl text-blue-800 pt-4"><%= @trip.name %></h1>
     <h2 class="text-xl text-gray-600 pl-3"><%= @trip.country %>, <%= @trip.city %></h2>
   </div>
-  <%= link_to trip_task_path(@trip) do %>
+  <%= link_to trip_tasks_path(@trip) do %>
     <i class="fas fa-tasks"></i>
   <% end %>
 </div>

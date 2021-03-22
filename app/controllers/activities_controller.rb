@@ -2,6 +2,8 @@ class ActivitiesController < ApplicationController
   before_action :find_activity, only: [:show]
 
   def index
+        @trip = Trip.find(params[:trip_id])
+
     @activities = Activity.all
     @markers = @activities.geocoded.map do |activity|
       {
