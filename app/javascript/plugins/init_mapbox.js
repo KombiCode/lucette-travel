@@ -1,4 +1,5 @@
 import mapboxgl from '!mapbox-gl';
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const buildMap = (mapElement) => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
@@ -10,8 +11,18 @@ const buildMap = (mapElement) => {
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
-    new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
+  const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+  // Create a HTML element for your custom marker
+    const element = document.createElement('div');
+    element.className = 'marker';
+    element.style.backgroundImage = `url('${marker.image_url}')`;
+    element.style.backgroundSize = 'contain';
+    element.style.width = '25px';
+    element.style.height = '25px';
+    // Pass the element as an argument to the new marker
+    new mapboxgl.Marker(element)
+      .setLngLat([marker.lng, marker.lat])
+      .setPopup(popup)
       .addTo(map);
   });
 };
@@ -29,6 +40,8 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
+    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl }));
   }
 };
 
