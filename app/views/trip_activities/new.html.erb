@@ -19,20 +19,17 @@
   <%= simple_form_for [TripActivity.new], url: root_path, method: :get do |f| %>
     <%= f.input :date, input_html: {value: @planned_at}, html5: true %>
     <%= f.label :start_hour, "Start hour" %>
-    <%= f.time_select :start_hour %>
+    <%= f.time_select :start_hour, minute_step: 15 %>
     <%= f.input :trip_id, as: :hidden, value: @current_trip %>
     <%= f.input :activity_id, value: nil %>
     <%= f.submit %>
   <% end %>
 <!-- </div> -->
-
-  <%= render 'shared/footer' %>
-<!-- desactivated to faster the loading of tinder app -->
-
-<!-- </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> -->
-<div id="map"
-  style="width: 100%; height: 450px;"
+<div class="wrapper-container" id="map"
+  style="width: 100%; height: 250px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
+<%= render 'shared/footer' %>
 
