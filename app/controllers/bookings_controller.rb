@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  # before_action :set_booking, only: [:show]
+  #before_action :set_booking, only: [:show]
 
   def index
     @trip = Trip.find(params[:trip_id])
