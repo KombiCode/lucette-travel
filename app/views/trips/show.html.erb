@@ -1,11 +1,7 @@
 <div class="wrapper-header flex justify-between items-center pr-4 text-3xl">
   <div class="wrapper-title flex items-end px-2">
     <h1 class="text-6xl text-blue-800 pt-4"><%= @trip.name %></h1>
-    <h2 class="text-xl text-gray-600 pl-3"><%= @trip.country %>, <%= @trip.city %></h2>
   </div>
-  <%= link_to trip_tasks_path(@trip) do %>
-    <i class="fas fa-tasks"></i>
-  <% end %>
 </div>
 
 <div id="wrapper-day">
@@ -14,9 +10,11 @@
       <!-- Should have n swiper-slide corresponding to the number of days of the trip -->
       <% @trip.number_of_days.times do |index| %>
         <div class="swiper-slide px-4">
-          <h5><%= "Day ##{index + 1} : #{@trip.date_for_day(index)}" %></h4>
+
+          <h5><%= "Day ##{index + 1} : #{@trip.date_for_day(index)}" %></h5>
+
+
           <% @trip.day_activities(@trip.date_for_day(index)).each do |trip_activity| %>
-            <!-- <div class="wrapper-activity border-black shadow-md rounded-2xl py-4"> -->
               <% activity = trip_activity.activity %>
               <%= link_to activity_path(activity.id), class: "" do %>
 
@@ -30,21 +28,25 @@
                   </div>
                 </div>
 
-
-                <div class="">
-                  <!-- As many filled stars (up to five) as activity rating -->
-                  <% activity.valid_rating.times do %>
-                    <i class="fas fa-star"></i>
-                  <% end %>
-                  <!-- As many empty stars as five - activity rating -->
-                  <% (5 - activity.valid_rating).times do %>
-                    <i class="far fa-star"></i>
-                  <% end %>
+                  <div class="">
+                    <!-- As many filled stars (up to five) as activity rating -->
+                    <% activity.valid_rating.times do %>
+                      <i class="fas fa-star"></i>
+                    <% end %>
+                    <!-- As many empty stars as five - activity rating -->
+                    <% (5 - activity.valid_rating).times do %>
+                      <i class="far fa-star"></i>
+                    <% end %>
                 </div>
 
-              <% end %>
-            <!-- </div> -->
+            <% end %>
           <% end %>
+          </br></br>
+
+
+
+          <%= link_to "Add Activity", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)), class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
+
           <div class="wrapper-booking">
             <% @trip.day_bookings(index).each do |booking| %>
               <%= link_to trip_booking_path(@trip.id, booking.id) do %>
@@ -54,13 +56,11 @@
               <% end %>
             <% end %>
           </div>
+
         </div>
       <% end %>
+
     </div>
   </div>
 </div>
 <%= render 'shared/footer' %>
-<div class="container inline-flex justify-around">
-  <%= link_to "Bookings", trip_bookings_path(@trip), class: "bg-red-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
-  <%= link_to "Activities", activities_path, class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
-</div>

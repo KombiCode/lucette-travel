@@ -1,20 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :find_activity, only: [:show]
 
-  def index
-        @trip = Trip.find(params[:trip_id])
-
-    @activities = Activity.all
-    @markers = @activities.geocoded.map do |activity|
-      {
-        lat: activity.latitude,
-        lng: activity.longitude,
-        infoWindow: render_to_string(partial: "activity_info_window", locals: { activity: activity }),
-        image_url: helpers.asset_url('local_activity.png')
-      }
-    end
-  end
-
   def show
   end
 

@@ -1,12 +1,21 @@
-let profiles = document.querySelectorAll('.profile');
 
 const maxAngle = 42;
 const smooth = 0.3;
 const threshold = 30;
 const thresholdMatch = 90;
-profiles.forEach(setupDragAndDrop);
 
-function setupDragAndDrop(profile) {
+const activityUpdate = (callbackNewActivity) => {
+  const elements = document.querySelectorAll('.profile:not(.profile--next)')
+  if (elements.length) {
+    const lastElement = elements[elements.length - 1]
+    console.log(lastElement)
+    const activityId = lastElement.dataset.activityId
+    document.querySelector('#trip_activity_activity_id').value = activityId
+    callbackNewActivity(activityId)
+  }
+}
+
+const setupDragAndDrop = (profile, callbackNewActivity) =>{
   const hammertime = new Hammer(profile);
 
   hammertime.on('pan', function (e) {
@@ -31,15 +40,31 @@ function setupDragAndDrop(profile) {
       profile.style.transform = ``;
       if (posX > thresholdMatch) {
         profile.classList.add('profile--match');
-        window.open('http://localhost:3000/trips/40/bookings/new');
+        // recuperer id de lactivite selectionnbnee
+
+        // mettre cet id dans
+        // window.open('http://localhost:3000/trips/40/bookings/new');
+        console.log("OK")
       } else if (posX < -thresholdMatch) {
         profile.classList.add('profile--next');
+        console.log("NOK")
+        activityUpdate(callbackNewActivity)
       } else {
         profile.classList.add('profile--back');
       }
     }
   });
 }
+
+const initTinder = (callbackNewActivity) => {
+  let profiles = document.querySelectorAll('.profile');
+  profiles.forEach((profile) => {
+    setupDragAndDrop(profile, callbackNewActivity)
+  });
+  activityUpdate(callbackNewActivity)
+}
+
+export { initTinder }
 // <div class="card"
   // data-offer-id="<%= offer.id %>"
   // data-user-id="<%= current_user.id %>"
