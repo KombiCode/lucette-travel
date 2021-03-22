@@ -17,15 +17,23 @@ h3 {
   font-size: 1.5em;
 }
 
+h4 {
+  color: white;
+  font-family: Halant;
+  font-weight: 500;
+  font-size: 2rem;
+  text-shadow: 0 0 10px black;
+}
+
 #wrapper-day {
   /*height: 500px;*/
   width: 100vw;
 }
 
-.wrapper-activity {
+/*.wrapper-activity {
   height: 250px;
   width: auto;
-}
+}*/
 
 .wrapper-image {
   width: auto;

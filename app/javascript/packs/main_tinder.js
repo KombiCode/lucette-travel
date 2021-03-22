@@ -31,8 +31,7 @@ function setupDragAndDrop(profile) {
       profile.style.transform = ``;
       if (posX > thresholdMatch) {
         profile.classList.add('profile--match');
-        // console.log("coucou");
-        // windows.open(new_trip_booking_path);
+        window.open('http://localhost:3000/trips/40/bookings/new');
       } else if (posX < -thresholdMatch) {
         profile.classList.add('profile--next');
       } else {
@@ -41,3 +40,18 @@ function setupDragAndDrop(profile) {
     }
   });
 }
+// <div class="card"
+  // data-offer-id="<%= offer.id %>"
+  // data-user-id="<%= current_user.id %>"
+// </div>
+
+  // const fetchingCard = (card) => {
+  //   if (card.classList.contains("profile--match")) {
+      // Rails.ajax({
+      //   url: `offers/${card.dataset.offerId}/bookings`,
+      //   type: "POST",
+      //   success: function(data) {console.log(data)},
+      //   error: function(data) {}
+      // })
+    // }
+  // }
