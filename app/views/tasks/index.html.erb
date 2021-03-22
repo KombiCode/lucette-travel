@@ -1,5 +1,35 @@
-<ul>
-  <% @tasks.each do |task| %>
-    <li><%= link_to task.name, task_path(task) %></li>
-  <% end %>
-</ul>
+<div class="container ">
+  <main class="p-4 shadow-lg text-gray-700 text-center mt-2">
+      <div class="flex flex-col m-auto pb-4">
+          <div class="justify-around flex flex-row items-baseline">
+              <h1 class="underline text-lg mt-2 ml-3">To do list</h1>
+          </div>
+
+      <% Task.all.each do |task| %>
+          <label class="custom-label flex mt-2 ml-3">
+              <div class="bg-white shadow w-6 h-6 p-1 flex  mr-2">
+                  <input type="checkbox" class="hidden" checked>
+                  <svg class="hidden w-4 h-4 text-green-600 pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
+              </div>
+                <p class="text-justify mx-3"><%= task.description %></p>
+          </label>
+          <% end %>
+
+          <div class="mt-4 ">
+           <div data-controller="tasklist">
+              <form data-action="submit->tasklist#newElement">
+                <input type="text" data-target="tasklist.myinput" placeholder="Title..." tabindex="1">
+                <input type="submit" value="Add" class="addBtn" tabindex="2" >
+              </form>
+            </div>
+          </div>
+    </div>
+  </main>
+  <style>
+      .custom-label input:checked + svg {
+          display: block !important;
+      }
+  </style>
+</div>
+
+  <%= render 'shared/footer' %>
