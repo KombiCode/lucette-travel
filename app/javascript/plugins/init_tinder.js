@@ -4,13 +4,15 @@ const smooth = 0.3;
 const threshold = 30;
 const thresholdMatch = 90;
 
-const actityUpdate = (callbackNewActivity) => {
+const activityUpdate = (callbackNewActivity) => {
   const elements = document.querySelectorAll('.profile:not(.profile--next)')
-  const lastElement = elements[elements.length - 1]
-  console.log(lastElement)
-  const activityId = lastElement.dataset.activityId
-  document.querySelector('#trip_activity_activity_id').value = activityId
-  callbackNewActivity(activityId)
+  if (elements.length) {
+    const lastElement = elements[elements.length - 1]
+    console.log(lastElement)
+    const activityId = lastElement.dataset.activityId
+    document.querySelector('#trip_activity_activity_id').value = activityId
+    callbackNewActivity(activityId)
+  }
 }
 
 const setupDragAndDrop = (profile, callbackNewActivity) =>{
@@ -46,7 +48,7 @@ const setupDragAndDrop = (profile, callbackNewActivity) =>{
       } else if (posX < -thresholdMatch) {
         profile.classList.add('profile--next');
         console.log("NOK")
-        actityUpdate(callbackNewActivity)
+        activityUpdate(callbackNewActivity)
       } else {
         profile.classList.add('profile--back');
       }
@@ -59,7 +61,7 @@ const initTinder = (callbackNewActivity) => {
   profiles.forEach((profile) => {
     setupDragAndDrop(profile, callbackNewActivity)
   });
-  actityUpdate(callbackNewActivity)
+  activityUpdate(callbackNewActivity)
 }
 
 export { initTinder }
