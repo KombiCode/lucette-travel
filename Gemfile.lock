@@ -236,6 +236,12 @@ GEM
       redis (>= 4.2.0)
     sidekiq-failures (1.0.0)
       sidekiq (>= 4.0.0)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
+    simple_form-tailwind (0.1.0)
+      railties (>= 4.0, <= 7)
+      simple_form (>= 5.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -307,6 +313,8 @@ DEPENDENCIES
   selenium-webdriver
   sidekiq
   sidekiq-failures (~> 1.0)
+  simple_form (~> 5.1)
+  simple_form-tailwind
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

@@ -1167,7 +1167,7 @@ hotel1 = Booking.create(
   begin_date: "24/03/2021",
   end_date: "26/03/2021",
   price: 152,
-  address: " Theofilopoulou 18, Kallirois Avenue, 11743, Athenes, 11743, Greece",
+  address: "18, Kallirois Avenue, 11743, Athenes, Greece",
   trip: trip1,
   photo_title: "b4bhotel"
   )

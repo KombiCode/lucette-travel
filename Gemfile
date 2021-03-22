@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'hammerjs-rails'
+gem 'simple_form-tailwind'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -68,3 +69,5 @@ gem 'dotenv-rails'
 gem 'rails_admin'
 gem 'postmark-rails'
 gem 'geocoder'
+
+gem "simple_form", "~> 5.1"
