@@ -1,28 +1,15 @@
-<div class="bg-blue-500 w-screen">
-  <nav >
-    <ul class="flex justify-between p-4">
-      <li>
-        <%= link_to root_path do %>
-          <i class="far fa-money-bill-alt text-white text-2xl"></i>
-        <% end %>
-      </li>
+ <nav class="flex flex-col w-screen sticky top-0 z-10">
+  <div class="fpy-5 bg-white text-gray-700 p-3">
+      <%= link_to root_path do %>
+        <i class="far fa-money-bill-alt text-gray text-2xl"></i>
+      <% end %>
+  </div>
+</nav>
 
-      <div class="flex">
-        <li>
-          <%= link_to root_path do %>
-            <i class="far fa-bell text-white pr-7 text-2xl"></i>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to user_session_path do %>
-            <i class="far fa-user text-white text-2xl"></i>
-          <% end %>
-        </li>
+<%= #render 'shared/footer' %>
 
-      </div>
-    </ul>
-  </nav>
-</div>
+<!-- This is an example component -->
+
 
 <!-- Don't remove, it's use for javascript notification if we use it -->
 
