@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #F5F5F5;
+}
+
 h1 {
   font-family: Halant;
   font-weight: 700;
@@ -23,6 +27,12 @@ h4 {
   font-weight: 500;
   font-size: 2rem;
   text-shadow: 0 0 10px black;
+}
+
+h5 {
+  font-family: Halant;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
 #wrapper-day {
@@ -46,10 +56,9 @@ h4 {
 }
 
 .rotate-card {
-  /*transform-origin: bottom left 20px;*/
   position: absolute;
   top: 50;
-  left: 0
+  left: 0;
 }
 
 .rotate-card-transform {
@@ -57,3 +66,14 @@ h4 {
   transform-origin: 20% 40%;
 }
 
+.shadow-custom {
+  text-shadow: 0 0 5px black;
+}
+
+.shadow-custom-card {
+  box-shadow: 0 3px 5px gray;
+}
+
+.shadow-custom-navbar {
+  box-shadow: 0 5px 10px gray;
+}

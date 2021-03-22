@@ -1,4 +1,4 @@
-<div class="wrapper-header flex justify-between items-center pr-4 text-3xl">
+<div class="wrapper-header flex justify-between items-center pr-4 text-3xl mt-3">
   <div class="wrapper-title flex items-end px-2">
     <h1 class="text-6xl text-blue-800 pt-4"><%= @trip.name %></h1>
   </div>
@@ -11,39 +11,46 @@
       <% @trip.number_of_days.times do |index| %>
         <div class="swiper-slide px-4">
 
-          <h5><%= "Day ##{index + 1} : #{@trip.date_for_day(index)}" %></h5>
-
+          <h5 class="text-center"><%= "Day #{index + 1}: #{@trip.date_for_day(index)}" %></h5>
 
           <% @trip.day_activities(@trip.date_for_day(index)).each do |trip_activity| %>
               <% activity = trip_activity.activity %>
               <%= link_to activity_path(activity.id), class: "" do %>
 
-                <div class="wrapper-image relative justify-between rounded-2xl shadow">
+                <div class="wrapper-image relative justify-between rounded-2xl mb-6 shadow-custom-card">
                   <% if activity.photo_title.present? %>
-                    <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "" %>
+                    <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "static" %>
                   <% end %>
-                  <div class="flex absolute top-3 left-3">
-                    <h4><%= activity.name %></h4>
-                    <%= show_start_hour(trip_activity.start_hour) %>
-                  </div>
-                </div>
 
-                  <div class="">
-                    <!-- As many filled stars (up to five) as activity rating -->
-                    <% activity.valid_rating.times do %>
+                    <div class="border-2 border-white w-32 h-14 absolute top-0 right-0 -m-1 -mr-2 rounded-bl-2xl bg-gray-200 bg-opacity-40">
+                    </div>
+                    <div class="border-2 border-white w-32 h-12 absolute bottom-0 -m-1 rounded-tr-2xl"> <!-- bg-gray-200 bg-opacity-40 -->
+                    </div>
+                  <div class="box-content container absolute top-3 flex justify-between"> <!-- --------- Name + Hour --------- -->
+                    <div class="leading-8 w-60 pl-3">
+                      <h4><%= activity.name %></h4>
+                    </div>
+
+                    <div class="leading-8 text-white pr-3">
+                      <h4><%= show_start_hour(trip_activity.start_hour) %></h4>
+                    </div>
+
+                  </div>
+
+                  <div class="flex absolute bottom-3 left-3 text-white shadow-custom"> <!-- ---------- Stars ----------- -->
+                    <% activity.valid_rating.times do %> <!-- As many filled stars (up to five) as activity rating -->
                       <i class="fas fa-star"></i>
                     <% end %>
-                    <!-- As many empty stars as five - activity rating -->
-                    <% (5 - activity.valid_rating).times do %>
+                    <% (5 - activity.valid_rating).times do %> <!-- As many empty stars as five - activity rating -->
                       <i class="far fa-star"></i>
                     <% end %>
+                  </div>
+
                 </div>
 
             <% end %>
           <% end %>
           </br></br>
-
-
 
           <%= link_to "Add Activity", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)), class: "bg-green-400 rounded-md p-3 text-white hover:bg-opacity-40 shadow-md" %>
 
@@ -63,4 +70,5 @@
     </div>
   </div>
 </div>
+
 <%= render 'shared/footer' %>
