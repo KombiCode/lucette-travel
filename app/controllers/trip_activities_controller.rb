@@ -10,6 +10,7 @@ class TripActivitiesController < ApplicationController
     @activities = Activity.near(@localisation, 100)
     @markers = @activities.geocoded.map do |activity|
       {
+        id: activity.id,
         lat: activity.latitude,
         lng: activity.longitude,
         infoWindow: render_to_string(partial: "activities/activity_info_window", locals: { activity: activity }),
