@@ -31,6 +31,9 @@ function setupDragAndDrop(profile) {
       profile.style.transform = ``;
       if (posX > thresholdMatch) {
         profile.classList.add('profile--match');
+        // recuperer id de lactivite selectionnbnee
+
+        // mettre cet id dans
         window.open('http://localhost:3000/trips/40/bookings/new');
       } else if (posX < -thresholdMatch) {
         profile.classList.add('profile--next');

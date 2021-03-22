@@ -2,7 +2,12 @@ class ActivitiesController < ApplicationController
   before_action :find_activity, only: [:show]
 
   def index
-    @activities = Activity.all
+    @planned_at = params[:planned_at]
+    @localisation = params[:address]
+    # @localisation_user = Trip.where(city: @trip, params[:planned_at]) # => recuper le lieu ou est le user
+    # @date_user = @localisation_user(params[:planned_at])
+    # return a localisation avec le date en params
+    @activities = Activity.near(@localisation, 100)
     @markers = @activities.geocoded.map do |activity|
       {
         lat: activity.latitude,
