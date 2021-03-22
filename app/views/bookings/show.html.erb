@@ -1,4 +1,7 @@
-<div> 
-  <h4> Show for booking : <%= "#{@booking.name} (#{@booking.category})"  %> </h4>
-  <p> <%= "#{@booking.begin_date}, #{@booking.end_date}" %>
+<div class="container">
+    <h4> <%= "#{@booking.name} (#{@booking.category})"  %> </h4>
+    <p> <%= "#{@booking.begin_date}, #{@booking.end_date}" %>
+    <div class="bg-gray-100 rounded-lg text-center text-gray-700 p-2 m-2">
+      <%= link_to "Back", trip_path(@booking.trip) %>
+    </div>
 </div>
