@@ -1,20 +1,21 @@
-<div class="container p-10">
-  <div class="text-gray-700 text-center text-3xl">
+<div class="container flex-row mt-2">
+  <div class="text-gray-700 text-center text-2xl">
     <h1>Welcome to Lucette Travel !</h1>
   </div>
   <div>
     <% @trips.each do |trip| %>
-      <div class="bg-gray-100 rounded-lg text-center text-gray-700 p-2 m-2">
+      <div class="w-80 h-58 bg-gray-100 rounded-lg text-center text-gray-500 p-2 m-4">
         <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "" %>
-        <h4><%= link_to trip.name, trip_path(trip) %></h4>
+        <h6><%= link_to trip.name.upcase, trip_path(trip) %> </br>
+        From <%= trip.begin_date %> to <%= trip.begin_date %>
+        </h6>
       </div>
     <% end %>
-      <div class="container inline-flex justify-around p-2">
-        <a role="button" class="bg-gray-600 hover:bg-red-700 text-white text-sm px-4 py-2 border rounded-full" href="/trips/new">
-    Create event
-        </a>
-      </div>
+  </div>
+  <div class="container inline-flex justify-around">
+    <a role="button" class="bg-gray-600 hover:bg-red-700 text-white text-sm px-4 py-2 border rounded-full" href="/trips/new">
+Create event
+    </a>
   </div>
 </div>
-
 
