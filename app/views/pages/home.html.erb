@@ -2,7 +2,7 @@
   <div class="text-gray-700 text-center text-2xl p-4">
     <h1>Welcome to Lucette Travel !</h1>
   </div>
-  <div>
+  <div class="mx-8">
     <% @trips.each do |trip| %>
       <div class="w-80 h-58 bg-gray-100 rounded-lg text-center text-gray-500 p-2 m-4">
         <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "" %>
@@ -18,6 +18,6 @@ Create event
     </a>
   </div>
      <%= link_to user_session_path do %>
-      <i class="far fa-user text-gray-600 text-2xl"></i>
+      <i class="far fa-user text-gray-600 absolute right-2.5 m-4 bottom-0 text-2xl"></i>
     <% end %>
 </div>
