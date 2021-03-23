@@ -10,7 +10,7 @@ const activityUpdate = (callbackNewActivity) => {
     const lastElement = elements[elements.length - 1]
     console.log(lastElement)
     const activityId = lastElement.dataset.activityId
-    document.querySelector('#trip_activity_activity_id').value = activityId
+    document.querySelector('#trip_activity_activity_id').value = activityId  // <---- Comprend pas cette ligne. activityId = activityId.value
     callbackNewActivity(activityId)
   }
 }
@@ -40,11 +40,10 @@ const setupDragAndDrop = (profile, callbackNewActivity) =>{
       profile.style.transform = ``;
       if (posX > thresholdMatch) {
         profile.classList.add('profile--match');
-        // recuperer id de lactivite selectionnbnee
-
-        // mettre cet id dans
-        // window.open('http://localhost:3000/trips/40/bookings/new');
-        console.log("OK")
+        const tinderList = document.querySelector('.wrapper-container-tinder');
+        tinderList.classList.add('invisible');
+        const tinderForm = document.querySelector('.hidden');
+        tinderForm.classList.remove('hidden');
       } else if (posX < -thresholdMatch) {
         profile.classList.add('profile--next');
         console.log("NOK")

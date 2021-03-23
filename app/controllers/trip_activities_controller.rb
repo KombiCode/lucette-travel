@@ -9,23 +9,35 @@ class TripActivitiesController < ApplicationController
     @booking = @trip.bookings.find_by(begin_date: params[:planned_at], category: 'Hotel') || @trip.bookings.find_by(category: 'Hotel')
     @localisation = @booking&.address
 
+    @tripActivity = TripActivity.new
+    # @tripActivity.trip = @trip
+     # <---- A mettre ?
     # ON DECIDE DE PÉTÉ SI Y A PAS DE RESERVATION CE JOUR LÀ
     @activities = Activity.near(@localisation, 100)
+
+    # @not_done_activities = not_done(@activities, @trip)
+
+
     @markers = @activities.geocoded.map do |activity|
-      {
-        id: activity.id,
-        lat: activity.latitude,
-        lng: activity.longitude,
-        infoWindow: render_to_string(partial: "activities/activity_info_window", locals: { activity: activity }),
-        image_url: helpers.asset_url('local_activity.png')
-      }
+
+        {
+          id: activity.id,
+          lat: activity.latitude,
+          lng: activity.longitude,
+          infoWindow: render_to_string(partial: "activities/activity_info_window", locals: { activity: activity }),
+          image_url: helpers.asset_url('local_activity.png')
+        }
+
     end
   end
 
   def create
-    @TripActivity = TripActivity.create(trip_activity_params)
-    if @TripActivity.save
-      redirect_to activities_path
+
+    # @tripActivity = TripActivity.create(activity_id: @activity ,trip_id: @trip, start_hour: ,date: )
+    @tripActivity = TripActivity.new(trip_activity_params)
+    @tripActivity.trip = @trip
+    if @tripActivity.save
+      redirect_to trip_path(@trip)
     else
       render :new
     end
@@ -33,8 +45,21 @@ class TripActivitiesController < ApplicationController
 
   private
 
+  # def not_done(activities, trip)
+  #   trip_activities = TripActivity.where(trip_id: trip)
+  #   result = []
+  #   trip_activities.each do |trip_activity|
+  #     activities.each do |activity|
+  #       if trip_activity.activity.id != activity.id
+  #         result << activity
+  #       end
+  #     end
+  #   result
+  #   end
+  # end
+
   def trip_activity_params
-    params.require(:tripActivity).permit(:date, :start_hour)
+    params.require(:trip_activity).permit(:date, :start_hour, :activity_id, :trip_id)
   end
 
   def set_trip
