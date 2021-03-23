@@ -24,6 +24,9 @@ class Trip < ApplicationRecord
   end
 
   def day_bookings(index)
-    day_bookings = bookings.select { |b| b.begin_date.to_date ==  date_for_day(index)}
+    day_bookings = bookings.select { |b|
+      (date_for_day(index) >= b.begin_date.to_date) &&
+      (date_for_day(index) <= b.end_date.to_date)
+    }
   end
 end
