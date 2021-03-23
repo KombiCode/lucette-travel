@@ -18,16 +18,20 @@
       <div class="flex items-center justify-center burger" id="burger"> <!-- Contenu -->
         <ul>
           <li>
-            <div class="border-2 border-red-500">
+            <div class="">
               <% @trips.each do |trip| %>
-                <div class="wrapper-card-burger border-2 border-green-500 h-44 text-center mx-4 mb-6">
+                <div class="wrapper-card-burger relative shadow-custom-card h-44 text-center mx-4 mb-10">
                   <%= link_to trip_path(trip) do %>
-                    <div class="wrapper-image relative justify-between rounded-2xl mb-6 shadow-custom-card">
+                    <!-- <div class="box-content relative rounded-2xl mb-6  border-2 border-yellow-500"> -->
                       <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "rounded-lg" %>
-                      <div class="text-white box-content container flex flex-col ">
-                        <h5><%= trip.name.upcase %></h5>
-                        <p>From <%= trip.begin_date %> to <%= trip.end_date %></p>
-                      </div>
+                        <div class="box-content container absolute top-3 content-between">
+                          <div class="text-white">
+                            <h5><%= trip.name.upcase %></h5>
+                          </div>
+                          <div>
+                            <p>From <%= trip.begin_date %> to <%= trip.end_date %></p>
+                          </div>
+                        </div>
                     </div>
                   <% end %>
                 </div>
@@ -36,6 +40,7 @@
           </li>
         </ul>
       </div>
+      <!-- End Burger menu -->
     </li>
   </ul>
 </nav>
