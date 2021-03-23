@@ -4,20 +4,24 @@
 }
 
 body {
-  background-color: #F5F5F5;
+  background-color: #292828;
 }
 
+
 h1 {
+  color: white;
   font-family: Halant;
   font-weight: 700;
 }
 
 h2 {
+  color: white;
   font-family: Halant;
   font-weight: 300;
 }
 
 h3 {
+  color: white;
   font-size: 1.5em;
 }
 
@@ -25,14 +29,22 @@ h4 {
   color: white;
   font-family: Halant;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-shadow: 0 0 10px black;
 }
 
 h5 {
+  color: white;
   font-family: Halant;
   font-weight: 600;
   font-size: 1.3rem;
+}
+
+h6 {
+  color: white;
+  font-family: Halant;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 #wrapper-day {
