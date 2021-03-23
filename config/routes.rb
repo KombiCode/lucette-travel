@@ -8,9 +8,9 @@ Rails.application.routes.draw do
     resources :trip_activities, only: [ :new, :create ] #:index
     resources :bookings, only: [ :new, :create, :index, :show ]
     resources :tasks, only: [ :new, :create, :index ]
-    resources :activities, only: [:index]
+    resources :activities, only: [:index, :show]
   end
   resources :tasks, only: [ :show ]
 
-  resources :activities, only: [ :new, :create, :index, :show ]
+  resources :activities, only: [ :new, :create ]
 end
