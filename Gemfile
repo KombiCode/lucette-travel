@@ -44,6 +44,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'bullet'
   gem 'amazing_print'
+  gem 'letter_opener'
 end
 # Temporary move Faker gem here
 gem 'faker'
@@ -69,6 +70,5 @@ gem 'dotenv-rails'
 gem 'rails_admin'
 gem 'postmark-rails'
 gem 'geocoder'
-gem 'simple_form-tailwind'
 
 gem "simple_form", "~> 5.1"
