@@ -6,7 +6,10 @@ class PagesController < ApplicationController
       format.html
       # TODO put in the json info we need
       # For now just a test (not yet displayed anyway)
-      if (Booking.last.name == "KEF")
+
+      @test = User.first.firstname
+
+      if (Booking.last.name == "Flight LYS - KEF to store")
         format.json { render json: { newbooking: Booking.last.name } }
       elsif 
         format.json  { render json: { newbooking: "None"}  }    
