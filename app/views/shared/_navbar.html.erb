@@ -1,7 +1,10 @@
  <nav class="flex flex-col w-screen sticky top-0 z-10">
-  <div class="fpy-5 bg-white text-gray-700 p-3 shadow-custom-navbar">
-      <%= link_to root_path do %>
-        <i class="far fa-money-bill-alt text-gray text-2xl"></i>
-      <% end %>
+  <div class="fpy-5 flex justify-between bg-white text-gray-700 p-3 shadow-custom-navbar">
+    <%= link_to root_path do %>
+      <h5 class="font-bold mt-1 mb-1 text-gray-600 mx-4">Lucette-Travel</h5>
+    <% end %>
+    <%= link_to "#" do %>
+        <i class="far fa-bell text-gray text-2xl text-gray-600 mx-4"></i>
+    <% end %>
   </div>
 </nav>
