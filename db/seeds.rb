@@ -218,8 +218,8 @@ athenes4 = Activity.create(
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: athenes4.id,
-  date: Date.current + 1,
-  start_hour: "11:00"
+  date: Date.current - 1,
+  start_hour: "12:00"
 )
 
 athenes5 = Activity.create(
@@ -269,13 +269,6 @@ athenes6 = Activity.create(
   photo_title: "monastikari"
     )
 
-TripActivity.create(
-  trip_id: trip1.id,
-  activity_id: athenes6.id,
-  date: Date.current + 1,
-  start_hour: "16:30"
-)
-
 athenes7 = Activity.create(
   category: "Points of interest & Lookouts",
   name: "Lycabettus Hill",
@@ -322,6 +315,13 @@ athenes8 = Activity.create(
   address: "Plaka, Athens, Greece",
   photo_title: "plaka"
     )
+
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: athenes8.id,
+  date: Date.current + 1,
+  start_hour: "16:30"
+)
 
 TripActivity.create(
   trip_id: trip1.id,
@@ -478,14 +478,13 @@ Begun in the 6th century BC by Peisistratos, the temple was abandoned for lack o
   rating: 4,
   address: "Leoforos Vasilissis Olgas Plaka Athens Greece",
   photo_title: "zeus"
-    )
-
+)
 
 athenes16 = Activity.create(
   category: "Historic sites",
   name: "Ancient Agora of Athens",
-  description: "These ruins, located in the heart of modern Athens, were once the site of the marketplace in ancient times, a political, cultural and economic center of the ancient world. ",
-  duration: "00:30",
+  description: "These ruins, located in the heart of modern Athens, were once the site of the marketplace in ancient times, a political, cultural and economic center of the ancient world. In ancient Greece, the agora first designated the meeting of the whole people or the council of a city for the exercise of their political rights, before designating the public square which bears the same name. ",
+  duration: "01:00",
   opening_hours: {
     monday: [{open: "11:00", close: "19:30"}],
     tuesday: [{open: "08:00", close: "19:30"}],
@@ -500,7 +499,6 @@ athenes16 = Activity.create(
   address: "Adrianou 24, Athens 105 55 Greece",
   photo_title: "agora"
     )
-
 
 athenes17 = Activity.create(
   category: "Museum",
@@ -585,9 +583,10 @@ There's also kids' play areas, an outdoor gym and much more. A variety of free a
     )
 
 athenes21 = Activity.create(
-  category: "Parks & Gardens",
-  name: "Philopappos Hill",
-  description: "This hill is a favorite for weekending Athenians who come here to picnic and admire the breathaking views.",
+  category: "Points of interest & Lookouts",
+  name: "Stavros Niarchos Park",
+  description: "Athens is short on green spaces, so this vast seaside park is a blessing. Covering a man-made slope that incorporates the roof of the Stavros Niarchos Foundation Cultural Center, this 21-hectare park has been sustainably designed with paths cutting through plantings of lavender, olive trees and other Mediterranean flora.
+There's also kids' play areas, an outdoor gym and much more. A variety of free activities are laid on, but you can simply sit in a chair and soak up the sunshine.",
   duration: "01:30",
   opening_hours: {
     monday: [{open: "00:00", close: "23:59"}],
@@ -600,174 +599,169 @@ athenes21 = Activity.create(
   },
   price: 0,
   rating: 4.5,
-  address: "Athens 105 55 Greece",
-  photo_title: "philopappos"
+  address: " Leof. Andrea Siggrou 364, Kallithea 176 74, Greece",
+  photo_title: "stavros"
     )
 
-paros1 = Activity.create(
-  category: "Flea & Street Markets",
-  name: "Lefkes",
-  description: "It is the most mountainous village of Paros and the most verdurous one. Lefkes was the first capital of Paros. The village is located under a pinewood on the hill. A walk around its beautiful narrow streets with the white joints will impress you.",
-  duration: "02:00",
-  opening_hours: {
-    monday: [{open: "00:00", close: "23:59"}],
-    tuesday: [{open: "00:00", close: "23:59"}],
-    wednesday: [{open: "00:00", close: "23:59"}],
-    thursday: [{open: "00:00", close: "23:59"}],
-    friday: [{open: "00:00", close: "23:59"}],
-    saturday: [{open: "00:00", close: "23:59"}],
-    sunday: [{open: "00:00", close: "23:59"}]
-  },
-  price: 0,
-  rating: 4.5,
-  address: "Lefkes , Paros 84400 ,Cyclades , GREECE",
-  photo_title: "lefkes"
-    )
-
-athenes16 = Activity.create(
-  category: "Neighbourhood",
-  name: "Psirri",
-  description: "Vibrant Psyrri centers on Iroon Square, whose surrounding streets have eateries offering meze and live music, including rembetika (Greek blues). Bars with DJs stay open late, as do tavernas serving traditional specialties like meatballs and Greek salad. Small artisan shops, often decorated with graffiti, sell handmade leather bags, indie fashions and offbeat homewares.",
+athenes22 = Activity.create(
+  category: "Ancient ruins",
+  name: "Theater of Dionysus",
+  description: "Theatre of Dionysus, prototype of Greek theatres, situated on the south side of the Acropolis in Athens, in which all extant classical Greek plays were first presented.",
   duration: "01:00",
- opening_hours: {
-    monday: [{open: "00:00", close: "23:59"}],
-    tuesday: [{open: "00:00", close: "23:59"}],
-    wednesday: [{open: "00:00", close: "23:59"}],
-    thursday: [{open: "00:00", close: "23:59"}],
-    friday: [{open: "00:00", close: "23:59"}],
-    saturday: [{open: "00:00", close: "23:59"}],
-    sunday: [{open: "00:00", close: "23:59"}]
+  opening_hours: {
+    monday: [{open: "08:00", close: "17:00"}],
+    tuesday: [{open: "08:00", close: "17:00"}],
+    wednesday: [{open: "08:00", close: "17:00"}],
+    thursday: [{open: "08:00", close: "17:00"}],
+    friday: [{open: "08:00", close: "17:00"}],
+    saturday: [{open: "08:00", close: "17:00"}],
+    sunday: [{open: "08:00", close: "17:00"}]
   },
-  price: 0,
-  rating: 4,
-  address: "Psirri, Athina 105 54, Greece, Athens",
-  photo_title: "psirri"
+  price: 14.5,
+  rating: 4.5,
+  address: "Mitseon 25, Athènes 105 58 Grèce",
+  photo_title: "dionysus"
   )
 
-athenes17 = Activity.create(
-  category: "Historic sites",
-  name: "Temple of Olympian Zeus",
-  description: "A can't-miss on two counts: it's a marvellous temple, once the largest in Greece, and it's smack in the centre of Athens. Of the temple's 104 original Corinthian columns (17m high with a base diameter of 1.7m), only 15 remain – the fallen column was blown down in a gale in 1852.
-Begun in the 6th century BC by Peisistratos, the temple was abandoned for lack of funds. Various other leaders took a stab at completing it, but it was left to Hadrian to finish the job in AD 131, thus taking more than 700 years in total to build. In typically immodest fashion, Hadrian built not just a colossal statue of Zeus, but an equally large one of himself.",
-  duration: "01:00",
-  opening_hours: {
-    monday: [{open: "08:00", close: "20:00"}],
-    tuesday: [{open: "08:00", close: "20:00"}],
-    wednesday: [{open: "08:00", close: "20:00"}],
-    thursday: [{open: "08:00", close: "20:00"}],
-    friday: [{open: "08:00", close: "20:00"}],
-    saturday: [{open: "08:00", close: "20:00"}],
-    sunday: [{open: "08:00", close: "20:00"}]
-  },
-  price: 8,
-  rating: 4,
-  address: "Leoforos Vasilissis Olgas Plaka Athens Greece",
-  photo_title: "zeus"
-    )
-
-
-athenes18 = Activity.create(
-  category: "Historic sites",
-  name: "Ancient Agora of Athens",
-  description: "These ruins, located in the heart of modern Athens, were once the site of the marketplace in ancient times, a political, cultural and economic center of the ancient world. ",
-  duration: "00:30",
-  opening_hours: {
-    monday: [{open: "11:00", close: "19:30"}],
-    tuesday: [{open: "08:00", close: "19:30"}],
-    wednesday: [{open: "08:00", close: "19:30"}],
-    thursday: [{open: "08:00", close: "19:30"}],
-    friday: [{open: "08:00", close: "19:30"}],
-    saturday: [{open: "08:00", close: "19:30"}],
-    sunday: [{open: "08:00", close: "19:30"}]
-  },
-  price: 8.50,
-  rating: 4.5,
-  address: "Adrianou 24, Athens 105 55 Greece",
-  photo_title: "agora"
-    )
-
-
-athenes19 = Activity.create(
+athenes23 = Activity.create(
   category: "Museum",
-  name: "The National Museum of Contemporary Art in Athens",
-  description: "The National Museum of Contemporary Art, established in October 2000, is the sole national institution focused only on collecting and exhibiting contemporary Greek and international art in Athens.",
-  duration: "02:30",
+  name: "Byzantine and Christian Museum",
+  description: "The scenography of the Byzantine museum is interesting. The museum is arranged in chronological order and covers a period from the 3rd to the 20th century.",
+  duration: "02:00",
   opening_hours: {
-    monday: [],
-    tuesday: [{open: "11:00", close: "19:00"}],
-    wednesday: [{open: "11:00", close: "19:00"}],
-    thursday: [{open: "11:00", close: "19:00"}],
-    friday: [{open: "11:00", close: "19:00"}],
-    saturday: [{open: "11:00", close: "19:00"}],
-    sunday: [{open: "11:00", close: "19:00"}]
+    monday: [{open: "10:00", close: "16:00"}],
+    tuesday: [{open: "09:30", close: "17:30"}],
+    wednesday: [{open: "09:30", close: "17:30"}],
+    thursday: [{open: "09:30", close: "17:30"}],
+    friday: [{open: "09:30", close: "17:30"}],
+    saturday: [{open: "09:30", close: "17:30"}],
+    sunday: [{open: "09:30", close: "17:30"}]
   },
-  price: 8.50,
-  rating: 3,
-  address: "Kallirois ave. & Am. Frantzi str. (former Fix factory) 11743 Athens - Greece",
-  photo_title: "contemporary"
-    )
+  price: 4,
+  rating: 4.5,
+  address: "Leof. Vasilissis Sofias 22, Athènes 10675 Grèce",
+  photo_title: "byzantine"
+  )
 
-
-athenes19 = Activity.create(
-  category: "Points of interest & Lookouts",
-  name: "Aeropagus",
-  description: "TThe Areopagus (Arios Pagos), is located just to the right of the exit of the Acropolis. It is also known as the “Hill of Ares”. In classical times, this was the site of the Council of Nobles and the Judicial Court, that mainly dealt with homicide.",
+athenes24 = Activity.create(
+  category: "Ancient ruins",
+  name: "Temple of Athena Nike",
+  description: "The Temple of Athena Nike is the smallest structure on the Athenian Acropolis, but holds no less importance than its neighboring shrines. Built to honor Athena Nike, the goddess of victory, the site upon which the temple was constructed has ceremonial roots that date back to the Bronze Age.",
   duration: "01:00",
   opening_hours: {
-    monday: [{open: "00:00", close: "23:59"}],
-    tuesday: [{open: "00:00", close: "23:59"}],
-    wednesday: [{open: "00:00", close: "23:59"}],
-    thursday: [{open: "00:00", close: "23:59"}],
-    friday: [{open: "00:00", close: "23:59"}],
-    saturday: [{open: "00:00", close: "23:59"}],
-    sunday: [{open: "00:00", close: "23:59"}]
+    monday: [{open: "08:00", close: "17:00"}],
+    tuesday: [{open: "08:00", close: "17:00"}],
+    wednesday: [{open: "08:00", close: "17:00"}],
+    thursday: [{open: "08:00", close: "17:00"}],
+    friday: [{open: "08:00", close: "17:00"}],
+    saturday: [{open: "08:00", close: "17:00"}],
+    sunday: [{open: "08:00", close: "17:00"}]
+  },
+  price: 14.5,
+  rating: 4.5,
+  address: "Acropolis, Dionysiou Areopagitou Acropolis, Athènes 10558 Grèce",
+  photo_title: "athena"
+  )
+
+athenes25 = Activity.create(
+  category: "Ancient ruins",
+  name: "Erechtheion",
+  description: "The Erechtheion is an ancient Greek temple of Ionic order located on the Acropolis of Athens, north of the Parthenon. It is the last monument erected on the Acropolis before the end of the 5th century BC. AD and it is renowned for its architecture both elegant and unusual.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "10:30", close: "16:30"}],
+    tuesday: [{open: "10:30", close: "16:30"}],
+    wednesday: [{open: "10:30", close: "16:30"}],
+    thursday: [{open: "10:30", close: "16:30"}],
+    friday: [{open: "10:30", close: "16:30"}],
+    saturday: [{open: "10:30", close: "16:30"}],
+    sunday: [{open: "10:30", close: "16:30"}]
+  },
+  price: 14.5,
+  rating: 4.5,
+  address: "Acropolis, Athènes 10558 Grèce",
+  photo_title: "erechtheion"
+  )
+
+iceland1 = Activity.create(
+  category: "Church",
+  name: "Hallgrimskirkja",
+  description: "Located in the center of Reykjavik, the Hallgrímskirkja is one of the city's best-known landmarks. Its construction was decided in 1937. The architect Guðjón Samúelsson was inspired by the basalt columns, mountains and glaciers of the Icelandic landscape.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "11:00", close: "16:00"}],
+    tuesday: [{open: "11:00", close: "16:00"}],
+    wednesday: [{open: "11:00", close: "16:00"}],
+    thursday: [{open: "11:00", close: "16:00"}],
+    friday: [{open: "11:00", close: "16:00"}],
+    saturday: [{open: "11:00", close: "16:00"}],
+    sunday: [{open: "10:00", close: "16:00"}]
   },
   price: 0,
   rating: 4.5,
-  address: "Aeropagus Hill Athens - Greece",
-  photo_title: "aeropagus"
-    )
+  address: "Hallgrimstorgi 1, Reykjavik 101 Islande",
+  photo_title: "hallgrimskirkja"
+  )
 
-athenes20 = Activity.create(
-  category: "Points of interest & Lookouts",
-  name: "Plateia Syntagmatos",
-  description: "TSyntagma Square is the central square of Athens. The square is named after the Constitution that Otto, the first King of Greece, was obliged to grant after a popular and military uprising on 3 September 1843. It is located in front of the 19th century Old Royal Palace, housing the Greek Parliament since 1934.",
-  duration: "00:30",
+iceland2 = Activity.create(
+  category: "Museum",
+  name: "Perlan",
+  description: "The Perlan, an Icelandic toponym literally meaning “the pearl” in French, is an Icelandic building located in Reykjavik, the country's capital, on Öskjuhlíð hill. It is 25.7 m high. The building is originally a reservoir where hot water of geothermal origin is stored.",
+  duration: "01:00",
   opening_hours: {
-    monday: [{open: "00:00", close: "23:59"}],
-    tuesday: [{open: "00:00", close: "23:59"}],
-    wednesday: [{open: "00:00", close: "23:59"}],
-    thursday: [{open: "00:00", close: "23:59"}],
-    friday: [{open: "00:00", close: "23:59"}],
-    saturday: [{open: "00:00", close: "23:59"}],
-    sunday: [{open: "00:00", close: "23:59"}]
+    monday: [{open: "10:00", close: "18:00"}],
+    tuesday: [{open: "10:00", close: "18:00"}],
+    wednesday: [{open: "10:00", close: "18:00"}],
+    thursday: [{open: "10:00", close: "18:00"}],
+    friday: [{open: "10:00", close: "18:00"}],
+    saturday: [{open: "10:00", close: "18:00"}],
+    sunday: [{open: "10:00", close: "18:00"}]
   },
-  price: 0,
-  rating: 4,
-  address: "Plateia Syntagmatos Athens - Greece",
-  photo_title: "plateia"
-    )
-
-athenes21 = Activity.create(
-  category: "Points of interest & Lookouts",
-  name: "Stavros Niarchos Park",
-  description: "Athens is short on green spaces, so this vast seaside park is a blessing. Covering a man-made slope that incorporates the roof of the Stavros Niarchos Foundation Cultural Center, this 21-hectare park has been sustainably designed with paths cutting through plantings of lavender, olive trees and other Mediterranean flora.
-There's also kids' play areas, an outdoor gym and much more. A variety of free activities are laid on, but you can simply sit in a chair and soak up the sunshine.",
-  duration: "01:30",
-  opening_hours: {
-    monday: [{open: "00:00", close: "23:59"}],
-    tuesday: [{open: "00:00", close: "23:59"}],
-    wednesday: [{open: "00:00", close: "23:59"}],
-    thursday: [{open: "00:00", close: "23:59"}],
-    friday: [{open: "00:00", close: "23:59"}],
-    saturday: [{open: "00:00", close: "23:59"}],
-    sunday: [{open: "00:00", close: "23:59"}]
-  },
-  price: 0,
+  price: 19.00,
   rating: 4.5,
-  address: " Leof. Andrea Siggrou 364, Kallithea 176 74, Greece",
-  photo_title: "stavros"
-    )
+  address: "Varmahlid 1 Oskjuhlid, Reykjavik 105 Islande",
+  photo_title: "perlan"
+  )
+
+iceland3 = Activity.create(
+  category: "Water places",
+  name: "Jokulsarlon Lagoon",
+  description: "The Blue Lagoon, in Icelandic Bláa Lónið, is the name of a spa resort located in southwest Iceland, on the Reykjanesskagi, four kilometers from Grindavík and forty minutes southwest of the capital Reykjavik. Its water comes from the Svartsengi geothermal power station.",
+  duration: "03:00",
+  opening_hours: {
+    monday: [{open: "11:00", close: "16:00"}],
+    tuesday: [{open: "11:00", close: "16:00"}],
+    wednesday: [{open: "11:00", close: "16:00"}],
+    thursday: [{open: "11:00", close: "16:00"}],
+    friday: [{open: "11:00", close: "16:00"}],
+    saturday: [{open: "11:00", close: "16:00"}],
+    sunday: [{open: "10:00", close: "16:00"}]
+  },
+  price: 135.00,
+  rating: 5,
+  address: "Skaftafell National Park Route 1, Jokulsarlon 781 Islande",
+  photo_title: "jokulsarlon"
+  )
+
+iceland4 = Activity.create(
+  category: "ice cave",
+  name: "Crystal Blue Ice Cave Adventure",
+  description: "This fascinating ice cave adventure is perfect for travelers keen to experience Iceland's natural wonders.",
+  duration: "05:00",
+  opening_hours: {
+    monday: [{open: "11:00", close: "16:00"}],
+    tuesday: [{open: "11:00", close: "16:00"}],
+    wednesday: [{open: "11:00", close: "16:00"}],
+    thursday: [{open: "11:00", close: "16:00"}],
+    friday: [{open: "11:00", close: "16:00"}],
+    saturday: [{open: "11:00", close: "16:00"}],
+    sunday: [{open: "10:00", close: "16:00"}]
+  },
+  price: 158.00,
+  rating: 5,
+  address: "Glacier Lagoon, Skaftafell National Park Route 1, Jokulsarlon 781 Iceland",
+  photo_title: "crystal"
+  )
 
 paros1 = Activity.create(
   category: "Flea & Street Markets",
@@ -849,6 +843,13 @@ paros4 = Activity.create(
   address: "Kolympethres Beach, 844 01, Greece",
   photo_title: "kolimpithres"
   )
+
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: paros4.id,
+  date: Date.current + 4,
+  start_hour: "16:30"
+)
 
 paros5 = Activity.create(
   category: "Historic sites",
@@ -1164,7 +1165,7 @@ puts "Creating bookings"
 hotel1 = Booking.create(
   category: "Hotel",
   name: "B4B Athens Signature Hotel",
-  begin_date: "24/03/2021",
+  begin_date: "22/03/2021",
   end_date: "26/03/2021",
   price: 152,
   address: "18, Kallirois Avenue, 11743, Athenes, Greece",

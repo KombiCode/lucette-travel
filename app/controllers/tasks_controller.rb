@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
 
   def index
+    @trip = Trip.find(params[:trip_id])
     @tasks = Task.all
     @tasks_done = Task.where(done: true)
   end
