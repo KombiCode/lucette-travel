@@ -218,7 +218,7 @@ athenes4 = Activity.create(
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: athenes4.id,
-  date: Date.current -1,
+  date: Date.current - 1,
   start_hour: "12:00"
 )
 
@@ -478,6 +478,7 @@ Begun in the 6th century BC by Peisistratos, the temple was abandoned for lack o
   rating: 4,
   address: "Leoforos Vasilissis Olgas Plaka Athens Greece",
   photo_title: "zeus"
+)
 
 athenes16 = Activity.create(
   category: "Historic sites",
