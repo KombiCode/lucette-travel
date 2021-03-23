@@ -15,7 +15,7 @@ export default class extends Controller {
         //this.countTarget.innerText = data.bookings.length;
         const new_booking_name = data.newbooking;
         let bell_html = "<i class=\"far fa-bell text-gray text-2xl text-gray-600 mx-4\"></i>"
-        if (new_booking_name == "KEF") {
+        if (new_booking_name == "Flight LYS - KEF to store") {
           bell_html = "<span style=\"color: Dodgerblue;\"><i class=\"fas fa-bell text-blue text-2xl text-blue-600 mx-4\"></i></span>";
         }
         this.countTarget.innerHTML = bell_html;
