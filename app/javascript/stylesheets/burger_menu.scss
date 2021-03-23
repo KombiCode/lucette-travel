@@ -4,16 +4,16 @@
   -ms-transition: left 0.5s ease;
   -o-transition: left 0.5s ease;
   transition: left 0.5s ease;
-  background: lightgray;
+  background: #DCDCDC;
   color: white;
   cursor: pointer;
   font-size: 2rem;
   height: 100vh;
-  left: -20rem;
-  padding: 6rem 2rem 2rem 2rem;
+  left: -30rem;
+  padding: 6rem 1rem 1rem 1rem;
   position: fixed;
   top: 0;
-  width: 20rem;
+  width: 22rem;
   z-index: 1;
 }
 
@@ -23,6 +23,7 @@
 
 .burger ul {
   position: absolute;
+  width: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -37,15 +38,15 @@
   -moz-user-select: none;
   user-select: none;
   cursor: pointer;
-  height: 2rem;
-  left: 2rem;
+  height: 1.5rem;
+  left: 1.5rem;
   position: fixed;
-  top: 2rem;
-  width: 3.6rem;
+  top: 1rem;
+  width: 2.6rem;
   z-index: 2;
 }
 
-.burger-toggle:hover { opacity: 0.8; }
+/*.burger-toggle:hover { opacity: 0.8; }*/
 
 .burger-toggle .burger-toggle-bar,  .burger-toggle .burger-toggle-bar::after,  .burger-toggle .burger-toggle-bar::before {
   position: absolute;
@@ -58,7 +59,8 @@
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  background: white;
+  /*background: white;*/
+  background-color: rgb(55, 65, 81);
   content: '';
   height: 0.4rem;
   width: 100%;
@@ -73,7 +75,8 @@
 .burger-toggle.expanded .burger-toggle-bar { background: transparent; }
 
 .burger-toggle.expanded .burger-toggle-bar::after, .burger-toggle.expanded .burger-toggle-bar::before {
-  background: white;
+  /*background: white;*/
+  background-color: rgb(55, 65, 81);
   margin-top: 0;
 }
 
@@ -103,4 +106,10 @@
   /*font-weight: 300;*/
 }
 
+nav ul:nth {
+  justify-content: space-between;
+}
 
+.padding-bell {
+  padding-left: 22rem;
+}
