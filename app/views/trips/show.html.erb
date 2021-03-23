@@ -15,7 +15,7 @@
 
           <% @trip.day_activities(@trip.date_for_day(index)).each do |trip_activity| %>
               <% activity = trip_activity.activity %>
-              <%= link_to activity_path(activity.id), class: "" do %>
+              <%= link_to trip_activity_path(@trip, activity.id), class: "" do %>
 
                 <div class="wrapper-image relative justify-between rounded-2xl mb-6 shadow-custom-card">
                   <% if activity.photo_title.present? %>

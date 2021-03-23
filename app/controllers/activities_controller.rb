@@ -2,6 +2,7 @@ class ActivitiesController < ApplicationController
   before_action :find_activity, only: [:show]
 
   def show
+    @trip = Trip.find(params[:trip_id])
   end
 
   def new

@@ -1,5 +1,8 @@
 class TripActivitiesController < ApplicationController
-  before_action :set_trip, only: [:new, :create]
+  before_action :set_trip, only: [:show, :new, :create]
+
+  def show
+  end
 
   def new
     @planned_at = params[:planned_at]
