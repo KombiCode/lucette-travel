@@ -1,14 +1,14 @@
 <div class="container flex-row mt-2">
-  <div class="text-gray-700 text-center text-2xl">
+  <div class="text-gray-700 text-center text-2xl p-4">
     <h1>Welcome to Lucette Travel !</h1>
   </div>
   <div>
     <% @trips.each do |trip| %>
       <div class="w-80 h-58 bg-gray-100 rounded-lg text-center text-gray-500 p-2 m-4">
         <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "" %>
-        <h6><%= link_to trip.name.upcase, trip_path(trip) %> </br>
+        <p><%= link_to trip.name.upcase, trip_path(trip) %> </br>
         From <%= trip.begin_date %> to <%= trip.end_date %>
-        </h6>
+        </p>
       </div>
     <% end %>
   </div>
