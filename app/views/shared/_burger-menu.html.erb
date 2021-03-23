@@ -1,11 +1,22 @@
 <div class="burger-toggle">   <!-- Button to toggle -->
   <div class="burger-toggle-bar"></div>
 </div>
-<nav class="burger"> <!-- Contenu -->
+<nav class="burger" id="burger"> <!-- Contenu -->
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Portfolio</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <li>
+      <div class="w-42 border-2 border-red-500">
+        <% @trips.each do |trip| %>
+          <div class="wrapper-card-burger border-2 border-green-500 w-60 h-58 bg-gray-100 rounded-lg text-center text-gray-500 p-2 mx-auto">
+            <%= link_to trip_path(trip) do %>
+              <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "" %>
+              <h5><%= trip.name.upcase %></h5>
+              <p>From <%= trip.begin_date %> to <%= trip.end_date %></p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </li>
   </ul>
 </nav>
+
+<!-- <div class="hidden body-black-toggle"></div> -->

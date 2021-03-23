@@ -4,7 +4,7 @@
   -ms-transition: left 0.5s ease;
   -o-transition: left 0.5s ease;
   transition: left 0.5s ease;
-  background: #28dde0;
+  background: lightgray;
   color: white;
   cursor: pointer;
   font-size: 2rem;
@@ -87,4 +87,17 @@
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.body-black-toggle {
+  background-color: rgba(0, 0, 0, .8);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
+}
+
+.wrapper-card-burger:nth-of-type(2) p {
+  font-family: Nunito;
+  font-weight: 300;
 }
