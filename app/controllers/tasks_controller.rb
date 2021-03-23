@@ -1,9 +1,9 @@
 class TasksController < ApplicationController
+  before_action :set_trip, only: [:index, :show, :create]
 
   def index
-    @trip = Trip.find(params[:trip_id])
-    @tasks = Task.all
-    @tasks_done = Task.where(done: true)
+    @tasks = @trip.tasks
+    @tasks_done = @tasks.where(done: true)
     @task = Task.new
   end
 
@@ -12,14 +12,13 @@ class TasksController < ApplicationController
   end
 
   def show
-    @trip = Trip.find(params[:id])
     @task = Task.new
-    @task.trip = @trip
   end
 
   def create
     @task = Task.new(task_params)
-    @task.save
+    @task.trip = @trip
+    @task.save!
 
     redirect_to trip_tasks_path
   end
@@ -30,9 +29,9 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    @task.update(task_params)
+    @task.update!(task_params)
 
-    redirect_to trip_tasks_path(@task)
+    head(200)
   end
 
   def destroy
@@ -47,5 +46,9 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:name, :description, :done)
+  end
+
+  def set_trip
+    @trip = Trip.find(params[:trip_id])
   end
 end
