@@ -5,7 +5,8 @@
 </div>
 
 <div id="wrapper-day">
-  <div data-controller="carousel" class="swiper-container rounded-2xl">
+  <div data-controller="carousel" class="swiper-container rounded-2xl"
+       data-carousel-options-value='{"initialSlide": <%= "#{@trip.index_for_today}" %>}' >
     <div class="swiper-wrapper">
       <!-- Should have n swiper-slide corresponding to the number of days of the trip -->
       <% @trip.number_of_days.times do |index| %>

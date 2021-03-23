@@ -29,4 +29,8 @@ class Trip < ApplicationRecord
       (date_for_day(index) <= b.end_date.to_date)
     }
   end
+
+  def index_for_today()
+    it = (Date.current - begin_date.to_date).to_i
+  end
 end
