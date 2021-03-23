@@ -17,18 +17,20 @@
 
           <div class="mt-4 ">
            <div data-controller="tasklist">
-              <form data-action="submit->tasklist#newElement">
-                <input type="text" data-target="tasklist.myinput" placeholder="Title..." tabindex="1">
-                <input type="submit" value="Add" class="addBtn" tabindex="2" >
-              </form>
+              <%= simple_form_for([@trip, @task]) do |f| %>
+                <%= f.input :description %>
+                <%= f.submit %>
+              <% end %>
             </div>
           </div>
     </div>
   </main>
+
   <style>
       .custom-label input:checked + svg {
           display: block !important;
       }
   </style>
+
 </div>
 <%= render 'shared/footer' %>
