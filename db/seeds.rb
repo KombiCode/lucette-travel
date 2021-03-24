@@ -1007,7 +1007,7 @@ paros12 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "agia Eirini, 84400 Paroikía, Kikladhes,, Paros 844 00, Greece",
+  address: "agia Eirini, 84400 Paroikía, Kikladhes, Paros 844 00, Greece",
   photo_title: "palmbeach"
   )
 
@@ -1173,13 +1173,13 @@ hotel1 = Booking.create(
   photo_title: "b4bhotel"
   )
 
-flat1 = Booking.create(
-  category: "Flat",
-  name: "Katerina Mare",
-  begin_date: "26/03/2021",
+hotel3 = Booking.create(
+  category: "Hotel",
+  name: "Hotel Katerina Mare",
+  begin_date: "27/03/2021",
   end_date: "01/04/2021",
   price: 867,
-  address: "Naousa 844 00, Greece",
+  address: "Naousa, Greece",
   trip: trip1,
   photo_title: "katerinahotel"
   )
