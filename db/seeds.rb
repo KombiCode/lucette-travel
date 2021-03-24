@@ -1165,7 +1165,7 @@ puts "Creating bookings"
 hotel1 = Booking.create(
   category: "Hotel",
   name: "B4B Athens Signature Hotel",
-  begin_date: "22/03/2021",
+  begin_date: "23/03/2021",
   end_date: "26/03/2021",
   price: 152,
   address: "18, Kallirois Avenue, 11743, Athenes, Greece",
