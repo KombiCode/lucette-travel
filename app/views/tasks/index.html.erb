@@ -1,8 +1,8 @@
 <div class="container" data-controller="task">
   <main class="h-screen p-4 shadow-lg text-gray-700 text-center mt-2">
       <div class="flex flex-col m-auto pb-4">
-          <div class="justify-around flex flex-row items-baseline">
-              <h1 class="underline text-lg mt-2 ml-3">To do list</h1>
+          <div class="justify-around flex flex-row items-baseline mb-2">
+              <h1 class="underline text-xl mt-2 ml-3">Tasks list</h1>
           </div>
 
       <% @tasks.each do |task| %>
@@ -11,16 +11,22 @@
                   <input type="checkbox" class="hidden" <%= "checked" if task.done %> data-action="change->task#change" data-task-id="<%= task.id %>">
                   <svg class="hidden w-4 h-4 text-green-500 rounded pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
               </div>
-                <p class="text-justify mx-3 text-gray-100"><%= task.description %></p>
+                <p class="text-justify mx-3 text-gray-100"><%= task.description %>
+                  <div class="justify-end">
+                  <%= link_to '🗑',
+                  task_path(task),
+                  method: :delete %>
+                </div>
+                </p>
           </label>
-          <% end %>
+         <% end %>
 
-          <div class="bg-gray-600 rounded text-black text-md font-bold px-2 py-2 border my-4">
+          <div class="bg-gray-600 rounded text-black text-md font-bold px-2 py-2 border my-4 mt-6">
             <%= simple_form_for([@trip, @task]) do |f| %>
-              <%= f.input :description %>
-              <div class="bg-gray-100 text-black text-md font-bold px-2 py-2 border rounded-full my-4">
-                <%= f.submit %>
-              </div>
+              <%= f.input :description, :as => :string,  placeholder: "Add a task" %>
+              <!-- <div class="text-gray-200 text-md font-bold px-2 py-2 border rounded-full my-4"> -->
+                <%= f.submit value: "Add", class: "mb-2 bg-gray-600 text-white text-md font-bold" %>
+              <!-- </div> -->
             <% end %>
           </div>
     </div>
