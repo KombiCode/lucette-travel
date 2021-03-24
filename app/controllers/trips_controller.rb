@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   before_action :find_trip, only: [:show]
 
   def index
