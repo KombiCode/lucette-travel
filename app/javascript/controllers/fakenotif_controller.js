@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = [ 'count' ];
 
   connect() {
-    setInterval(this.refresh, 7000);
+    setInterval(this.refresh, 8000);
   }
 
   refresh = () => {
@@ -16,7 +16,7 @@ export default class extends Controller {
         const notifType = data.notifType;
         const notifMessage = data.notifMessage;
         const notifData = data.notifData;
-        
+
         let bell_html = "<i class=\"far fa-bell text-gray-200 text-2xl text-left\"></i>"
         if (notifType == 'emptyActivities') {
           bell_html = "<i style=\"color: Tomato;\" class=\"far fa-bell text-gray-200 text-2xl text-left\"></i> \
