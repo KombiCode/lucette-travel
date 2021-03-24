@@ -1,11 +1,10 @@
-<nav class="w-screen container justify-between sticky top-0 z-1">
+<nav class="w-screen container justify-between sticky top-0 z-10">
   <ul>
     <li>
-      <div class="padding-bell text-gray-700 p-3 shadow-custom-navbar">
-<!--    <%= link_to "#", class: "nav-link", data: {toggle: "modal", target: "#notifModal"} %> -->
+      <div class="padding-bell p-3 shadow-custom-navbar">
         <%= link_to "#", onclick: "notifClick()" do %>
           <div data-controller="fakenotif" data-fakenotif-target="count">
-            <i class="far fa-bell text-gray text-2xl text-gray-600"></i>
+            <i class="far fa-bell text-gray-200 text-2xl text-left"></i>
           </div>
         <% end %>
       </div>
@@ -21,7 +20,7 @@
           <li>
             <div class="">
               <% Trip.all.each do |trip| %>
-                <div class="wrapper-card-burger relative shadow-custom-card h-44 text-center mx-4 mb-10">
+                <div class="wrapper-card-burger relative shadow-custom-card h-44 text-center mx-4">
                   <%= link_to trip_path(trip) do %>
                     <!-- <div class="box-content relative rounded-2xl mb-6  border-2 border-yellow-500"> -->
                       <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "rounded-lg" %>
@@ -36,6 +35,7 @@
                     </div>
                   <% end %>
                 </div>
+                <hr>
               <% end %>
             </div>
           </li>
@@ -56,6 +56,6 @@
     <% if lb.name == "Flight LYS - KEF to store"%>
       <% lb.name = "Flight LYS - KEF" %>
       <% lb.save %>
-    <% end %> 
+    <% end %>
   }
 </script>

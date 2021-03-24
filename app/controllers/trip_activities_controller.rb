@@ -5,6 +5,7 @@ class TripActivitiesController < ApplicationController
   end
 
   def new
+
     @planned_at = params[:planned_at]
     @booking = @trip.bookings.find_by(begin_date: params[:planned_at], category: 'Hotel') || @trip.bookings.find_by(category: 'Hotel')
     @localisation = @booking&.address
@@ -14,9 +15,6 @@ class TripActivitiesController < ApplicationController
      # <---- A mettre ?
     # ON DECIDE DE PÉTÉ SI Y A PAS DE RESERVATION CE JOUR LÀ
     @activities = Activity.near(@localisation, 100)
-
-    # @not_done_activities = not_done(@activities, @trip)
-
 
     @markers = @activities.geocoded.map do |activity|
 

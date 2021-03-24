@@ -4,7 +4,7 @@
   -ms-transition: left 0.5s ease;
   -o-transition: left 0.5s ease;
   transition: left 0.5s ease;
-  background: #DCDCDC;
+  background: #424242;
   color: white;
   cursor: pointer;
   font-size: 2rem;
@@ -60,7 +60,7 @@
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   /*background: white;*/
-  background-color: rgb(55, 65, 81);
+  background-color: #e5e7eb; /* Color cross */
   content: '';
   height: 0.4rem;
   width: 100%;
@@ -76,7 +76,7 @@
 
 .burger-toggle.expanded .burger-toggle-bar::after, .burger-toggle.expanded .burger-toggle-bar::before {
   /*background: white;*/
-  background-color: rgb(55, 65, 81);
+  background-color: #e5e7eb; /* Color cross */
   margin-top: 0;
 }
 
@@ -111,5 +111,5 @@ nav ul:nth {
 }
 
 .padding-bell {
-  padding-left: 22rem;
+  padding-left: 23rem;
 }

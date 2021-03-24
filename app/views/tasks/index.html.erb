@@ -6,19 +6,21 @@
           </div>
 
       <% @tasks.each do |task| %>
-          <label class="custom-label flex mt-2 ml-3">
-              <div class="bg-white shadow w-6 h-6 p-1 flex  mr-2">
+          <label class="custom-label text-justify flex mt-2 ml-3">
+              <div class="bg-white rounded-md shadow w-6 h-6 p-1 flex">
                   <input type="checkbox" class="hidden" <%= "checked" if task.done %> data-action="change->task#change" data-task-id="<%= task.id %>">
-                  <svg class="hidden w-4 h-4 text-green-600 pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
+                  <svg class="hidden w-4 h-4 text-green-500 rounded pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
               </div>
-                <p class="text-justify mx-3"><%= task.description %></p>
+                <p class="text-justify mx-3 text-gray-100"><%= task.description %></p>
           </label>
           <% end %>
 
-          <div class="mt-4 ">
+          <div class="bg-gray-600 rounded text-black text-md font-bold px-2 py-2 border my-4">
             <%= simple_form_for([@trip, @task]) do |f| %>
               <%= f.input :description %>
-              <%= f.submit %>
+              <div class="bg-gray-100 text-black text-md font-bold px-2 py-2 border rounded-full my-4">
+                <%= f.submit %>
+              </div>
             <% end %>
           </div>
     </div>
