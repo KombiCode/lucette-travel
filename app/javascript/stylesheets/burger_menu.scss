@@ -13,7 +13,7 @@
   padding: 6rem 1rem 1rem 1rem;
   position: fixed;
   top: 0;
-  width: 22rem;
+  width: 20rem;
   z-index: 8;
 }
 
@@ -24,10 +24,10 @@
 .burger ul {
   position: absolute;
   width: 100%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  /*top: 50%;*/
+  /*-webkit-transform: translateY(-50%);*/
+  /*-ms-transform: translateY(-50%);*/
+  /*transform: translateY(-50%);*/
   list-style: none;
   margin: 0;
   padding: 0;
@@ -38,30 +38,31 @@
   -moz-user-select: none;
   user-select: none;
   cursor: pointer;
-  height: 1.5rem;
-  left: 1.5rem;
+  height: 1.2rem;
+  left: 1.2rem;
   position: fixed;
-  top: 1rem;
-  width: 2.6rem;
+  top: 1.3rem;
+  width: 2.4rem;
   z-index: 10;
 }
 
 .burger-toggle .burger-toggle-bar,  .burger-toggle .burger-toggle-bar::after,  .burger-toggle .burger-toggle-bar::before {
   position: absolute;
-  top: 50%;
+  /*top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  -webkit-transition: all 0.5s ease;
+  /*-webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;*/
   transition: all 0.5s ease;
   /*background: white;*/
   background-color: #e5e7eb; /* Color cross */
   content: '';
-  height: 0.4rem;
+  height: 0.2rem;
   width: 100%;
+
   /*z-index: 10;*/
 }
 
@@ -102,7 +103,7 @@ nav ul:nth {
 }
 
 .padding-bell {
-  padding-left: 23rem;
+  padding-left: 21rem;
 }
 
 .body-black-toggle {
