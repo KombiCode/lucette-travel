@@ -2,7 +2,7 @@
   <ul>
     <li>
       <div class="padding-bell p-3 shadow-custom-navbar">
-        <%= link_to "#", onclick: "notifClick()" do %>
+        <%= link_to "#", id: "notifBell", onclick: "notifClick()" do %>
           <div data-controller="fakenotif" data-fakenotif-target="count">
             <i class="far fa-bell text-gray-200 text-2xl text-left"></i>
           </div>
@@ -53,13 +53,20 @@
 <!-- Do not remove -->
 <script>
   function notifClick() {
-    hiddenMsgElement = document.getElementById("notif-message")
-    if (hiddenMsgElement) {
-      console.log(hiddenMsgElement.innerText)
-      <% lb = Booking.last %>
-      <% if lb.name == "Flight LYS - KEF to store"%>
-        <% lb.name = "Flight LYS - KEF" %>
-        <% lb.save %>
+    const hiddenNotifMessageElement = document.getElementById("notif-message")
+    const hiddenNotifTypeElement = document.getElementById("notif-type")
+    const hiddenNotifDataElement = document.getElementById("notif-data")
+    if (hiddenNotifMessageElement) {
+      // console.log(hiddenNotifMessageElement.innerText)
+      // console.log(hiddenNotifTypeElement.innerText)
+      // console.log(hiddenNotifDataElement.innerText)
+      <% new_booking = Booking.where("name = ?", 'Flight LYS - KEF to store') %>
+      console.log("Query done");
+      <% if new_booking.any? %>
+        console.log("Found new_booking");
+        console.log("Should rename it");
+        <% new_booking.first.name = "Flight LYS - KEF" %>
+        <% new_booking.first.save! %>
       <% end %>
     }
   }

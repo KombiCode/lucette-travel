@@ -12,6 +12,7 @@
     "places.js": "^1.19.0",
     "stimulus": "^2.0.0",
     "stimulus-carousel": "^2.0.0",
+    "sweetalert2": "^10.15.6",
     "tailwindcss": "^2.0.3",
     "turbolinks": "^5.2.0"
   },
