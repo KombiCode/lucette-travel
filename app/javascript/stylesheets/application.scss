@@ -1,3 +1,9 @@
+$lucette-light-gray: #DCDCDC;
+$lucette-gray: #646464;
+$lucette-middle-gray: #424242;
+$lucette-dark-gray: #303030;
+$lucette-icone-gray: #e5e7eb;
+
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +53,20 @@ h6 {
   font-size: 1rem;
 }
 
+hr {
+  height: 2px;
+  background-color: $lucette-icone-gray;
+  /*border: none;*/
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+nav {
+  background-color: $lucette-middle-gray;
+}
+
 #wrapper-day {
   /*height: 500px;*/
   width: 100vw;
@@ -83,7 +103,8 @@ h6 {
 }
 
 .shadow-custom-card {
-  box-shadow: 0 3px 5px gray;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+  border-radius: 9px;
 }
 
 .shadow-custom-navbar {
