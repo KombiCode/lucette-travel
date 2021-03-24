@@ -18,21 +18,25 @@
 </div>
 <!-- END Tinder like -->
 
-<div class="hidden absolute top-28 w-72 text-center left-16 border-2 border-gray-300">
+<div id="tinderForm" class="hidden absolute top-28 w-72 text-center left-16 border-2 rounded-xl pb-8">
   <%= simple_form_for [@trip, @tripActivity], url: trip_trip_activities_path(@trip,@tripActivity) do |f| %>
     <%= f.input :date,
+                item_wrapper_tag: 'div',
+                # item_wrapper_html: { class: "text-white" },
+                label: "When do you want to do this?",
+                # label_html: { class: 'text-white' },
                 required: true,
                 input_html: { value: @planned_at,
-                              class: "text-white border-gray-300 focus:outline-none focus:border-indigo-500 sm:text-sm rounded-md" },
+                              class: "m-2 pl-4 pr-1 py-2 border-gray-300 focus:outline-none sm:text-sm rounded-md" },
                               html5: true %>
     <%= f.input :start_hour,
                 as: :select,
                 required: true,
-                # label: "Start Hour",
+                label: "What time?",
                 collection: (6..20).map {|n| ["#{n}:00","#{n}:30"]}.flatten,
                 wrapper_html: { class: 'flex flex-col items-center justify-center mx-auto w-32' },
                 input_html: { type: :date,
-                              class: 'm-2 pl-4 pr-1 py-2 text-white border-gray-300 focus:outline-none focus:border-indigo-500 sm:text-sm rounded-md' }%>
+                              class: 'm-2 pl-4 pr-1 py-2 border-gray-300 focus:outline-none sm:text-sm rounded-md' }%>
 
     <%#= f.input :trip_id, as: :hidden, value: @current_trip%>
     <%= f.input :activity_id, as: :hidden, value: nil %>
