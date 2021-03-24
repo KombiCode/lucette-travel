@@ -1,6 +1,6 @@
 module MetaTagsHelper
   def meta_title
-    content_for?(:meta_title) ? content_for(:meta_title) : DEFAULT_META["Lucette-Travel"]
+    content_for?(:meta_title) ? content_for(:meta_title) : DEFAULT_META["Lucette Travel, all your travel in one app"]
   end
 
   def meta_description
