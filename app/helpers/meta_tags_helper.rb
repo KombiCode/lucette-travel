@@ -4,7 +4,7 @@ module MetaTagsHelper
   end
 
   def meta_description
-    content_for?(:meta_description) ? content_for(:meta_description) : DEFAULT_META["Lucette Travel, a travel helper which allows you to be organized and centralize relevant information during one's trip"]
+    content_for?(:meta_description) ? content_for(:meta_description) : DEFAULT_META["Lucette travel, all your travel in one app. Spend less time organizing your trips and more time enjoying them!"]
   end
 
   def meta_image
