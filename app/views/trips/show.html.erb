@@ -33,43 +33,42 @@
             <% end %>
           </div>
 
-
           </br></br>
 
           <% @trip.day_activities(@trip.date_for_day(index)).each do |trip_activity| %>
-              <% activity = trip_activity.activity %>
-              <%= link_to trip_activity_path(@trip, activity.id), class: "" do %>
+            <% activity = trip_activity.activity %>
+            <%= link_to trip_activity_path(@trip, activity.id) do %>
 
-                <div class="wrapper-image relative justify-between rounded-2xl mb-6 shadow-custom-card">
-                  <% if activity.photo_title.present? %>
-                    <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "static" %>
-                  <% end %>
+              <div class="wrapper-image relative justify-between rounded-2xl mb-6 shadow-custom-card">
+                <% if activity.photo_title.present? %>
+                  <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "static" %>
+                <% end %>
 
-                    <div class="border-2 border-white w-20 h-14 absolute top-0 right-0 -m-1 -mr-2 rounded-bl-xl bg-white-200 bg-opacity-40">
-                    </div>
-                    <div class="border-2 border-white w-32 h-12 absolute bottom-0 -m-1 rounded-tr-2xl"> <!-- bg-gray-200 bg-opacity-40 -->
-                    </div>
-                  <div class="box-content container absolute top-3 flex justify-between"> <!-- --------- Name + Hour --------- -->
-                    <div class="leading-8 w-60 pl-3 text-white font-bold">
-                      <%= activity.name %>
-                    </div>
-
-                    <div class="leading-8 text-white pr-3">
-                      <div class="text-white font-bold"><%= show_start_hour(trip_activity.start_hour) %></div>
-                    </div>
-
+                  <div class="border-2 border-white w-20 h-14 absolute top-0 right-0 -m-2 -mr-1 rounded-bl-xl bg-white-200 bg-opacity-40">
+                  </div>
+                  <div class="border-2 border-white w-32 h-12 absolute bottom-0 -m-1 rounded-tr-2xl"> <!-- bg-gray-200 bg-opacity-40 -->
+                  </div>
+                <div class="box-content container absolute top-2 flex justify-between"> <!-- --------- Name + Hour --------- -->
+                  <div class="leading-8 w-60 pl-3 text-lg text-white font-bold">
+                    <%= activity.name %>
                   </div>
 
-                  <div class="flex absolute bottom-3 left-3 text-white shadow-custom"> <!-- ---------- Stars ----------- -->
-                    <% activity.valid_rating.times do %> <!-- As many filled stars (up to five) as activity rating -->
-                      <i class="fas fa-star"></i>
-                    <% end %>
-                    <% (5 - activity.valid_rating).times do %> <!-- As many empty stars as five - activity rating -->
-                      <i class="far fa-star"></i>
-                    <% end %>
+                  <div class="leading-8 text-lg text-white pr-3">
+                    <div class="text-white font-bold"><%= show_start_hour(trip_activity.start_hour) %></div>
                   </div>
 
                 </div>
+
+                <div class="flex absolute bottom-3 left-3 text-white shadow-custom"> <!-- ---------- Stars ----------- -->
+                  <% activity.valid_rating.times do %> <!-- As many filled stars (up to five) as activity rating -->
+                    <i class="fas fa-star"></i>
+                  <% end %>
+                  <% (5 - activity.valid_rating).times do %> <!-- As many empty stars as five - activity rating -->
+                    <i class="far fa-star"></i>
+                  <% end %>
+                </div>
+
+              </div>
 
             <% end %>
           <% end %>
@@ -77,8 +76,8 @@
       <% end %>
     </div>
     <!-- A rendre plus distincts, en blanc? -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next shadow-custom-arrow"></div>
+      <div class="swiper-button-prev shadow-custom-arrow"></div>
   </div>
 </div>
 
