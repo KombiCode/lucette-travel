@@ -7,14 +7,14 @@ class TripActivitiesController < ApplicationController
   def new
 
     @planned_at = params[:planned_at]
-    @booking = @trip.bookings.find_by(begin_date: params[:planned_at], category: 'Hotel') || @trip.bookings.find_by(category: 'Hotel')
+    @booking = @trip.bookings.find_by('begin_date <= :planned_at AND end_date >= :planned_at AND category = :category', planned_at: params[:planned_at], category: 'Hotel') || @trip.bookings.find_by(category: 'Hotel')
     @localisation = @booking&.address
 
     @tripActivity = TripActivity.new
     # @tripActivity.trip = @trip
      # <---- A mettre ?
     # ON DECIDE DE PÉTÉ SI Y A PAS DE RESERVATION CE JOUR LÀ
-    @activities = Activity.near(@localisation, 100)
+    @activities = Activity.near(@localisation, 15).where.not(id: @trip.activities.ids)
 
     @markers = @activities.geocoded.map do |activity|
 

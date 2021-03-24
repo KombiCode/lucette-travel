@@ -11,7 +11,7 @@ export default class extends Controller {
     fetch('/', { headers: { accept: "application/json" }})
       .then(response => response.json())
       .then((data) => {
-        // TODO put what we want to display here  
+        // TODO put what we want to display here
         //this.countTarget.innerText = data.bookings.length;
         const notifType = data.notifType;
         const notifMessage = data.notifMessage;
