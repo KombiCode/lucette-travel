@@ -23,7 +23,9 @@
                 <div class="wrapper-card-burger relative shadow-custom-card h-44 text-center mx-4">
                   <%= link_to trip_path(trip) do %>
                     <!-- <div class="box-content relative rounded-2xl mb-6  border-2 border-yellow-500"> -->
-                      <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "rounded-lg" %>
+                      <% if trip.photo_title && !trip.photo_title.empty? %>
+                        <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "rounded-lg" %>
+                      <% end %>
                         <div class="box-content container absolute top-3 content-between">
                           <div class="text-white">
                             <h5><%= trip.name.upcase %></h5>
