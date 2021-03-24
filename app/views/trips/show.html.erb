@@ -18,10 +18,9 @@
         <div class="swiper-slide px-4">
           <div class="relative font-bold text-white mr-24 my-4 pl-2"><%= "Day #{index + 1}: #{@trip.date_for_day(index).to_formatted_s(:long) }" %></div>
 
-          <div class="right-4 -top-6 absolute text-right px-2">
-            <%= link_to "+", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)), class: "text-gray-600 text-7xl font-bold rounded-full" %>
+          <div class="right-4 -top-2 absolute text-gray-200 text-6xl">
+            <%= link_to "+", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)) %>
           </div>
-
 
           <div class="wrapper-booking mb-4">
             <% @trip.day_bookings(index).each do |booking| %>
