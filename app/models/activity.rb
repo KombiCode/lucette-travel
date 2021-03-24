@@ -2,6 +2,8 @@ class Activity < ApplicationRecord
   has_many :trip_activities
 
   validates :name, presence: true
+  validates :category, presence: true
+  validates :duration, presence: true
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
