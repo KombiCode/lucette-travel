@@ -5,7 +5,7 @@
 <div class="wrapper-header flex justify-between pr-4 text-white mt-3">
   <div class="wrapper-title flex px-2">
     <div class="px-2 text-xl font-bold"><%= @trip.name %>: </div></br>
-      <div class="px-2 text-sm mt-1"><%= @trip.begin_date.to_formatted_s(:long)  %> to <%= @trip.end_date.to_formatted_s(:long)  %></div>
+      <div class="px-1 text-sm mt-1 mr-16"><%= @trip.begin_date.to_formatted_s(:long)  %> to <%= @trip.end_date.to_formatted_s(:long)  %></div>
   </div>
 </div>
 
@@ -16,8 +16,12 @@
       <!-- Should have n swiper-slide corresponding to the number of days of the trip -->
       <% @trip.number_of_days.times do |index| %>
         <div class="swiper-slide px-4">
+          <div class="relative font-bold text-white mr-24 my-4 pl-2"><%= "Day #{index + 1}: #{@trip.date_for_day(index).to_formatted_s(:long) }" %></div>
 
-          <div class="font-bold text-white text-md my-4"><%= "Day #{index + 1}: #{@trip.date_for_day(index).to_formatted_s(:long) }" %></div>
+          <div class="right-4 -top-6 absolute text-right px-2">
+            <%= link_to "+", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)), class: "text-gray-600 text-7xl font-bold rounded-full" %>
+          </div>
+
 
           <div class="wrapper-booking mb-4">
             <% @trip.day_bookings(index).each do |booking| %>
@@ -30,9 +34,6 @@
             <% end %>
           </div>
 
-          <div class="place-content-center"> <!-- A CENTRER -->
-          <%= link_to "Add Activity", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)), class: "bg-gray-400 text-white text-sm font-bold px-4 py-2 border rounded-full" %>
-          </div>
 
           </br></br>
 
