@@ -32,6 +32,7 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 import { initMapbox, showActivity } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initBurger } from '../plugins/init_burger';
+import { initNotifMessage } from "../plugins/init_notifmessage"
 import { initTinder } from '../plugins/init_tinder';
 
 document.addEventListener('turbolinks:load', () => {
@@ -39,4 +40,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutocomplete();
   initTinder(showActivity);
+  initNotifMessage();
 })
