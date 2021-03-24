@@ -2,8 +2,8 @@
   <ul>
     <li>
       <div class="padding-bell text-gray-700 p-3 shadow-custom-navbar">
-        <%= link_to "#" do %>
-          <div data-controller="fakebooking" data-fakebooking-target="count">
+        <%= link_to "#", onclick: "notifClick()" do %>
+          <div data-controller="fakenotif" data-fakenotif-target="count">
             <i class="far fa-bell text-gray text-2xl text-gray-600"></i>
           </div>
         <% end %>
@@ -44,3 +44,15 @@
     </li>
   </ul>
 </nav>
+
+<!-- Internal script stuff for fake notif system -->
+<!-- Do not remove -->
+<script>
+  function notifClick() {
+    <% lb = Booking.last %>
+    <% if lb.name == "Flight LYS - KEF to store"%>
+      <% lb.name = "Flight LYS - KEF" %>
+      <% lb.save %>
+    <% end %> 
+  }
+</script>
