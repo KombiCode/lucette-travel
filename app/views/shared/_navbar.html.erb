@@ -19,7 +19,7 @@
         <ul>
           <li>
             <div class="">
-              <% @trips.each do |trip| %>
+              <% Trip.all.each do |trip| %>
                 <div class="wrapper-card-burger relative shadow-custom-card h-44 text-center mx-4 mb-10">
                   <%= link_to trip_path(trip) do %>
                     <!-- <div class="box-content relative rounded-2xl mb-6  border-2 border-yellow-500"> -->
