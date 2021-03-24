@@ -25,7 +25,7 @@ class PagesController < ApplicationController
       elsif ghost_activity.any?
         notif_message = "You have no activities planned for tomorrow, pick up one !"
         notif_type = "emptyActivities"
-        notif_data = ghost_activity.first.name
+        notif_data = ghost_activity.first.id
       end
 
       format.json { render json: {
