@@ -12,7 +12,7 @@ module ActivitiesHelper
       next_index = index + 1
 
       while next_index < 7 && !output_first.empty? && oh_output(opening_hours[days_full[next_index]]) == output_first
-        day_prefix << ",#{days_short[next_index]}"
+        day_prefix << ", #{days_short[next_index]}"
         visited_indexes << next_index
         next_index = next_index + 1
       end
