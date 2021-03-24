@@ -22,7 +22,9 @@
             <% Trip.all.each do |trip| %>
               <div class="wrapper-card-burger relative shadow-custom-card text-center mx-4">
                 <%= link_to trip_path(trip) do %>
-                  <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "rounded-lg" %>
+                    <% if trip.photo_title && !trip.photo_title.empty? %>
+                      <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "rounded-lg" %>
+                    <% end %>
                     <div class="box-content container absolute top-3 content-between">
                       <div class="text-white">
                         <h5><%= trip.name.upcase %></h5>

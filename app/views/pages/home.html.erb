@@ -6,7 +6,9 @@
     <% @trips.each do |trip| %>
       <div class="w-80 h-58 bg-gray-100 rounded-lg text-center text-gray-500 p-2 mx-auto">
         <%= link_to trip_path(trip) do  %>
-          <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "" %>
+          <% if trip.photo_title && !trip.photo_title.empty? %>
+            <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "" %>
+          <% end %>
           <p><%= trip.name.upcase %> </br>
           From <%= trip.begin_date %> to <%= trip.end_date %>
           </p>
