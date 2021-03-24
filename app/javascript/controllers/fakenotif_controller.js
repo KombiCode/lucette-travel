@@ -16,11 +16,11 @@ export default class extends Controller {
         const notifType = data.notifType;
         const notifMessage = data.notifMessage;
         const bookingName = data.newBooking;
-        let bell_html = "<i class=\"far fa-bell text-gray text-2xl text-gray-600 mx-4\"></i>"
+        let bell_html = "<i class=\"far fa-bell text-gray text-2xl text-gray-600\"></i>"
         if (notifType == 'emptyActivities') {
-          bell_html = "<span style=\"color: Tomato;\"><i class=\"fas fa-bell text-red text-2xl text-red-600 mx-4\"></i></span>";
+          bell_html = "<i style=\"color: Tomato;\" class=\"far fa-bell text-gray text-2xl text-gray-600\"></i>"
         } else if (notifType == 'newBooking') {
-          bell_html = "<span style=\"color: Dodgerblue;\"><i class=\"fas fa-bell text-blue text-2xl text-blue-600 mx-4\"></i></span>";
+          bell_html = "<i style=\"color: Dodgerblue;\" class=\"far fa-bell text-gray text-2xl text-gray-600\"></i>"
         }
         this.countTarget.innerHTML = bell_html;
       });
