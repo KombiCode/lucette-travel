@@ -1173,7 +1173,7 @@ hotel1 = Booking.create(
   photo_title: "b4bhotel"
   )
 
-hotel3 = Booking.create(
+hotel2 = Booking.create(
   category: "Hotel",
   name: "Hotel Katerina Mare",
   begin_date: "27/03/2021",
@@ -1184,7 +1184,7 @@ hotel3 = Booking.create(
   photo_title: "katerinahotel"
   )
 
-hotel2 = Booking.create(
+hotel3 = Booking.create(
   category: "Hotel",
   name: "Acropolis View Hotel",
   begin_date: "01/04/2021",
@@ -1193,6 +1193,17 @@ hotel2 = Booking.create(
   address: "Webster 10 & Robertou Galli, Athenes, 11742, Greece",
   trip: trip1,
   photo_title: "acropolishotel"
+  )
+
+hotel4 = Booking.create(
+  category: "Hotel",
+  name: "Grand Hotel Reykjavík ",
+  begin_date: "10/04/2021",
+  end_date: "17/04/2021",
+  price: 730,
+  address: "Sigtún 28, 105 Reykjavík, Iceland",
+  trip: trip2,
+  photo_title: "islandhotel"
   )
 
 plane1 = Booking.create(
