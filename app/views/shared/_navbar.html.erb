@@ -17,33 +17,47 @@
       <!-- Inside Burger -->
       <div class="flex items-center justify-center burger" id="burger"> <!-- Contenu -->
         <ul>
+
           <li>
-            <div class="">
-              <% Trip.all.each do |trip| %>
-                <div class="wrapper-card-burger relative shadow-custom-card h-44 text-center mx-4">
-                  <%= link_to trip_path(trip) do %>
-                    <!-- <div class="box-content relative rounded-2xl mb-6  border-2 border-yellow-500"> -->
+            <% Trip.all.each do |trip| %>
+              <div class="wrapper-card-burger relative shadow-custom-card text-center mx-4">
+                <%= link_to trip_path(trip) do %>
+                    <% if trip.photo_title && !trip.photo_title.empty? %>
                       <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "rounded-lg" %>
-                        <div class="box-content container absolute top-3 content-between">
-                          <div class="text-white">
-                            <h5><%= trip.name.upcase %></h5>
-                          </div>
-                          <div>
-                            <p>From <%= trip.begin_date %> to <%= trip.end_date %></p>
-                          </div>
-                        </div>
+                    <% end %>
+                    <div class="box-content container absolute top-3 content-between">
+                      <div class="text-white">
+                        <h5><%= trip.name.upcase %></h5>
+                      </div>
+                      <div>
+                        <p>From <%= trip.begin_date %> to <%= trip.end_date %></p>
+                      </div>
                     </div>
-                  <% end %>
-                   <hr>
+                <% end %>
+              </div>
+
+              <hr>
+
+            <% end %>
+          </li>
+          <li>
+            <div class="container inline-flex justify-around">
+              <%= link_to new_trip_path do  %>
+                <div class="custom-text-button px-4 py-4 border rounded-full">
+                  +
                 </div>
               <% end %>
             </div>
           </li>
         </ul>
       </div>
-      <!-- End Burger menu -->
     </li>
+
+
+
+
   </ul>
+      <!-- End Burger menu -->
 </nav>
 <div class="hidden body-black-toggle"></div>
 

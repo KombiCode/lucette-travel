@@ -1,5 +1,5 @@
 <!-- START Tinder like -->
-<div class="wrapper-container-tinder h-96 overflow-hidden mx-auto pt-10" id="tinder-list">
+<div class="wrapper-container-tinder h-96 overflow-hidden mx-auto pt-8" id="tinder-list">
   <div class="wrapper-main">
     <div class="profiles">
       <% @activities.each do |activity| %>
@@ -18,7 +18,7 @@
 </div>
 <!-- END Tinder like -->
 
-<div id="tinderForm" class="hidden absolute top-28 w-72 text-center left-16 border-2 rounded-xl pb-8">
+<div id="tinderForm" class="hidden absolute w-72 text-center left-11 border-2 rounded-xl pb-6">
   <%= simple_form_for [@trip, @tripActivity], url: trip_trip_activities_path(@trip,@tripActivity) do |f| %>
     <%= f.input :date,
                 item_wrapper_tag: 'div',
@@ -40,7 +40,7 @@
 
     <%#= f.input :trip_id, as: :hidden, value: @current_trip%>
     <%= f.input :activity_id, as: :hidden, value: nil %>
-    <%= f.submit value: "Add Activity", class: "bg-green-400 px-5 py-2 rounded-md text-white" %>
+    <%= f.submit value: "+", class: "text-gray-200 text-6xl -my-5 bg-transparent", data: { disable_with: false } %>
   <% end %>
 </div>
 

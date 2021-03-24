@@ -1,5 +1,6 @@
 class TripsController < ApplicationController
-  before_action :find_trip, only: [:show, :create]
+  before_action :authenticate_user!, only: [:new]
+  before_action :find_trip, only: [:show]
 
   def index
     @trips = Trip.all
@@ -14,9 +15,11 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
+    @trip.user_id = current_user.id
     if @trip.save
       redirect_to root_path
     else
+      raise
       render :new
     end
   end
