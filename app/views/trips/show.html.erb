@@ -1,11 +1,14 @@
 <!-- FRONT - titres h enlevés pour remplacer par div (pb de taille - voir si pertinents les remettre) -->
 
-<div class="wrapper-header flex justify-between items-center pr-4 text-white mt-3">
+<!-- A CENTRER ? -->
+
+<div class="wrapper-header flex justify-between pr-4 text-white mt-3">
   <div class="wrapper-title flex px-2">
-    <div class="px-2 text-lg font-bold text-center"><%= @trip.name %>: </div></br>
+    <div class="px-2 text-xl font-bold"><%= @trip.name %>: </div></br>
       <div class="px-2 text-sm mt-1"><%= @trip.begin_date.to_formatted_s(:long)  %> to <%= @trip.end_date.to_formatted_s(:long)  %></div>
   </div>
 </div>
+
 
 <div id="wrapper-day">
   <div data-controller="carousel" class="swiper-container rounded-2xl"
@@ -15,13 +18,14 @@
       <% @trip.number_of_days.times do |index| %>
         <div class="swiper-slide px-4">
 
-          <div class="text-center font-bold text-white text-md my-4"><%= "Day #{index + 1}: #{@trip.date_for_day(index).to_formatted_s(:long) }" %></div>
+          <div class="font-bold text-white text-md my-4"><%= "Day #{index + 1}: #{@trip.date_for_day(index).to_formatted_s(:long) }" %></div>
 
           <div class="wrapper-booking mb-4">
             <% @trip.day_bookings(index).each do |booking| %>
               <%= link_to trip_booking_path(@trip.id, booking.id) do %>
-                <div class="p-4 border-2 bg-gray-600 text-white rounded-2xl mt-4">
-                  <%= "#{booking.name}" %>
+                <div class="p-2 border-2 bg-gray-600 text-white rounded-2xl mt-4 text-center">
+                  <%= "#{booking.name}" %></br>
+                  <div class="text-sm"> <%= "#{booking.address}" %> </div>
                 </div>
               <% end %>
             <% end %>
@@ -72,8 +76,11 @@
           <% end %>
         </div>
       <% end %>
-
     </div>
+
+    <!-- A rendre plus distincts, en blanc? -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
   </div>
 </div>
 
