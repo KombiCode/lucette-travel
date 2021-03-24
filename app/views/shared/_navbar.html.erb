@@ -2,7 +2,7 @@
   <ul>
     <li>
       <div class="padding-bell pl-3 pt-2 pb-2 shadow-custom-navbar">
-        <%= link_to "#", id: "notifBell", onclick: "notifClick()" do %>
+        <%= link_to "#", id: "notifBell" do %>
           <div data-controller="fakenotif" data-fakenotif-target="count">
             <i class="far fa-bell text-gray-200 text-2xl text-left"></i>
           </div>
@@ -60,26 +60,3 @@
       <!-- End Burger menu -->
 </nav>
 <div class="hidden body-black-toggle"></div>
-
-<!-- Internal script stuff for fake notif system -->
-<!-- Do not remove -->
-<script>
-  function notifClick() {
-    const hiddenNotifMessageElement = document.getElementById("notif-message")
-    const hiddenNotifTypeElement = document.getElementById("notif-type")
-    const hiddenNotifDataElement = document.getElementById("notif-data")
-    if (hiddenNotifMessageElement) {
-      // console.log(hiddenNotifMessageElement.innerText)
-      // console.log(hiddenNotifTypeElement.innerText)
-      // console.log(hiddenNotifDataElement.innerText)
-      <% new_booking = Booking.where("name = ?", 'Flight LYS - KEF to store') %>
-      console.log("Query done");
-      <% if new_booking.any? %>
-        console.log("Found new_booking");
-        console.log("Should rename it");
-        <% new_booking.first.name = "Flight LYS - KEF" %>
-        <% new_booking.first.save! %>
-      <% end %>
-    }
-  }
-</script>
