@@ -22,8 +22,8 @@ import "stylesheets/application"
 import "controllers"
 import 'swiper/swiper-bundle.min.css'
 import 'stylesheets/googlefont'
-import 'stylesheets/style_tinder'
 import 'stylesheets/burger_menu'
+import 'stylesheets/style_tinder'
 
 // CSS
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -31,14 +31,14 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 // internal imports
 import { initMapbox, showActivity } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
-import { initTinder } from '../plugins/init_tinder';
 import { initBurger } from '../plugins/init_burger';
 import { initNotifMessage } from "../plugins/init_notifmessage"
+import { initTinder } from '../plugins/init_tinder';
 
 document.addEventListener('turbolinks:load', () => {
+  initBurger();
   initMapbox();
   initAutocomplete();
   initTinder(showActivity);
-  initBurger();
   initNotifMessage();
 })

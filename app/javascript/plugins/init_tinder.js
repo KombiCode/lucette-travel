@@ -42,8 +42,9 @@ const setupDragAndDrop = (profile, callbackNewActivity) =>{
         profile.classList.add('profile--match');
         const tinderList = document.querySelector('.wrapper-container-tinder');
         tinderList.classList.add('invisible');
-        const tinderForm = document.querySelector('.hidden');
+        const tinderForm = document.querySelector('#tinderForm');
         tinderForm.classList.remove('hidden');
+        // console.log("coucou")
       } else if (posX < -thresholdMatch) {
         profile.classList.add('profile--next');
         console.log("NOK")
