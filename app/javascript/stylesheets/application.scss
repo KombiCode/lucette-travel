@@ -67,6 +67,10 @@ nav {
   background-color: $lucette-middle-gray;
 }
 
+footer {
+  background-color: $lucette-middle-gray;
+}
+
 #wrapper-day {
   /*height: 500px;*/
   width: 100vw;
@@ -111,6 +115,9 @@ nav {
   box-shadow: 0 0 8px rgba(0, 0, 0, 1);
 }
 
+.shadow-custom-footer {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+}
 /*.circle-add-button {
   border-radius: 50%;
   line-height: 60%;
