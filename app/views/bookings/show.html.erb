@@ -1,11 +1,21 @@
-<div class="container bg-gray-400 p-3 my-3">
-	<%= image_tag "#{@booking.photo_title}.jpg", alt: "#{@booking.name}"%>
-    <h4> <%= "#{@booking.name} (#{@booking.price}€)"  %> </h4>
+<main class="h-screen p-4 rounded-lg shadow-lg mx-auto text-white text-center mt-2">
+  <div class="container bg-gray-800 text-white p-3 my-3 mt-6 mb-8">
+  	<%= image_tag "#{@booking.photo_title}.jpg", alt: "#{@booking.name}"%>
+      <div class="mt-6"> <%= "#{@booking.name} (#{@booking.price.to_i} €)"  %>
+      </div>
 
-    <p> <%= "#{@booking.begin_date}, #{@booking.end_date}" %>
-    <div class="bg-gray-100 rounded-lg text-center text-gray-700 p-2 m-2">
-      <%= link_to "Back", trip_path(@booking.trip) %>
+      <div class="bg-gray-400 text-white text-md font-bold px-4 py-2 border rounded-full my-4">
+        <i class="fa fa-map-marker" aria-hidden="true"> <%= link_to @booking.address, "https://maps.google.com/?q=#{@booking.address}" %></i>
     </div>
-</div>
+     <div class="text-sm mb-8">
+      <%= "#{@booking.begin_date.to_formatted_s(:long)}, #{@booking.end_date.to_formatted_s(:long)}" %>
+      </div>
+      <div class="bg-gray-100 rounded-lg text-center text-gray-700 p-2 m-2 mb-6">
+        <%= link_to "Back", trip_path(@booking.trip) %>
+      </div>
+  </div>
+  </br>
+</main>
 
-  <%= render 'shared/footer' %>
+<%= render 'shared/footer' %>
+
