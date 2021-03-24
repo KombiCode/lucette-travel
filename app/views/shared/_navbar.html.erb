@@ -54,11 +54,13 @@
 <script>
   function notifClick() {
     hiddenMsgElement = document.getElementById("notif-message")
-    console.log(hiddenMsgElement.innerText)
-    <% lb = Booking.last %>
-    <% if lb.name == "Flight LYS - KEF to store"%>
-      <% lb.name = "Flight LYS - KEF" %>
-      <% lb.save %>
-    <% end %>
+    if (hiddenMsgElement) {
+      console.log(hiddenMsgElement.innerText)
+      <% lb = Booking.last %>
+      <% if lb.name == "Flight LYS - KEF to store"%>
+        <% lb.name = "Flight LYS - KEF" %>
+        <% lb.save %>
+      <% end %>
+    }
   }
 </script>
