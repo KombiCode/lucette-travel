@@ -24,9 +24,20 @@
           <div class="wrapper-booking mb-4">
             <% @trip.day_bookings(index).each do |booking| %>
               <%= link_to trip_booking_path(@trip.id, booking.id) do %>
-                <div class="p-2 border-2 text-white rounded-2xl mt-4 text-center">
-                  <%= "#{booking.name}" %></br>
-                  <div class="text-sm"> <%= "#{booking.address}" %> </div>
+                <div class="flex p-2 border-2 text-white rounded-2xl mt-4 text-center justify-between align-middle">
+                  <div class="my-auto px-3">
+                    <% if booking.category == "Hotel" %>
+                      <i class="fas fa-building mr-4"></i>
+                    <% elsif booking.category == "Plane" %>
+                      <i class="fas fa-plane mr-4"></i>
+                    <% else %>
+                      <i class="fas fa-ship mr-4"></i>
+                    <% end %> <!-- Icone Transport -->
+                  </div>
+                  <div class="text-center mx-auto pr-4">
+                    <%= "#{booking.name}" %></br>
+                    <div class="text-sm"> <%= "#{booking.address}" %> </div>
+                  </div>
                 </div>
               <% end %>
             <% end %>
