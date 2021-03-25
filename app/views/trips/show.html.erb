@@ -63,9 +63,9 @@
                   <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "static" %>
                 <% end %>
 
-                  <div class="border-2 border-white w-20 h-14 absolute top-0 right-0 -m-2 -mr-1 rounded-bl-xl bg-white bg-opacity-40">
+                  <div class="border-2 border-white w-24 h-14 absolute top-0 right-0 -m-3 -mr-3 rounded-bl-xl bg-white bg-opacity-40">
                   </div>
-                  <div class="border-2 border-white w-32 h-12 absolute bottom-0 -m-1 rounded-tr-2xl"> <!-- bg-gray-200 bg-opacity-40 -->
+                  <div class="border-2 border-white w-32 h-12 absolute bottom-0 -m-1 rounded-tr-2xl">
                   </div>
                 <div class="box-content container absolute top-2 flex justify-between"> <!-- --------- Name + Hour --------- -->
                   <div class="leading-8 w-60 pl-3 text-lg text-white font-bold">
@@ -73,7 +73,9 @@
                   </div>
 
                   <div class="leading-8 text-lg text-white pr-3">
-                    <div class="text-white font-bold"><%= show_start_hour(trip_activity.start_hour) %></div>
+                    <div class="text-white font-bold text-xl">
+                      <%= show_start_hour(trip_activity.start_hour) %>
+                    </div>
                   </div>
 
                 </div>
@@ -94,8 +96,8 @@
         </div>
       <% end %>
     </div>
-    <div class="swiper-button-next custom-position-arrow shadow-custom-arrow"></div>
-    <div class="swiper-button-prev custom-position-arrow shadow-custom-arrow"></div>
+    <div class="swiper-button-next custom-position-arrow"></div>
+    <div class="swiper-button-prev custom-position-arrow"></div>
   </div>
 </div>
 
