@@ -57,8 +57,8 @@ hr {
   height: 2px;
   background-color: $lucette-icone-gray;
   /*border: none;*/
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: 70px;
   margin-right: 70px;
 }
@@ -74,6 +74,11 @@ footer {
 #wrapper-day {
   /*height: 500px;*/
   width: 100vw;
+}
+
+#text-trip {
+  /*height: 500px;*/
+  font-size: 1.5rem;
 }
 
 /*.wrapper-activity {

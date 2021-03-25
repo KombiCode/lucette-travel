@@ -154,7 +154,6 @@ const notifications = () => {
         return;
       }
     });
-    console.log("coucou")
     return (properties[match] || {}).end;
   }
 

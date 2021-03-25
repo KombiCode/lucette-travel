@@ -10,7 +10,7 @@ namespace :fake_reservation do
     if (iceland_trip.any? && !booking_flight_lys_to_kef.any?)
       Booking.create(
         category: "Plane",
-        name: "Flight LYS - KEF to store",
+        name: "Flight LYS - KEF",
         begin_date: DateTime.new(2021,4,10,11,25,0),
         end_date: DateTime.new(2021,4,17,7,40,0),
         price: 546.99,

@@ -24,10 +24,10 @@
 .burger ul {
   position: absolute;
   width: 100%;
-  /*top: 50%;*/
-  /*-webkit-transform: translateY(-50%);*/
-  /*-ms-transform: translateY(-50%);*/
-  /*transform: translateY(-50%);*/
+ top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -48,14 +48,14 @@
 
 .burger-toggle .burger-toggle-bar,  .burger-toggle .burger-toggle-bar::after,  .burger-toggle .burger-toggle-bar::before {
   position: absolute;
-  /*top: 50%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  /*-webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;*/
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   /*background: white;*/
   background-color: #e5e7eb; /* Color cross */
@@ -119,5 +119,9 @@ nav ul:nth {
 .custom-text-button {
   font-size: 3.75rem;
   line-height: 1.75rem;
+}
+
+.text-burger-custom {
+  font-size: 1.5rem;
 }
 

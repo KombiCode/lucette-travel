@@ -4,6 +4,8 @@
       <div class="padding-bell pl-3 pt-2 pb-2 shadow-custom-navbar">
         <%= link_to "#", id: "notifBell" do %>
           <div data-controller="fakenotif" data-fakenotif-target="count">
+            <div id="notif-ea-checked" hidden>false</div>
+            <div id="notif-nb-checked" hidden>false</div>
             <i class="far fa-bell text-gray-200 text-2xl text-left"></i>
           </div>
         <% end %>
@@ -15,8 +17,12 @@
         <div class="burger-toggle-bar"></div>
       </div>
       <!-- Inside Burger -->
-      <div class="flex items-center justify-center burger" id="burger"> <!-- Contenu -->
+      <div class="flex items-center justify-center burger mb-1" id="burger"> <!-- Contenu -->
         <ul>
+
+          <div class="text-burger-custom text-center mx-4 mb-6">
+            <li>My trips</li>
+          </div>
 
           <li>
             <% Trip.all.each do |trip| %>
@@ -41,12 +47,15 @@
             <% end %>
           </li>
           <li>
-            <div class="container inline-flex justify-around">
+            <div class="container justify-around">
+              <div class="text-burger-custom text-center text-sm mx-4">
+              Add a trip
               <%= link_to new_trip_path do  %>
-                <div class="custom-text-button px-4 py-4 border rounded-full">
+                <div class="custom-text-button px-4 py-4">
                   +
                 </div>
               <% end %>
+            </div>
             </div>
           </li>
         </ul>

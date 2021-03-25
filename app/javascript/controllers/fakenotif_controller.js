@@ -4,7 +4,8 @@ export default class extends Controller {
   static targets = [ 'count' ];
 
   connect() {
-    setInterval(this.refresh, 70000);
+    const interval = 5 * 1000;
+    setInterval(this.refresh, interval);
   }
 
   refresh = () => {
@@ -17,18 +18,39 @@ export default class extends Controller {
         const notifMessage = data.notifMessage;
         const notifData = data.notifData;
 
-        let bell_html = "<i class=\"far fa-bell text-gray-200 text-2xl text-left\"></i>"
-        if (notifType == 'emptyActivities') {
-          bell_html = "<i style=\"color: Tomato;\" class=\"far fa-bell text-gray-200 text-2xl text-left\"></i> \
-                       <div id=\"notif-message\" hidden>" + `${notifMessage}` + "</div> \
-                       <div id=\"notif-type\" hidden>" + `${notifType}` + "</div> \
-                       <div id=\"notif-data\" hidden>" + `${notifData}` + "</div>";
-        } else if (notifType == 'newBooking') {
-          bell_html = "<i style=\"color: Dodgerblue;\" class=\"far fa-bell text-gray-200 text-2xl text-left\"></i> \
-                       <div id=\"notif-message\" hidden>" + `${notifMessage}` + "</div> \
-                       <div id=\"notif-type\" hidden>" + `${notifType}` + "</div> \
-                       <div id=\"notif-data\" hidden>" + `${notifData}` + "</div>";
+        let neaCheckedElement = document.getElementById('notif-ea-checked');
+        let nnbCheckedElement = document.getElementById('notif-nb-checked');
+        let neaCheckedHtml = ""
+        let nnbCheckedHtml = ""
+        let neaChecked = false;
+        let nnbChecked = false;
+
+        if (neaCheckedElement) {
+          neaCheckedHtml = neaCheckedElement.innerHTML;
+          if (neaCheckedElement.innerText == "true") {
+            neaChecked = true;
+          }
         }
+        if (nnbCheckedElement) {
+          nnbCheckedHtml = nnbCheckedElement.innerHTML;
+          if (nnbCheckedElement.innerText == "true") {
+            nnbChecked = true;
+          }
+        }
+
+        let bell_html = "";
+        if (notifType == 'emptyActivities' && !neaChecked) {
+          bell_html = "<i style=\"color: Tomato;\" class=\"far fa-bell text-gray-200 text-2xl text-left\"></i>"
+        } else if (notifType == 'newBooking' && !nnbChecked) {
+          bell_html = "<i style=\"color: Dodgerblue;\" class=\"far fa-bell text-gray-200 text-2xl text-left\"></i>"
+        } else {
+          bell_html = "<i class=\"far fa-bell text-gray-200 text-2xl text-left\"></i>"
+        }
+        bell_html = bell_html + "<div id=\"notif-ea-checked\" hidden>" + `${neaCheckedElement.innerText}` + "</div> \
+                                 <div id=\"notif-nb-checked\" hidden>" + `${nnbCheckedElement.innerText}` + "</div> \
+                                 <div id=\"notif-message\" hidden>" + `${notifMessage}` + "</div> \
+                                 <div id=\"notif-type\" hidden>" + `${notifType}` + "</div> \
+                                 <div id=\"notif-data\" hidden>" + `${notifData}` + "</div>";
         this.countTarget.innerHTML = bell_html;
       });
   }

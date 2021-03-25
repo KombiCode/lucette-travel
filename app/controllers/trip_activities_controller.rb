@@ -23,7 +23,7 @@ class TripActivitiesController < ApplicationController
           lat: activity.latitude,
           lng: activity.longitude,
           infoWindow: render_to_string(partial: "activities/activity_info_window", locals: { activity: activity }),
-          image_url: helpers.asset_url('local_activity.png')
+          image_url: helpers.asset_url('lucette-marker.svg')
         }
 
     end
