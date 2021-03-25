@@ -305,12 +305,12 @@ athenes7 = Activity.create(
   photo_title: "lycabette"
     )
 
-TripActivity.create(
-  trip_id: trip1.id,
-  activity_id: athenes7.id,
-  date: Date.current + 2,
-  start_hour: "09:00"
-)
+# TripActivity.create(
+#   trip_id: trip1.id,
+#   activity_id: athenes7.id,
+#   date: Date.current + 2,
+#   start_hour: "09:00"
+# )
 
 athenes8 = Activity.create(
   category: "Neighbourhood",
@@ -332,12 +332,12 @@ athenes8 = Activity.create(
   photo_title: "plaka"
     )
 
-TripActivity.create(
-  trip_id: trip1.id,
-  activity_id: athenes8.id,
-  date: Date.current + 2,
-  start_hour: "12:00"
-)
+# TripActivity.create(
+#   trip_id: trip1.id,
+#   activity_id: athenes8.id,
+#   date: Date.current + 2,
+#   start_hour: "12:00"
+# )
 
 athenes9 = Activity.create(
   category: "Museum",
@@ -359,12 +359,12 @@ athenes9 = Activity.create(
   photo_title: "archaeologicalmuseum"
     )
 
-TripActivity.create(
-  trip_id: trip1.id,
-  activity_id: athenes9.id,
-  date: Date.current + 2,
-  start_hour: "16:00"
-)
+# TripActivity.create(
+#   trip_id: trip1.id,
+#   activity_id: athenes9.id,
+#   date: Date.current + 2,
+#   start_hour: "16:00"
+# )
 
 athenes10 = Activity.create(
   category: "Historic sites",
