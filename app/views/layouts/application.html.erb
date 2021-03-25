@@ -31,13 +31,15 @@
     <link rel="manifest" href="/manifest.json">
   </head>
 
-  <body>
-
+  <body class="min-h-screen flex flex-col">
     <%= render 'shared/navbar' %>
     <!-- Disable devise notice and alert
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     -->
-    <%= yield %>
+    <div class="main_container flex-grow">
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' unless @hide_footer %>
   </body>
 </html>
