@@ -5,11 +5,11 @@
 
 .wrapper-container-tinder {
   width: 100%;
-  height: 360px;
+  height: 350px;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  padding-top: 26px;
+  padding-top: 14px;
 }
 
 .wrapper-main {
@@ -73,7 +73,7 @@
 .profile-name {
   color: white;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   text-shadow: 0 0 5px black;
 }
@@ -139,5 +139,5 @@ legend {
 }
 
 #tinderForm {
-  top: 80px;
+  top: 70px;
 }
