@@ -8,7 +8,6 @@ const activityUpdate = (callbackNewActivity) => {
   const elements = document.querySelectorAll('.profile:not(.profile--next)')
   if (elements.length) {
     const lastElement = elements[elements.length - 1]
-    console.log(lastElement)
     const activityId = lastElement.dataset.activityId
     document.querySelector('#trip_activity_activity_id').value = activityId  // <---- Comprend pas cette ligne. activityId = activityId.value
     callbackNewActivity(activityId)
@@ -44,10 +43,8 @@ const setupDragAndDrop = (profile, callbackNewActivity) =>{
         tinderList.classList.add('invisible');
         const tinderForm = document.querySelector('#tinderForm');
         tinderForm.classList.remove('hidden');
-        // console.log("coucou")
       } else if (posX < -thresholdMatch) {
         profile.classList.add('profile--next');
-        console.log("NOK")
         activityUpdate(callbackNewActivity)
       } else {
         profile.classList.add('profile--back');
