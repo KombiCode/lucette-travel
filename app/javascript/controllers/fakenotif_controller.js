@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = [ 'count' ];
 
   connect() {
-    const interval = 5 * 1000;
+    //const interval = 5 * 1000;
     setInterval(this.refresh, interval);
   }
 
@@ -28,7 +28,7 @@ export default class extends Controller {
         if (neaCheckedElement) {
           neaCheckedHtml = neaCheckedElement.innerHTML;
           if (neaCheckedElement.innerText == "true") {
-            neaChecked = true;   
+            neaChecked = true;
           }
         }
         if (nnbCheckedElement) {
