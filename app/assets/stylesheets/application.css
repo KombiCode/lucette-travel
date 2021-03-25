@@ -13,7 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-.img-background {
-  background: url(wallpaper.png);
-}
