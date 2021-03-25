@@ -780,25 +780,25 @@ paros6 = Activity.create(
   photo_title: "moraitis"
   )
 
-paros7 = Activity.create(
-  category: "Points of interest & Lookouts",
-  name: "Paros Park",
-  description: "Easily accessible by bus and water taxi from the Naousa port. Hi Bigla is a perfect tavern for a lunch during your beach day.",
-  duration: "02:00",
-  opening_hours: {
-    monday: [{open: "00:00", close: "23:59"}],
-    tuesday: [{open: "00:00", close: "23:59"}],
-    wednesday: [{open: "00:00", close: "23:59"}],
-    thursday: [{open: "00:00", close: "23:59"}],
-    friday: [{open: "00:00", close: "23:59"}],
-    saturday: [{open: "00:00", close: "23:59"}],
-    sunday: [{open: "00:00", close: "23:59"}]
-  },
-  price: 0,
-  rating: 4,
-  address: "Ai-Yannis Detis Kolimbithres Naoussa, Paros 844 01, Grèce",
-  photo_title: "parosphare"
-  )
+# paros7 = Activity.create(
+#   category: "Points of interest & Lookouts",
+#   name: "Paros Park",
+#   description: "Easily accessible by bus and water taxi from the Naousa port. Hi Bigla is a perfect tavern for a lunch during your beach day.",
+#   duration: "02:00",
+#   opening_hours: {
+#     monday: [{open: "00:00", close: "23:59"}],
+#     tuesday: [{open: "00:00", close: "23:59"}],
+#     wednesday: [{open: "00:00", close: "23:59"}],
+#     thursday: [{open: "00:00", close: "23:59"}],
+#     friday: [{open: "00:00", close: "23:59"}],
+#     saturday: [{open: "00:00", close: "23:59"}],
+#     sunday: [{open: "00:00", close: "23:59"}]
+#   },
+#   price: 0,
+#   rating: 4,
+#   address: "Ai-Yannis Detis Kolimbithres Naoussa, Paros 844 01, Grèce",
+#   photo_title: "parosphare"
+#   )
 
 paros8 = Activity.create(
   category: "Beach",
