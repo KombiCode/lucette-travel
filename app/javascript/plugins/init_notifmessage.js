@@ -16,6 +16,10 @@ const displayMessage = (e) => {
                 icon: 'info',
                 confirmButtonText: 'Ok'
             })
+            const nnbCheckedElement = document.getElementById('notif-nb-checked');
+            if (nnbCheckedElement) {
+              nnbCheckedElement.innerHTML = "<div id=\"notif-nb-checked\" hidden>true</div>";
+            }
         } else if (type == 'emptyActivities') {
             Swal.fire({
                 title: 'Lucette message!',
@@ -23,6 +27,10 @@ const displayMessage = (e) => {
                 icon: 'warning',
                 confirmButtonText: 'Ok'
             })
+            const neaCheckedElement = document.getElementById('notif-ea-checked');
+            if (neaCheckedElement) {
+              neaCheckedElement.innerHTML = "<div id=\"notif-ea-checked\" hidden>true</div>";
+            }
         }
       }
     }
