@@ -2,9 +2,14 @@
 
 <!-- A CENTRER ? -->
 
-<div class="wrapper-header bg-custom-title pr-4 text-gray-200 pt-2 pb-2 mb-1">
-  <div class="wrapper-title px-2">
-    <div class="px-2 text-md text-center font-bold"><%= @trip.name %>: <%= @trip.begin_date.to_formatted_s(:long)  %> to <%= @trip.end_date.to_formatted_s(:long)  %></div>
+<div class="wrapper-header flex justify-center bg-custom-title text-gray-200 pt-2 pb-2 mb-1">
+  <div class="wrapper-title px-2 text-center">
+    <div class="px-2 text-4xl">
+      <h1>~ <%= @trip.name %> ~</h1>
+    </div>
+    <div class="text-md italic">
+      <%= @trip.begin_date.to_formatted_s(:long)  %> to <%= @trip.end_date.to_formatted_s(:long)  %>
+    </div>
   </div>
 </div>
 
@@ -15,10 +20,16 @@
       <!-- Should have n swiper-slide corresponding to the number of days of the trip -->
       <% @trip.number_of_days.times do |index| %>
         <div class="swiper-slide px-4">
-          <div class="relative font-bold text-white mr-24 my-4 pl-2"><%= "Day #{index + 1}: #{@trip.date_for_day(index).to_formatted_s(:long) }" %></div>
-
-          <div class="right-4 -top-2 absolute text-gray-200 text-6xl">
-            <%= link_to "+", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)) %>
+          <div class="container">
+            <div class="relative font-bold text-white mr-24 my-4 pl-2 text-2xl">
+              <%= "Day #{index + 1}:" %>
+            </div>
+            <div class="text-white mr-24 my-4 pl-2 text-md -mt-3">
+              <%= "#{@trip.date_for_day(index).to_formatted_s(:long) }" %>
+            </div>
+            <div class="right-4 top-2 absolute text-gray-200 text-6xl">
+              <%= link_to "+", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)) %>
+            </div>
           </div>
 
           <div class="wrapper-booking mb-4">
