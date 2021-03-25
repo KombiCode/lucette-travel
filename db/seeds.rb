@@ -20,7 +20,7 @@ user2 = User.create(
   firstname: "Elodie",
   lastname: "Duponx",
   phone: "0687676736",
-  email: "elodie@lucette-travel.com",
+  email: "elodiedalmon@lucette-travel.com",
   password: "azerty"
 )
 
