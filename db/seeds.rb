@@ -672,26 +672,6 @@ athenes24 = Activity.create(
   photo_title: "athena"
   )
 
-athenes25 = Activity.create(
-  category: "Ancient ruins",
-  name: "Erechtheion",
-  description: "The Erechtheion is an ancient Greek temple of Ionic order located on the Acropolis of Athens, north of the Parthenon. It is the last monument erected on the Acropolis before the end of the 5th century BC. AD and it is renowned for its architecture both elegant and unusual.",
-  duration: "01:00",
-  opening_hours: {
-    monday: [{open: "10:30", close: "16:30"}],
-    tuesday: [{open: "10:30", close: "16:30"}],
-    wednesday: [{open: "10:30", close: "16:30"}],
-    thursday: [{open: "10:30", close: "16:30"}],
-    friday: [{open: "10:30", close: "16:30"}],
-    saturday: [{open: "10:30", close: "16:30"}],
-    sunday: [{open: "10:30", close: "16:30"}]
-  },
-  price: 14.5,
-  rating: 4.5,
-  address: "Acropolis, Athènes 10558 Grèce",
-  photo_title: "erechtheion"
-  )
-
 paros1 = Activity.create(
   category: "Flea & Street Markets",
   name: "Lefkes",
