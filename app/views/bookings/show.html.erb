@@ -1,10 +1,10 @@
-<main class="p-4 rounded-lg shadow-lg mx-auto text-white text-center mt-2">
-  <div class="container bg-gray-800 text-white p-3 my-3 mt-6 mb-8">
+<main class="p-4 rounded-lg shadow-lg mx-auto text-gray-200 text-center mt-2">
+  <div class="container text-white p-3 my-3 mt-6 mb-8">
   	<%= image_tag "#{@booking.photo_title}.jpg", alt: "#{@booking.name}"%>
       <div class="mt-6"> <%= "#{@booking.name} (#{@booking.price.to_i} €)"  %>
       </div>
 
-      <div class="bg-gray-400 text-white text-md font-bold px-4 py-2 border rounded-full my-4">
+      <div class="text-gray-200 text-md font-bold px-4 pt-3 pb-2 border rounded-full my-4">
         <i class="fa fa-map-marker" aria-hidden="true"> <%= link_to @booking.address, "https://maps.google.com/?q=#{@booking.address}" %></i>
     </div>
      <div class="text-sm mb-8">
