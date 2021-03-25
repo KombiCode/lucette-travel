@@ -41,8 +41,8 @@ trip1 = Trip.create(
   name: "Greece",
   country: "Greece",
   city: "Athens",
-  begin_date: Date.current - 1,
-  end_date: Date.current + 8,
+  begin_date: Date.current - 2,
+  end_date: Date.current + 7,
   language: "Greek - English",
   devise: "€",
   user: user2,
@@ -331,13 +331,6 @@ athenes8 = Activity.create(
   address: "Plaka, Athens, Greece",
   photo_title: "plaka"
     )
-
-TripActivity.create(
-  trip_id: trip1.id,
-  activity_id: athenes8.id,
-  date: Date.current + 1,
-  start_hour: "16:30"
-)
 
 TripActivity.create(
   trip_id: trip1.id,
