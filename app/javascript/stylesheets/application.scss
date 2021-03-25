@@ -137,4 +137,13 @@ footer {
   background-color: rgba(160, 160, 160, .5);
 }
 
+.swiper-container .custom-position-arrow {
+  position: fixed;
+  top: 50vh;
+}
+
+.swiper-container {
+  min-height: 100vh;
+}
+
 /* hover sur la div toute la hauteur du caroussel */
