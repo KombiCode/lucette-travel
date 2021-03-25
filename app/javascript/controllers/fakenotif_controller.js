@@ -27,15 +27,17 @@ export default class extends Controller {
 
         if (neaCheckedElement) {
           neaCheckedHtml = neaCheckedElement.innerHTML;
-          if (neaCheckedElement.innerText == "true") {
+          if (neaCheckedElement.innerText == "true")
             neaChecked = true;
-          }
+          else
+            neaChecked = false;
         }
         if (nnbCheckedElement) {
           nnbCheckedHtml = nnbCheckedElement.innerHTML;
-          if (nnbCheckedElement.innerText == "true") {
+          if (nnbCheckedElement.innerText == "true")
             nnbChecked = true;
-          }
+          else
+            nnbChecked = false
         }
 
         let bell_html = "";
