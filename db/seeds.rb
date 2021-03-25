@@ -16,6 +16,14 @@ user1 = User.create(
   password: "azerty"
 )
 
+user2 = User.create(
+  firstname: "Elodie",
+  lastname: "Duponx",
+  phone: "0687676736",
+  email: "elodie.duponx1@gmail.com",
+  password: "azerty"
+)
+
 # Do not remove : this is user admin
 User.create(
   firstname: "Admin",
@@ -37,7 +45,7 @@ trip1 = Trip.create(
   end_date: Date.current + 8,
   language: "Greek - English",
   devise: "€",
-  user: user1,
+  user: user2,
   photo_title: "greece",
   description: ""
   )
@@ -50,7 +58,7 @@ trip2 = Trip.create(
   end_date: Date.new(2021, 4, 17),
   language: "English",
   devise: "€",
-  user: user1,
+  user: user2,
   photo_title: "iceland",
   description: ""
   )
@@ -191,7 +199,7 @@ athenes3 = Activity.create(
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: athenes3.id,
-  date: Date.current,
+  date: Date.current - 1,
   start_hour: "16:00"
 )
 
@@ -218,7 +226,7 @@ athenes4 = Activity.create(
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: athenes4.id,
-  date: Date.current - 1,
+  date: Date.current,
   start_hour: "12:00"
 )
 
@@ -683,86 +691,6 @@ athenes25 = Activity.create(
   photo_title: "erechtheion"
   )
 
-iceland1 = Activity.create(
-  category: "Church",
-  name: "Hallgrimskirkja",
-  description: "Located in the center of Reykjavik, the Hallgrímskirkja is one of the city's best-known landmarks. Its construction was decided in 1937. The architect Guðjón Samúelsson was inspired by the basalt columns, mountains and glaciers of the Icelandic landscape.",
-  duration: "01:00",
-  opening_hours: {
-    monday: [{open: "11:00", close: "16:00"}],
-    tuesday: [{open: "11:00", close: "16:00"}],
-    wednesday: [{open: "11:00", close: "16:00"}],
-    thursday: [{open: "11:00", close: "16:00"}],
-    friday: [{open: "11:00", close: "16:00"}],
-    saturday: [{open: "11:00", close: "16:00"}],
-    sunday: [{open: "10:00", close: "16:00"}]
-  },
-  price: 0,
-  rating: 4.5,
-  address: "Hallgrimstorgi 1, Reykjavik 101 Islande",
-  photo_title: "hallgrimskirkja"
-  )
-
-iceland2 = Activity.create(
-  category: "Museum",
-  name: "Perlan",
-  description: "The Perlan, an Icelandic toponym literally meaning “the pearl” in French, is an Icelandic building located in Reykjavik, the country's capital, on Öskjuhlíð hill. It is 25.7 m high. The building is originally a reservoir where hot water of geothermal origin is stored.",
-  duration: "01:00",
-  opening_hours: {
-    monday: [{open: "10:00", close: "18:00"}],
-    tuesday: [{open: "10:00", close: "18:00"}],
-    wednesday: [{open: "10:00", close: "18:00"}],
-    thursday: [{open: "10:00", close: "18:00"}],
-    friday: [{open: "10:00", close: "18:00"}],
-    saturday: [{open: "10:00", close: "18:00"}],
-    sunday: [{open: "10:00", close: "18:00"}]
-  },
-  price: 19.00,
-  rating: 4.5,
-  address: "Varmahlid 1 Oskjuhlid, Reykjavik 105 Islande",
-  photo_title: "perlan"
-  )
-
-iceland3 = Activity.create(
-  category: "Water places",
-  name: "Jokulsarlon Lagoon",
-  description: "The Blue Lagoon, in Icelandic Bláa Lónið, is the name of a spa resort located in southwest Iceland, on the Reykjanesskagi, four kilometers from Grindavík and forty minutes southwest of the capital Reykjavik. Its water comes from the Svartsengi geothermal power station.",
-  duration: "03:00",
-  opening_hours: {
-    monday: [{open: "11:00", close: "16:00"}],
-    tuesday: [{open: "11:00", close: "16:00"}],
-    wednesday: [{open: "11:00", close: "16:00"}],
-    thursday: [{open: "11:00", close: "16:00"}],
-    friday: [{open: "11:00", close: "16:00"}],
-    saturday: [{open: "11:00", close: "16:00"}],
-    sunday: [{open: "10:00", close: "16:00"}]
-  },
-  price: 135.00,
-  rating: 5,
-  address: "Skaftafell National Park Route 1, Jokulsarlon 781 Islande",
-  photo_title: "jokulsarlon"
-  )
-
-iceland4 = Activity.create(
-  category: "ice cave",
-  name: "Crystal Blue Ice Cave Adventure",
-  description: "This fascinating ice cave adventure is perfect for travelers keen to experience Iceland's natural wonders.",
-  duration: "05:00",
-  opening_hours: {
-    monday: [{open: "11:00", close: "16:00"}],
-    tuesday: [{open: "11:00", close: "16:00"}],
-    wednesday: [{open: "11:00", close: "16:00"}],
-    thursday: [{open: "11:00", close: "16:00"}],
-    friday: [{open: "11:00", close: "16:00"}],
-    saturday: [{open: "11:00", close: "16:00"}],
-    sunday: [{open: "10:00", close: "16:00"}]
-  },
-  price: 158.00,
-  rating: 5,
-  address: "Glacier Lagoon, Skaftafell National Park Route 1, Jokulsarlon 781 Iceland",
-  photo_title: "crystal"
-  )
-
 paros1 = Activity.create(
   category: "Flea & Street Markets",
   name: "Lefkes",
@@ -1152,6 +1080,86 @@ paros18 = Activity.create(
 
  # "Aeropagus","Theatre of Dionysus", "Kapnikarea", "Byzantine and Christian Museum", "Philopappos Monument", Odeon of Herodes Atticus", "Temple of Athena Nike", "Temple of Hephaestus", "Erechtheion", ""Varvakios Agora",
 
+
+iceland1 = Activity.create(
+  category: "Church",
+  name: "Hallgrimskirkja",
+  description: "Located in the center of Reykjavik, the Hallgrímskirkja is one of the city's best-known landmarks. Its construction was decided in 1937. The architect Guðjón Samúelsson was inspired by the basalt columns, mountains and glaciers of the Icelandic landscape.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "11:00", close: "16:00"}],
+    tuesday: [{open: "11:00", close: "16:00"}],
+    wednesday: [{open: "11:00", close: "16:00"}],
+    thursday: [{open: "11:00", close: "16:00"}],
+    friday: [{open: "11:00", close: "16:00"}],
+    saturday: [{open: "11:00", close: "16:00"}],
+    sunday: [{open: "10:00", close: "16:00"}]
+  },
+  price: 0,
+  rating: 4.5,
+  address: "Hallgrimstorgi 1, Reykjavik 101 Islande",
+  photo_title: "hallgrimskirkja"
+  )
+
+iceland2 = Activity.create(
+  category: "Museum",
+  name: "Perlan",
+  description: "The Perlan, an Icelandic toponym literally meaning “the pearl” in French, is an Icelandic building located in Reykjavik, the country's capital, on Öskjuhlíð hill. It is 25.7 m high. The building is originally a reservoir where hot water of geothermal origin is stored.",
+  duration: "01:00",
+  opening_hours: {
+    monday: [{open: "10:00", close: "18:00"}],
+    tuesday: [{open: "10:00", close: "18:00"}],
+    wednesday: [{open: "10:00", close: "18:00"}],
+    thursday: [{open: "10:00", close: "18:00"}],
+    friday: [{open: "10:00", close: "18:00"}],
+    saturday: [{open: "10:00", close: "18:00"}],
+    sunday: [{open: "10:00", close: "18:00"}]
+  },
+  price: 19.00,
+  rating: 4.5,
+  address: "Varmahlid 1 Oskjuhlid, Reykjavik 105 Islande",
+  photo_title: "perlan"
+  )
+
+iceland3 = Activity.create(
+  category: "Water places",
+  name: "Jokulsarlon Lagoon",
+  description: "The Blue Lagoon, in Icelandic Bláa Lónið, is the name of a spa resort located in southwest Iceland, on the Reykjanesskagi, four kilometers from Grindavík and forty minutes southwest of the capital Reykjavik. Its water comes from the Svartsengi geothermal power station.",
+  duration: "03:00",
+  opening_hours: {
+    monday: [{open: "11:00", close: "16:00"}],
+    tuesday: [{open: "11:00", close: "16:00"}],
+    wednesday: [{open: "11:00", close: "16:00"}],
+    thursday: [{open: "11:00", close: "16:00"}],
+    friday: [{open: "11:00", close: "16:00"}],
+    saturday: [{open: "11:00", close: "16:00"}],
+    sunday: [{open: "10:00", close: "16:00"}]
+  },
+  price: 135.00,
+  rating: 5,
+  address: "Skaftafell National Park Route 1, Jokulsarlon 781 Islande",
+  photo_title: "jokulsarlon"
+  )
+
+iceland4 = Activity.create(
+  category: "ice cave",
+  name: "Crystal Blue Ice Cave Adventure",
+  description: "This fascinating ice cave adventure is perfect for travelers keen to experience Iceland's natural wonders.",
+  duration: "05:00",
+  opening_hours: {
+    monday: [{open: "11:00", close: "16:00"}],
+    tuesday: [{open: "11:00", close: "16:00"}],
+    wednesday: [{open: "11:00", close: "16:00"}],
+    thursday: [{open: "11:00", close: "16:00"}],
+    friday: [{open: "11:00", close: "16:00"}],
+    saturday: [{open: "11:00", close: "16:00"}],
+    sunday: [{open: "10:00", close: "16:00"}]
+  },
+  price: 158.00,
+  rating: 5,
+  address: "Glacier Lagoon, Skaftafell National Park Route 1, Jokulsarlon 781 Iceland",
+  photo_title: "crystal"
+  )
 puts "#{Activity.count} activities created"
 puts "#{trip1.activities.count} activities assigned to trip1"
 puts "#{trip2.activities.count} activities assigned to trip2"
@@ -1177,7 +1185,7 @@ hotel2 = Booking.create(
   category: "Hotel",
   name: "Hotel Katerina Mare",
   begin_date: "27/03/2021",
-  end_date: "01/04/2021",
+  end_date: "31/03/2021",
   price: 867,
   address: "Naousa, Greece",
   trip: trip1,
@@ -1209,8 +1217,8 @@ hotel4 = Booking.create(
 plane1 = Booking.create(
   category: "Plane",
   name: "KLM",
-  begin_date: "24/03/2021, 11h50",
-  end_date: "25/03/2021, 1h05",
+  begin_date: "23/03/2021, 11h50",
+  end_date: "24/03/2021, 1h05",
   price: 263.40,
   address: "Lyon-Saint Exupéry Airport (LYS), Colombier-Saugnieu",
   trip: trip1,
@@ -1231,8 +1239,8 @@ plane2 = Booking.create(
 ferry1 = Booking.create(
   category: "Ferry",
   name: "Blue Star Ferries",
-  begin_date: "26/03/2021, 17h30",
-  end_date: "26/03/2021, 21h45",
+  begin_date: "27/03/2021, 17h30",
+  end_date: "27/03/2021, 21h45",
   price: 60,
   address: "Port of Piraeus, Pirée, Greece",
   trip: trip1,
