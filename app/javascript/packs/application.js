@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require ("plugins/hammer")
+require("plugins/hammer")
 // = require touch-emulator
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -32,8 +32,9 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 import { initMapbox, showActivity } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initBurger } from '../plugins/init_burger';
-import { initNotifMessage } from "../plugins/init_notifmessage"
+import { initNotifMessage } from "../plugins/init_notifmessage";
 import { initTinder } from '../plugins/init_tinder';
+import { initSwiper } from '../plugins/init_swiper';
 
 document.addEventListener('turbolinks:load', () => {
   initBurger();
@@ -41,4 +42,5 @@ document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
   initTinder(showActivity);
   initNotifMessage();
+  initSwiper();
 })

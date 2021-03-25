@@ -15,6 +15,8 @@ const activityUpdate = (callbackNewActivity) => {
   }
 }
 
+// const   rotateCards = (cards) => cards.forEach(card => card)
+
 const setupDragAndDrop = (profile, callbackNewActivity) =>{
   const hammertime = new Hammer(profile);
 
@@ -61,22 +63,9 @@ const initTinder = (callbackNewActivity) => {
   profiles.forEach((profile) => {
     setupDragAndDrop(profile, callbackNewActivity)
   });
+  // rotateCards(profiles)
   activityUpdate(callbackNewActivity)
 }
 
 export { initTinder }
-// <div class="card"
-  // data-offer-id="<%= offer.id %>"
-  // data-user-id="<%= current_user.id %>"
-// </div>
 
-  // const fetchingCard = (card) => {
-  //   if (card.classList.contains("profile--match")) {
-      // Rails.ajax({
-      //   url: `offers/${card.dataset.offerId}/bookings`,
-      //   type: "POST",
-      //   success: function(data) {console.log(data)},
-      //   error: function(data) {}
-      // })
-    // }
-  // }
