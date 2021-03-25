@@ -125,7 +125,7 @@ trip1.activities = []
 athenes1 = Activity.create(
   category: "Historic site",
   name: "Parthenon",
-  description: "The majestic ruins of an ancient Greek building, known for its dignified white marble columns and perfect sense of proportion.",
+  description: "Historic site or heritage site is an official location where pieces of political, military, cultural, or social history have been preserved due to their cultural heritage value.",
   duration: "04:30",
   opening_hours: {
     monday: [{open: "08:00", close: "20:00"}],
@@ -138,7 +138,7 @@ athenes1 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Acropolis Top of Dionyssiou Areopagitou, Athens 105 58 Greece",
+  address: "Acropolis Top of Dionyssiou Areopagitou, Athens Greece",
   photo_title: "parthenon"
     )
 
@@ -152,7 +152,7 @@ TripActivity.create(
 athenes2 = Activity.create(
   category: "Historic site",
   name: "The Acropolis",
-  description: "The most famous site in all of Athens, this large hill lies in the center of the city and contains a cluster of ancient ruins.",
+  description: "The Acropolis of Athens is an ancient citadel located on a rocky outcrop above the city of Athens and contains the remains of several ancient buildings of great architectural and historic significance, the most famous being the Parthenon.",
   duration: "02:00",
   opening_hours: {
     monday: [{open: "00:00", close: "23:59"}],
@@ -165,7 +165,7 @@ athenes2 = Activity.create(
   },
   price: 13,
   rating: 5,
-  address: "via Dionysiou Areopagitou str., Athens 105 58 Greece",
+  address: "via Dionysiou Areopagitou str., Athens Greece",
   photo_title: "acropole"
   )
 
@@ -206,7 +206,7 @@ TripActivity.create(
 athenes4 = Activity.create(
   category: "Museum",
   name: "Acropolis Museum",
-  description: "Modern, uptodate building on the foot of the Acropolis housing important ancient Greek statues and much more.",
+  description: "The Acropolis Museum is an archaeological museum focused on the findings of the archaeological site of the Acropolis of Athens. The museum was built to house every artifact found on the rock and on the surrounding slopes, from the Greek Bronze Age to Roman and Byzantine Greece. It also lies over the ruins of a part of Roman and early Byzantine Athens.",
   duration: "02:00",
   opening_hours: {
     monday: [{open: "00:00", close: "23:59"}],
@@ -219,7 +219,7 @@ athenes4 = Activity.create(
   },
   price: 7.50,
   rating: 4,
-  address: "Dionysiou Areopagitou 15, Athens 117 42 Greece",
+  address: "Dionysiou Areopagitou 15, Athens Greece",
   photo_title: "acropolismuseum"
     )
 
@@ -260,7 +260,7 @@ TripActivity.create(
 athenes6 = Activity.create(
   category: "Neighbourhood",
   name: "Monastiraki Neighbourhood",
-  description: "Lively flea market neighborhood with lots of small tavernas serving good-value local snacks.",
+  description: "Monastiraki is a flea market neighborhood in the old town of Athens, Greece, and is one of the principal shopping districts in Athens. The area is home to clothing boutiques, souvenir shops, and specialty stores, and is a major tourist attraction in Athens and Attica for bargain shopping.",
   duration: "02:30",
   opening_hours: {
     monday: [{open: "00:00", close: "23:59"}],
@@ -280,7 +280,7 @@ athenes6 = Activity.create(
 athenes7 = Activity.create(
   category: "Points of interest & Lookouts",
   name: "Lycabettus Hill",
-  description: "Walk or take the funicular tramway to the top of this hill for the best views of Athens",
+  description: "Mount Lycabettus, also known as Lycabettos, Lykabettos or Lykavittos, is a Cretaceous limestone hill in the Greek capital Athens. At 300 meters (908 feet) above sea level, its summit is the highest point in Athens and pine trees cover its base. The name also refers to the residential neighbourhood immediately below the east of the hill.",
   duration: "01:30",
   opening_hours: {
     monday: [{open: "00:00", close: "23:59"}],
@@ -307,7 +307,7 @@ TripActivity.create(
 athenes8 = Activity.create(
   category: "Neighbourhood",
   name: "Plaka Neighbourhood",
-  description: "Historic neighborhood located at the base of the hill topped by the Acropolis.",
+  description: "Plaka is the old historical neighborhood of Athens, clustered around the northern and eastern slopes of the Acropolis, and incorporating labyrinthine streets and neoclassical architecture. Plaka is built on top of the residential areas of the ancient town of Athens. It is known as the \"Neighborhood of the Gods\" due to its proximity to the Acropolis and its many archaeological sites.",
   duration: "02:30",
   opening_hours: {
     monday: [{open: "00:00", close: "23:59"}],
@@ -368,7 +368,7 @@ TripActivity.create(
 athenes10 = Activity.create(
   category: "Historic sites",
   name: "Herod Atticus Odeon",
-  description: "Second-century theater built into the hillside.",
+  description: "The Odeon of Herodes Atticus is a stone Roman theater structure located on the southwest slope of the Acropolis of Athens, Greece. The building was completed in 161 AD and then renovated in 1950.",
   duration: "00:30",
   opening_hours: {
     monday: [{open: "00:00", close: "23:59"}],
@@ -430,15 +430,15 @@ athenes12 = Activity.create(
 athenes13 = Activity.create(
   category: "Flea & Street Markets",
   name: "Central Municipal Athens Market",
-  description: "Large public market for meat & produce",
+  description: "The Athens central market is a great place to save money on food. You'll find halls of meat, fish, vegetables and fruits from all over Greece",
   duration: "01:00",
   opening_hours: {
-    monday: [{open: "07:00", close: "18:30"}],
-    tuesday: [{open: "07:00", close: "18:30"}],
-    wednesday: [{open: "07:00", close: "18:30"}],
-    thursday: [{open: "07:00", close: "18:30"}],
-    friday: [{open: "07:00", close: "18:30"}],
-    saturday: [{open: "07:00", close: "18:30"}],
+    monday: [{open: "08:00", close: "18:30"}],
+    tuesday: [{open: "08:00", close: "18:30"}],
+    wednesday: [{open: "08:00", close: "18:30"}],
+    thursday: [{open: "08:00", close: "18:30"}],
+    friday: [{open: "08:00", close: "18:30"}],
+    saturday: [{open: "08:00", close: "18:30"}],
     sunday: [],
     },
   price: 0,
@@ -728,7 +728,7 @@ paros2 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, 844 01, Greece",
+  address: "Kolympethres Beach, Greece",
   photo_title: "kolimpithres"
   )
 
@@ -748,7 +748,7 @@ paros3 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, 844 01, Greece",
+  address: "Kolympethres Beach, Greece",
   photo_title: "kolimpithres"
   )
 
@@ -768,7 +768,7 @@ paros4 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, 844 01, Greece",
+  address: "Kolympethres Beach, Greece",
   photo_title: "kolimpithres"
   )
 
@@ -795,7 +795,7 @@ paros5 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, 844 01, Greece",
+  address: "Kolympethres Beach, Greece",
   photo_title: "kolimpithres"
   )
 
@@ -815,7 +815,7 @@ paros6 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, 844 01, Greece",
+  address: "Kolympethres Beach, Greece",
   photo_title: "kolimpithres"
   )
 
@@ -835,7 +835,7 @@ paros7 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, 844 01, Greece",
+  address: "Kolympethres Beach, Greece",
   photo_title: "kolimpithres"
   )
 
@@ -855,7 +855,7 @@ paros8 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Golden beach, 731 00, Greece",
+  address: "Golden beach, Greece",
   photo_title: "goldenbeach"
   )
 
@@ -875,7 +875,7 @@ paros9 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Santa Maria Beach, Santa Maria 844 01, Greece",
+  address: "Santa Maria Beach, Santa Maria, Greece",
   photo_title: "santamariabeach"
   )
 
@@ -895,7 +895,7 @@ paros10 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Monastiri beach, Paros 844 01, Greece",
+  address: "Monastiri beach, Paros, Greece",
   photo_title: "monastiribeach"
   )
 
@@ -915,7 +915,7 @@ paros11 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Faragas Beach, Paros 844 00, Greece",
+  address: "Faragas Beach, Paros, Greece",
   photo_title: "faragas"
   )
 
@@ -935,7 +935,7 @@ paros12 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "agia Eirini, 84400 Paroikía, Kikladhes, Paros 844 00, Greece",
+  address: "agia Eirini, 84400 Paroikía, Kikladhes, Paros, Greece",
   photo_title: "palmbeach"
   )
 
@@ -956,7 +956,7 @@ paros13 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Marcello Beach, Paros 844 00, Greece",
+  address: "Marcello Beach, Paros, Greece",
   photo_title: "martselo"
   )
 
@@ -976,7 +976,7 @@ paros14 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Molos Beach, Paros 844 00, Greece",
+  address: "Molos Beach, Paros, Greece",
   photo_title: "molosbeach"
   )
 
@@ -996,7 +996,7 @@ paros15 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Church Panagia Ekatontapiliani, Prompona 18, Paros 844 00, Greece",
+  address: "Church Panagia Ekatontapiliani, Prompona 18, Paros, Greece",
   photo_title: "panagia"
   )
 
@@ -1016,7 +1016,7 @@ paros16 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Ancient Marble Quarries, Epar.Od. Parikias-Marpissas, Paros 844 00, Greece",
+  address: "Ancient Marble Quarries, Epar.Od. Parikias-Marpissas, Paros, Greece",
   photo_title: "marathi"
   )
 
@@ -1036,7 +1036,7 @@ paros17 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kalogeros beach, Paros 844 00, Greece",
+  address: "Kalogeros beach, Paros, Greece",
   photo_title: "kalogeros"
   )
 
@@ -1176,7 +1176,7 @@ hotel1 = Booking.create(
   begin_date: "23/03/2021",
   end_date: "26/03/2021",
   price: 152,
-  address: "18, Kallirois Avenue, 11743, Athenes, Greece",
+  address: "18, Kallirois Avenue, Athenes, Greece",
   trip: trip1,
   photo_title: "b4bhotel"
   )
@@ -1185,7 +1185,7 @@ hotel2 = Booking.create(
   category: "Hotel",
   name: "Hotel Katerina Mare",
   begin_date: "27/03/2021",
-  end_date: "31/03/2021",
+  end_date: "29/03/2021",
   price: 867,
   address: "Naousa, Greece",
   trip: trip1,
@@ -1194,16 +1194,27 @@ hotel2 = Booking.create(
 
 hotel3 = Booking.create(
   category: "Hotel",
+  name: "Naoussa Hills Boutique Resort",
+  begin_date: "30/03/2021",
+  end_date: "31/04/2021",
+  price: 161,
+  address: "Naoussa Hills Boutique Resort, Naousa Greece",
+  trip: trip1,
+  photo_title: "naoussahill"
+  )
+
+hotel4 = Booking.create(
+  category: "Hotel",
   name: "Acropolis View Hotel",
   begin_date: "01/04/2021",
   end_date: "02/04/2021",
   price: 74,
-  address: "Webster 10 & Robertou Galli, Athenes, 11742, Greece",
+  address: "Webster 10 & Robertou Galli, Athenes, Greece",
   trip: trip1,
   photo_title: "acropolishotel"
   )
 
-hotel4 = Booking.create(
+hotel5 = Booking.create(
   category: "Hotel",
   name: "Grand Hotel Reykjavík ",
   begin_date: "10/04/2021",
