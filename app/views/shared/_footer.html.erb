@@ -1,14 +1,18 @@
 <footer class="w-screen sticky bottom-0 z-10 shadow-custom-navbar mt-1">
   <div class="flex justify-around pt-2 pb-2">
+    <% if @trip && @trip.id %>
+      <%= link_to trip_path(@trip) do %>
+          <i class="fas fa-home text-gray-200 text-2xl"></i>
+      <% end %>
 
-     <%= link_to trip_path(@trip) do %>
-        <i class="fas fa-home text-gray-200 text-2xl"></i>
+      <%= link_to trip_tasks_path(@trip) do %>
+        <i class="fas fa-tasks text-gray-200 text-2xl"></i>
+      <% end %>
+    <% else %>
+      <%= link_to new_trip_path() do %>
+          <i class="fas fa-home text-gray-200 text-2xl"></i>
+      <% end %>
     <% end %>
-
-    <%= link_to trip_tasks_path(@trip) do %>
-      <i class="fas fa-tasks text-gray-200 text-2xl"></i>
-    <% end %>
-
     <%= link_to user_session_path do %>
       <i class="far fa-user text-gray-200 text-2xl"></i>
     <% end %>
