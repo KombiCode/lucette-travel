@@ -19,7 +19,7 @@
 </div>
 <!-- END Tinder like -->
 
-<div id="tinderForm" class="hidden absolute w-72 text-center left-11 border-2 rounded-xl pb-6">
+<div id="tinderForm" class="hidden absolute w-72 text-center left-11 border-2 rounded-xl">
   <%= simple_form_for [@trip, @tripActivity], url: trip_trip_activities_path(@trip,@tripActivity) do |f| %>
     <%= f.input :date,
                 item_wrapper_tag: 'div',
@@ -41,7 +41,7 @@
 
     <%#= f.input :trip_id, as: :hidden, value: @current_trip%>
     <%= f.input :activity_id, as: :hidden, value: nil %>
-    <%= f.submit value: "+", class: "text-gray-200 text-6xl -my-5 bg-transparent", data: { disable_with: false } %>
+    <%= f.submit value: "Add activity", class: "text-gray-200 text-md font-bold my-3 bg-transparent", data: { disable_with: false } %>
   <% end %>
 </div>
 
