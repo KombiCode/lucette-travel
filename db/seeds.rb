@@ -286,7 +286,7 @@ athenes6 = Activity.create(
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: athenes5.id,
-  date: Date.current -2 ,
+  date: Date.current - 2 ,
   start_hour: "19:00"
 )
 
