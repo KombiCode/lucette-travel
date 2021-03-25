@@ -2,9 +2,9 @@
 
 <!-- A CENTRER ? -->
 
-<div class="wrapper-header pr-4 text-white mt-3 mb-3">
+<div class="wrapper-header bg-custom-title pr-4 text-gray-200 pt-2 pb-2 mb-1">
   <div class="wrapper-title px-2">
-    <div class="px-2 text-md text-center font-bold"><%= @trip.name %>:<%= @trip.begin_date.to_formatted_s(:long)  %> to <%= @trip.end_date.to_formatted_s(:long)  %></div>
+    <div class="px-2 text-md text-center font-bold"><%= @trip.name %>: <%= @trip.begin_date.to_formatted_s(:long)  %> to <%= @trip.end_date.to_formatted_s(:long)  %></div>
   </div>
 </div>
 
