@@ -1,27 +1,9 @@
-<div class="container flex-row mt-2">
-  <div class="text-gray-700 text-center text-2xl p-4">
-    <h1>Welcome to Lucette Travel !</h1>
-  </div>
-  <div class="mx-8">
-    <% @trips.each do |trip| %>
-      <div class="w-80 h-58 bg-gray-100 rounded-lg text-center text-gray-500 p-2 mx-auto">
-        <%= link_to trip_path(trip) do  %>
-          <% if trip.photo_title && !trip.photo_title.empty? %>
-            <%= image_tag "#{trip.photo_title}.jpg", alt: "#{trip.name}", class: "" %>
-          <% end %>
-          <p><%= trip.name.upcase %> </br>
-          From <%= trip.begin_date %> to <%= trip.end_date %>
-          </p>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-  <div class="container inline-flex justify-around">
-    <a role="button" class="bg-gray-600 hover:bg-red-700 text-white text-sm px-4 py-2 border rounded-full" href="/trips/new">
-Create event
-    </a>
-  </div>
-     <%= link_to user_session_path do %>
-      <i class="far fa-user text-gray-600 absolute right-2.5 m-4 bottom-0 text-2xl"></i>
-    <% end %>
+<div class="img-background">
+  <!-- <div class="w-screen border-2 border-yellow-400"> -->
+    <div class="flex items-center justify-center h-screen">
+      <%= link_to Trip.first, class: "bg-gray-200 bg-opacity-50 px-4 py-2 text-gray-200 rounded-lg border-2 shadow-lg font-bold" do %>
+        Continue
+      <% end %>
+    </div>
+  <!-- </div> -->
 </div>
