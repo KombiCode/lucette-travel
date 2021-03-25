@@ -41,8 +41,8 @@ trip1 = Trip.create(
   name: "Greece",
   country: "Greece",
   city: "Athens",
-  begin_date: Date.current - 2,
-  end_date: Date.current + 7,
+  begin_date: Date.current - 3,
+  end_date: Date.current + 6,
   language: "Greek - English",
   devise: "€",
   user: user2,
@@ -64,6 +64,9 @@ trip2 = Trip.create(
   )
 
 puts "#{Trip.count} trips created"
+
+
+#TASKS--------------------------------------------
 
 puts "Creating Tasks"
 
@@ -97,14 +100,14 @@ task4 = Task.create(
 
 task5 = Task.create(
   name: "Luggage",
-  description: "Smartphone charger",
+  description: "Smartphone charger, headphones, tablet",
   done: true,
   trip: trip1
   )
 
 task5 = Task.create(
   name: "Luggage",
-  description: "Glasses, tablet, headphones",
+  description: "Sunglasses",
   done: true,
   trip: trip1
   )
@@ -130,6 +133,8 @@ puts "Creating Activities"
 
 trip1.activities = []
 
+#-----------------ATHENES--------------------------------------------
+
 athenes1 = Activity.create(
   category: "Historic site",
   name: "Parthenon",
@@ -153,7 +158,7 @@ athenes1 = Activity.create(
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: athenes1.id,
-  date: Date.current - 1,
+  date: Date.current - 2,
   start_hour: "10:00"
 )
 
@@ -180,8 +185,8 @@ athenes2 = Activity.create(
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: athenes2.id,
-  date: Date.current,
-  start_hour: "13:00"
+  date: Date.current - 1,
+  start_hour: "10:00"
 )
 
 athenes3 = Activity.create(
@@ -207,8 +212,8 @@ athenes3 = Activity.create(
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: athenes3.id,
-  date: Date.current - 1,
-  start_hour: "16:00"
+  date: Date.current - 2,
+  start_hour: "15:00"
 )
 
 athenes4 = Activity.create(
@@ -234,8 +239,8 @@ athenes4 = Activity.create(
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: athenes4.id,
-  date: Date.current,
-  start_hour: "12:00"
+  date: Date.current - 1,
+  start_hour: "14:00"
 )
 
 athenes5 = Activity.create(
@@ -258,13 +263,6 @@ athenes5 = Activity.create(
   photo_title: "cycladicmuseum"
     )
 
-TripActivity.create(
-  trip_id: trip1.id,
-  activity_id: athenes5.id,
-  date: Date.current + 1,
-  start_hour: "14:00"
-)
-
 athenes6 = Activity.create(
   category: "Neighbourhood",
   name: "Monastiraki Neighbourhood",
@@ -284,6 +282,13 @@ athenes6 = Activity.create(
   address: "Monastikari Square",
   photo_title: "monastikari"
     )
+
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: athenes5.id,
+  date: Date.current -2 ,
+  start_hour: "19:00"
+)
 
 athenes7 = Activity.create(
   category: "Points of interest & Lookouts",
@@ -305,12 +310,12 @@ athenes7 = Activity.create(
   photo_title: "lycabette"
     )
 
-# TripActivity.create(
-#   trip_id: trip1.id,
-#   activity_id: athenes7.id,
-#   date: Date.current + 2,
-#   start_hour: "09:00"
-# )
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: athenes7.id,
+  date: Date.current,
+  start_hour: "10:00"
+)
 
 athenes8 = Activity.create(
   category: "Neighbourhood",
@@ -332,12 +337,12 @@ athenes8 = Activity.create(
   photo_title: "plaka"
     )
 
-# TripActivity.create(
-#   trip_id: trip1.id,
-#   activity_id: athenes8.id,
-#   date: Date.current + 2,
-#   start_hour: "12:00"
-# )
+TripActivity.create(
+  trip_id: trip1.id,
+  activity_id: athenes8.id,
+  date: Date.current,
+  start_hour: "12:00"
+)
 
 athenes9 = Activity.create(
   category: "Museum",
@@ -358,13 +363,6 @@ athenes9 = Activity.create(
   address: "28is Oktovriou 44, Athina 106 82, Grèce",
   photo_title: "archaeologicalmuseum"
     )
-
-# TripActivity.create(
-#   trip_id: trip1.id,
-#   activity_id: athenes9.id,
-#   date: Date.current + 2,
-#   start_hour: "16:00"
-# )
 
 athenes10 = Activity.create(
   category: "Historic sites",
@@ -406,7 +404,6 @@ athenes11 = Activity.create(
   photo_title: "hephaestus"
     )
 
-
 athenes12 = Activity.create(
   category: "Parks & Gardens",
   name: "National Garden",
@@ -426,7 +423,6 @@ athenes12 = Activity.create(
   address: "Leoforos Amalias 1, Athens 10557 Greece",
   photo_title: "nationalgarden"
     )
-
 
 athenes13 = Activity.create(
   category: "Flea & Street Markets",
@@ -652,6 +648,8 @@ athenes24 = Activity.create(
   photo_title: "athena"
   )
 
+#PAROS--------------------------------------------
+
 paros1 = Activity.create(
   category: "Flea & Street Markets",
   name: "Lefkes",
@@ -689,7 +687,7 @@ paros2 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "844 01, Grèce",
+  address: "Monastiri beach, Paros, Greece",
   photo_title: "kolimpithres"
   )
 
@@ -709,7 +707,7 @@ paros3 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Paros 844 01, Grèce",
+  address: "Lageri Beach, Paros 844 01, Greece",
   photo_title: "lageri"
   )
 
@@ -729,15 +727,15 @@ paros4 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Naousa 844 01, Grèce",
+  address: "Naousa, Greece",
   photo_title: "naoussa"
   )
 
 TripActivity.create(
   trip_id: trip1.id,
   activity_id: paros4.id,
-  date: Date.current + 4,
-  start_hour: "16:30"
+  date: Date.current + 2,
+  start_hour: "18:30"
 )
 
 paros5 = Activity.create(
@@ -756,7 +754,7 @@ paros5 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Palia Agora, Parikia 84400, 844 00, Grèce",
+  address: "Palia Agora, Parikia, Greece",
   photo_title: "parikia"
   )
 
@@ -776,29 +774,29 @@ paros6 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Epar.Od. Naoussas-Marpissas, Naousa 844 01, Grèce",
+  address: "Epar.Od. Naoussas-Marpissas, Naousa, Greece",
   photo_title: "moraitis"
   )
 
-# paros7 = Activity.create(
-#   category: "Points of interest & Lookouts",
-#   name: "Paros Park",
-#   description: "Easily accessible by bus and water taxi from the Naousa port. Hi Bigla is a perfect tavern for a lunch during your beach day.",
-#   duration: "02:00",
-#   opening_hours: {
-#     monday: [{open: "00:00", close: "23:59"}],
-#     tuesday: [{open: "00:00", close: "23:59"}],
-#     wednesday: [{open: "00:00", close: "23:59"}],
-#     thursday: [{open: "00:00", close: "23:59"}],
-#     friday: [{open: "00:00", close: "23:59"}],
-#     saturday: [{open: "00:00", close: "23:59"}],
-#     sunday: [{open: "00:00", close: "23:59"}]
-#   },
-#   price: 0,
-#   rating: 4,
-#   address: "Ai-Yannis Detis Kolimbithres Naoussa, Paros 844 01, Grèce",
-#   photo_title: "parosphare"
-#   )
+paros7 = Activity.create(
+  category: "Points of interest & Lookouts",
+  name: "Paros Park",
+  description: "Easily accessible by bus and water taxi from the Naousa port. Hi Bigla is a perfect tavern for a lunch during your beach day.",
+  duration: "02:00",
+  opening_hours: {
+    monday: [{open: "00:00", close: "23:59"}],
+    tuesday: [{open: "00:00", close: "23:59"}],
+    wednesday: [{open: "00:00", close: "23:59"}],
+    thursday: [{open: "00:00", close: "23:59"}],
+    friday: [{open: "00:00", close: "23:59"}],
+    saturday: [{open: "00:00", close: "23:59"}],
+    sunday: [{open: "00:00", close: "23:59"}]
+  },
+  price: 0,
+  rating: 4,
+  address: "Ai-Yannis Detis Kolimbithres Naoussa, Paros, Greece",
+  photo_title: "parosphare"
+  )
 
 paros8 = Activity.create(
   category: "Beach",
@@ -816,7 +814,7 @@ paros8 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "731 00, Grèce",
+  address: "Kryssi Akti (Golden Beach), Paros, Greece",
   photo_title: "goldenbeach"
   )
 
@@ -836,7 +834,7 @@ paros9 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Beach, Santa Maria 844 01, Grèce",
+  address: "Beach, Santa Maria, Greece",
   photo_title: "santamariabeach"
   )
 
@@ -856,7 +854,7 @@ paros10 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Paros 844 01, Grèce",
+  address: "Monastiri beach, Paros Grèce",
   photo_title: "monastiribeach"
   )
 
@@ -876,7 +874,7 @@ paros11 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Paros 844 00, Grèce",
+  address: "Faragas Beach, Paros, Greece",
   photo_title: "faragas"
   )
 
@@ -896,7 +894,7 @@ paros12 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "agia Eirini, 84400 Paroikía, Kikladhes, Paros 844 00, Grèce",
+  address: "agia Eirini, Paroikía, Kikladhes, Paros, Greece",
   photo_title: "palmbeach"
   )
 
@@ -917,7 +915,7 @@ paros13 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Paros 844 00, Grèce",
+  address: "Paros, Grèce",
   photo_title: "martselo"
   )
 
@@ -937,7 +935,7 @@ paros14 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Paros 844 00, Grèce",
+  address: "Molos Beach, Paros, Greece",
   photo_title: "molosbeach"
   )
 
@@ -957,7 +955,7 @@ paros15 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Church Panagia Ekatontapiliani, Prompona 18, Paros 844 00, Grèce Greece",
+  address: "Church Panagia Ekatontapiliani, Prompona 18, Paros, Greece",
   photo_title: "panagia"
   )
 
@@ -977,7 +975,7 @@ paros16 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Epar.Od. Parikias-Marpissas, Paros 844 00, Grèce",
+  address: "Epar.Od. Parikias-Marpissas, Paros, Grèce",
   photo_title: "marathi"
   )
 
@@ -997,7 +995,7 @@ paros17 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Paros 844 00, Grèce",
+  address: "Kalogeros beach, Paros, Greece",
   photo_title: "kalogeros"
   )
 
@@ -1035,12 +1033,13 @@ paros18 = Activity.create(
     },
   price: 0,
   rating: 4,
-  address: "Potami, Naousa 844 01, Grèce",
+  address: "Potami, Naousa, Grèce",
   photo_title: "kapopoulos"
   )
 
- # "Aeropagus","Theatre of Dionysus", "Kapnikarea", "Byzantine and Christian Museum", "Philopappos Monument", Odeon of Herodes Atticus", "Temple of Athena Nike", "Temple of Hephaestus", "Erechtheion", ""Varvakios Agora",
+#ICELAND-------------------------
 
+trip2.activities = []
 
 iceland1 = Activity.create(
   category: "Church",
@@ -1058,7 +1057,7 @@ iceland1 = Activity.create(
   },
   price: 0,
   rating: 4.5,
-  address: "Hallgrimstorgi 1, Reykjavik 101 Islande",
+  address: "Hallgrimstorgi 1, Reykjavik 101 Iceland",
   photo_title: "hallgrimskirkja"
   )
 
@@ -1078,7 +1077,7 @@ iceland2 = Activity.create(
   },
   price: 19.00,
   rating: 4.5,
-  address: "Varmahlid 1 Oskjuhlid, Reykjavik 105 Islande",
+  address: "Varmahlid 1 Oskjuhlid, Reykjavik 105 Iceland",
   photo_title: "perlan"
   )
 
@@ -1098,7 +1097,7 @@ iceland3 = Activity.create(
   },
   price: 135.00,
   rating: 5,
-  address: "Skaftafell National Park Route 1, Jokulsarlon 781 Islande",
+  address: "Skaftafell National Park Route 1, Jokulsarlon 781 Iceland",
   photo_title: "jokulsarlon"
   )
 
