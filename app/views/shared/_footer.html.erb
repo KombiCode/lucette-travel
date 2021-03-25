@@ -1,16 +1,16 @@
-<footer class="flex flex-col w-screen sticky bottom-0 z-10 bg-gray-100 border rounded-gray-100 mt-1">
+<footer class="flex flex-col w-screen sticky bottom-0 z-10 shadow-custom-navbar mt-1">
   <div class="container inline-flex justify-around mb-2">
 
      <%= link_to trip_path(@trip) do %>
-        <i class="fas fa-caret-square-right text-gray text-2xl"></i>
+        <i class="fas fa-home text-gray-200 text-2xl"></i>
     <% end %>
 
     <%= link_to trip_tasks_path(@trip) do %>
-      <i class="fas fa-tasks text-gray-700 text-2xl"></i>
+      <i class="fas fa-tasks text-gray-200 text-2xl"></i>
     <% end %>
 
     <%= link_to user_session_path do %>
-      <i class="far fa-user text-gray-600 text-2xl"></i>
+      <i class="far fa-user text-gray-200 text-2xl"></i>
     <% end %>
   </div>
 </footer>
