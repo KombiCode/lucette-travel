@@ -21,12 +21,12 @@
           </label>
          <% end %>
 
-          <div class="bg-gray-800 rounded text-black text-md font-bold px-2 py-2 border my-4 mt-20">
+          <div class="rounded font-bold px-2 py-2 border my-4 mt-20">
             <%= simple_form_for([@trip, @task]) do |f| %>
               <%= f.input :description, :as => :string,  placeholder: "Add a task" %>
-              <!-- <div class="text-gray-200 text-md font-bold px-2 py-2 border rounded-full my-4"> -->
+              <div class="text-gray-800 bg-gray-800 text-md font-bold px-2 py-2 border rounded-full my-4">
                 <%= f.submit value: "Add", class: "mb-2 bg-gray-800 text-white text-md font-bold" %>
-              <!-- </div> -->
+              </div>
             <% end %>
           </div>
     </div>
