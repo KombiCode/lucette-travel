@@ -27,7 +27,11 @@ module ActivitiesHelper
     if !day_oh.empty?
       morning = day_oh[0].nil? ? "" : "#{day_oh[0]['open']}-#{day_oh[0]['close']}"
       afternoon = day_oh[1].nil? ? "" : "#{day_oh[1]['open']}-#{day_oh[1]['close']}"
-      oh_output = ": #{morning}   #{afternoon}"
+      oh_output = ": #{morning}  #{afternoon}"
+      # special case for 00:00-23:59
+      if (oh_output == ": 00:00-23:59  ")
+        oh_output = ": 24/24"
+      end
     end
     oh_output
   end
