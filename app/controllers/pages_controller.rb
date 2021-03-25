@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :hide_footer, only: [:home]
 
   def home
     @trips = Trip.all
@@ -34,11 +35,11 @@ class PagesController < ApplicationController
         notifData: notif_data,
       }
     }
-end
+  end
     #
     # End of stuff for 'fake' notifications
     #
-    
+
   end
 
   def index
