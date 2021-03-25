@@ -1,6 +1,7 @@
 let navToggle;
 let nav;
 let blackScreen;
+let footer;
 // let hr;
 
 const doToggle = (e) => {
@@ -8,14 +9,14 @@ const doToggle = (e) => {
   navToggle.classList.toggle('expanded');
   nav.classList.toggle('expanded');
   blackScreen.classList.toggle('hidden');
-  // hr.classList.toggle('hidden');
+  footer.classList.toggle('footer-move-bot');
 }
 
 const initBurger = () => {
   navToggle   = document.querySelector('.burger-toggle')
   nav         = document.querySelector('.burger')
   blackScreen = document.querySelector('.body-black-toggle')
-  // hr = document.querySelector('#hide')
+  footer = document.querySelector('#footer')
 
   if (navToggle) {
     navToggle.addEventListener('click', doToggle);

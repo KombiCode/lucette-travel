@@ -123,15 +123,14 @@ footer {
 .shadow-custom-footer {
   box-shadow: 0 0 8px rgba(0, 0, 0, 1);
 }
-/*.circle-add-button {
-  border-radius: 50%;
-  line-height: 60%;
-  top: 4px;
-}
-*/
 
 .shadow-custom-arrow {
   text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+}
+
+.footer-move-bot {
+  transition: all 1s ease-out;
+  transform: translate(0px,50px);
 }
 
 /* hover sur la div toute la hauteur du caroussel */
