@@ -24,16 +24,14 @@
           <div class="wrapper-booking mb-4">
             <% @trip.day_bookings(index).each do |booking| %>
               <%= link_to trip_booking_path(@trip.id, booking.id) do %>
-                <div class="p-2 border-2 bg-gray-600 text-white rounded-2xl mt-4 text-center">
+                <div class="p-2 border-2 text-white rounded-2xl mt-4 text-center">
                   <%= "#{booking.name}" %></br>
                   <div class="text-sm"> <%= "#{booking.address}" %> </div>
                 </div>
               <% end %>
             <% end %>
           </div>
-
-          </br></br>
-
+          </br>
           <% @trip.day_activities(@trip.date_for_day(index)).each do |trip_activity| %>
             <% activity = trip_activity.activity %>
             <%= link_to trip_activity_path(@trip, activity.id) do %>
