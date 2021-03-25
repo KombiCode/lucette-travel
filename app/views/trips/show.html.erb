@@ -41,7 +41,7 @@
                   <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "static" %>
                 <% end %>
 
-                  <div class="border-2 border-white w-20 h-14 absolute top-0 right-0 -m-2 -mr-1 rounded-bl-xl bg-white-200 bg-opacity-40">
+                  <div class="border-2 border-white w-20 h-14 absolute top-0 right-0 -m-2 -mr-1 rounded-bl-xl bg-white bg-opacity-40">
                   </div>
                   <div class="border-2 border-white w-32 h-12 absolute bottom-0 -m-1 rounded-tr-2xl"> <!-- bg-gray-200 bg-opacity-40 -->
                   </div>
@@ -72,9 +72,8 @@
         </div>
       <% end %>
     </div>
-    <!-- A rendre plus distincts, en blanc? -->
-      <div class="swiper-button-next shadow-custom-arrow"></div>
-      <div class="swiper-button-prev shadow-custom-arrow"></div>
+    <div class="swiper-button-next custom-position-arrow shadow-custom-arrow"></div>
+    <div class="swiper-button-prev custom-position-arrow shadow-custom-arrow"></div>
   </div>
 </div>
 
