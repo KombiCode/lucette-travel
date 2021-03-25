@@ -1,5 +1,5 @@
-<div class="bg-indigo-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-blue text-center mt-32">
-  <h2 class="font-black text-6xl text-center">Login</h2>
+<div class="p-10 rounded-lg shadow-lg max-w-lg mx-auto text-blue text-center mt-32 rounded font-bold px-2 py-2 border my-4 mt-20">
+  <h2 class="font-black p-2 text-6xl text-center">Login</h2>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.label :email %><br />
@@ -19,7 +19,7 @@
     <% end %>
 
     <div class="actions">
-      <%= f.submit "Log in", class: "h-10 px-5 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-full focus:shadow-outline hover:bg-indigo-800" %>
+      <%= f.submit "Log in", class: "h-10 px-5 text-gray-100 transition-colors duration-150 bg-gray-700 rounded-full focus:shadow-outline hover:bg-gray-800" %>
     </div>
   <% end %>
 

@@ -1,4 +1,4 @@
-<div class="bg-indigo-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
+<div class="bg-gray-400 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-white text-center mt-32">
   <h2 class="font-black text-6xl text-center">Sign up</h2>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="actions p-2">
-      <%= f.submit "Sign up", class: "h-10 px-5 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-full focus:shadow-outline hover:bg-indigo-800" %>
+      <%= f.submit "Sign up", class: "h-10 px-5 text-gray-100 transition-colors duration-150 bg-gray-700 rounded-full focus:shadow-outline hover:bg-gray-800" %>
     </div>
   <% end %>
 
