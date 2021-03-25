@@ -8,7 +8,7 @@
         <i class="fa fa-map-marker" aria-hidden="true"> <%= link_to @booking.address, "https://maps.google.com/?q=#{@booking.address}" %></i>
     </div>
      <div class="text-sm mb-8">
-      <%= "#{@booking.begin_date.to_formatted_s(:long)}, #{@booking.end_date.to_formatted_s(:long)}" %>
+      <%= "#{@booking.begin_date.to_date.to_formatted_s(:long)}, #{@booking.end_date.to_date.to_formatted_s(:long)}" %>
       </div>
       <div class="bg-gray-100 rounded-lg text-center text-gray-700 p-2 m-2 mb-6">
         <%= link_to "Back", trip_path(@booking.trip) %>
