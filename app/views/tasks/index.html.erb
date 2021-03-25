@@ -12,7 +12,7 @@
                   <svg class="hidden w-4 h-4 text-gray-900 font-bold rounded pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
               </div>
                 <p class="text-justify mx-3 text-md text-gray-100"><%= task.description %>
-                  <div class="text-white">
+                  <div class="text-white absolute right-6 px-2">
                   <%= link_to 'x',
                   task_path(task),
                   method: :delete %>
@@ -25,7 +25,7 @@
             <%= simple_form_for([@trip, @task]) do |f| %>
               <%= f.input :description, :as => :string,  placeholder: "Add a task" %>
               <div class="text-gray-800 bg-gray-800 text-md font-bold px-2 py-2 border rounded-full my-4">
-                <%= f.submit value: "Add", class: "mb-2 bg-gray-800 text-white text-md font-bold" %>
+                <%= f.submit value: "Add", class: "mb-2 bg-gray-800 text-white px-24 text-md font-bold" %>
               </div>
             <% end %>
           </div>
