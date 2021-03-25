@@ -146,7 +146,7 @@ athenes1 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Acropolis Top of Dionyssiou Areopagitou, Athens Greece",
+  address: "Acropolis Top of Dionysiou Areopagitou, Athens Greece",
   photo_title: "parthenon"
     )
 
@@ -173,7 +173,7 @@ athenes2 = Activity.create(
   },
   price: 13,
   rating: 5,
-  address: "via Dionysiou Areopagitou str., Athens Greece",
+  address: "Dionysiou Areopagitou str, Athens Greece",
   photo_title: "acropole"
   )
 
@@ -200,7 +200,7 @@ athenes3 = Activity.create(
   },
   price: 0,
   rating: 4.5,
-  address: "Vassileos Konstantinou Avenue opposite the statue of Myron Discobolus, Athens 116 35 Greece",
+  address: "Leof. Vasileos Konstantinou, Athina 116 35, Grèce",
   photo_title: "panathenaic"
     )
 
@@ -227,7 +227,7 @@ athenes4 = Activity.create(
   },
   price: 7.50,
   rating: 4,
-  address: "Dionysiou Areopagitou 15, Athens Greece",
+  address: "Dionysiou Areopagitou 15, Athina 117 42, Grèce",
   photo_title: "acropolismuseum"
     )
 
@@ -254,7 +254,7 @@ athenes5 = Activity.create(
   },
   price: 7,
   rating: 4,
-  address: "4 Neofytou Douka str., Athens 106 74 Greece",
+  address: "Neofitou Douka 4, Athina 106 74, Grèce",
   photo_title: "cycladicmuseum"
     )
 
@@ -355,7 +355,7 @@ athenes9 = Activity.create(
   },
   price: 12,
   rating: 3,
-  address: "8is Oktovriou 44, Athina 106 82, Greece",
+  address: "28is Oktovriou 44, Athina 106 82, Grèce",
   photo_title: "archaeologicalmuseum"
     )
 
@@ -464,7 +464,7 @@ athenes14 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Psirri, Athina 105 54, Greece, Athens",
+  address: "Eschilou 12, Athina 105 54, Grèce",
   photo_title: "psirri"
   )
 
@@ -485,7 +485,7 @@ Begun in the 6th century BC by Peisistratos, the temple was abandoned for lack o
   },
   price: 8,
   rating: 4,
-  address: "Leoforos Vasilissis Olgas Plaka Athens Greece",
+  address: "Athens 105 57, Grèce",
   photo_title: "zeus"
 )
 
@@ -505,7 +505,7 @@ athenes16 = Activity.create(
   },
   price: 8.50,
   rating: 4.5,
-  address: "Adrianou 24, Athens 105 55 Greece",
+  address: "Adrianou 24, Athina 105 55, Grèce",
   photo_title: "agora"
     )
 
@@ -546,7 +546,7 @@ athenes18 = Activity.create(
   },
   price: 0,
   rating: 4.5,
-  address: "Aeropagus Hill Athens - Greece",
+  address: "Theorias 21, Athina 105 55, Grèce",
   photo_title: "aeropagus"
     )
 
@@ -570,26 +570,6 @@ athenes19 = Activity.create(
   photo_title: "plateia"
     )
 
-athenes20 = Activity.create(
-  category: "Points of interest & Lookouts",
-  name: "Stavros Niarchos Park",
-  description: "Athens is short on green spaces, so this vast seaside park is a blessing. Covering a man-made slope that incorporates the roof of the Stavros Niarchos Foundation Cultural Center, this 21-hectare park has been sustainably designed with paths cutting through plantings of lavender, olive trees and other Mediterranean flora.
-There's also kids' play areas, an outdoor gym and much more. A variety of free activities are laid on, but you can simply sit in a chair and soak up the sunshine.",
-  duration: "01:30",
-  opening_hours: {
-    monday: [{open: "00:00", close: "23:59"}],
-    tuesday: [{open: "00:00", close: "23:59"}],
-    wednesday: [{open: "00:00", close: "23:59"}],
-    thursday: [{open: "00:00", close: "23:59"}],
-    friday: [{open: "00:00", close: "23:59"}],
-    saturday: [{open: "00:00", close: "23:59"}],
-    sunday: [{open: "00:00", close: "23:59"}]
-  },
-  price: 0,
-  rating: 4.5,
-  address: " Leof. Andrea Siggrou 364, Kallithea 176 74, Greece",
-  photo_title: "stavros"
-    )
 
 athenes21 = Activity.create(
   category: "Points of interest & Lookouts",
@@ -628,7 +608,7 @@ athenes22 = Activity.create(
   },
   price: 14.5,
   rating: 4.5,
-  address: "Mitseon 25, Athènes 105 58 Grèce",
+  address: "Mitseon 25, Athina 117 42, Grèce",
   photo_title: "dionysus"
   )
 
@@ -648,7 +628,7 @@ athenes23 = Activity.create(
   },
   price: 4,
   rating: 4.5,
-  address: "Leof. Vasilissis Sofias 22, Athènes 10675 Grèce",
+  address: "Leof. Vasilissis Sofias 22, Athina 106 75, Grèce",
   photo_title: "byzantine"
   )
 
@@ -709,7 +689,7 @@ paros2 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, Greece",
+  address: "844 01, Grèce",
   photo_title: "kolimpithres"
   )
 
@@ -729,8 +709,8 @@ paros3 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, Greece",
-  photo_title: "kolimpithres"
+  address: "Paros 844 01, Grèce",
+  photo_title: "lageri"
   )
 
 paros4 = Activity.create(
@@ -749,8 +729,8 @@ paros4 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, Greece",
-  photo_title: "kolimpithres"
+  address: "Naousa 844 01, Grèce",
+  photo_title: "naoussa"
   )
 
 TripActivity.create(
@@ -776,8 +756,8 @@ paros5 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, Greece",
-  photo_title: "kolimpithres"
+  address: "Palia Agora, Parikia 84400, 844 00, Grèce",
+  photo_title: "parikia"
   )
 
 paros6 = Activity.create(
@@ -796,8 +776,8 @@ paros6 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, Greece",
-  photo_title: "kolimpithres"
+  address: "Epar.Od. Naoussas-Marpissas, Naousa 844 01, Grèce",
+  photo_title: "moraitis"
   )
 
 paros7 = Activity.create(
@@ -816,8 +796,8 @@ paros7 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kolympethres Beach, Greece",
-  photo_title: "kolimpithres"
+  address: "Ai-Yannis Detis Kolimbithres Naoussa, Paros 844 01, Grèce",
+  photo_title: "parosphare"
   )
 
 paros8 = Activity.create(
@@ -836,7 +816,7 @@ paros8 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Golden beach, Greece",
+  address: "731 00, Grèce",
   photo_title: "goldenbeach"
   )
 
@@ -856,7 +836,7 @@ paros9 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Santa Maria Beach, Santa Maria, Greece",
+  address: "Beach, Santa Maria 844 01, Grèce",
   photo_title: "santamariabeach"
   )
 
@@ -876,7 +856,7 @@ paros10 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Monastiri beach, Paros, Greece",
+  address: "Paros 844 01, Grèce",
   photo_title: "monastiribeach"
   )
 
@@ -896,7 +876,7 @@ paros11 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Faragas Beach, Paros, Greece",
+  address: "Paros 844 00, Grèce",
   photo_title: "faragas"
   )
 
@@ -916,7 +896,7 @@ paros12 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "agia Eirini, 84400 Paroikía, Kikladhes, Paros, Greece",
+  address: "agia Eirini, 84400 Paroikía, Kikladhes, Paros 844 00, Grèce",
   photo_title: "palmbeach"
   )
 
@@ -937,7 +917,7 @@ paros13 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Marcello Beach, Paros, Greece",
+  address: "Paros 844 00, Grèce",
   photo_title: "martselo"
   )
 
@@ -957,7 +937,7 @@ paros14 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Molos Beach, Paros, Greece",
+  address: "Paros 844 00, Grèce",
   photo_title: "molosbeach"
   )
 
@@ -977,7 +957,7 @@ paros15 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Church Panagia Ekatontapiliani, Prompona 18, Paros, Greece",
+  address: "Church Panagia Ekatontapiliani, Prompona 18, Paros 844 00, Grèce Greece",
   photo_title: "panagia"
   )
 
@@ -997,7 +977,7 @@ paros16 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Ancient Marble Quarries, Epar.Od. Parikias-Marpissas, Paros, Greece",
+  address: "Epar.Od. Parikias-Marpissas, Paros 844 00, Grèce",
   photo_title: "marathi"
   )
 
@@ -1017,7 +997,7 @@ paros17 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Kalogeros beach, Paros, Greece",
+  address: "Paros 844 00, Grèce",
   photo_title: "kalogeros"
   )
 
@@ -1055,7 +1035,7 @@ paros18 = Activity.create(
     },
   price: 0,
   rating: 4,
-  address: "Potami Naousas, Paros Potami area, Naoussa 84401 Greece",
+  address: "Potami, Naousa 844 01, Grèce",
   photo_title: "kapopoulos"
   )
 
