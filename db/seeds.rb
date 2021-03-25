@@ -97,10 +97,18 @@ task4 = Task.create(
 
 task5 = Task.create(
   name: "Luggage",
-  description: "Smartphone charger, glasses, tablet, headphones",
+  description: "Smartphone charger",
   done: true,
   trip: trip1
   )
+
+task5 = Task.create(
+  name: "Luggage",
+  description: "Glasses, tablet, headphones",
+  done: true,
+  trip: trip1
+  )
+
 
 puts "#{Task.count} tasks created"
 
