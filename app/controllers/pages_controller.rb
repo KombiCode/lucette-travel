@@ -18,7 +18,7 @@ class PagesController < ApplicationController
       notif_type = "none"
       notif_data = ""
 
-      if (last_booking_name == "Flight LYS - KEF to store")
+      if (last_booking_name == "Flight LYS - KEF")
         notif_message = "Your booking flight for upcoming Iceland trip has been added"
         notif_type = "newBooking"
         notif_data = last_booking_name
