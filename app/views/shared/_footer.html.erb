@@ -16,7 +16,11 @@
       <% end %>
     <% end %>
     <%= link_to user_session_path do %>
-      <i class="far fa-user text-gray-200 text-2xl"></i>
+      <% if current_user %>
+        <i class="fas fa-user text-gray-200 text-2xl"></i>
+      <% else %>
+        <i class="far fa-user text-gray-200 text-2xl"></i>
+      <% end %>
     <% end %>
   </div>
 </footer>
