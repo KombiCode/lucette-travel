@@ -1,7 +1,9 @@
 <!-- START Tinder like -->
 <div class="wrapper-container-tinder h-96 overflow-hidden mx-auto pt-8" id="tinder-list">
   <div class="wrapper-main">
-    <div class="font-bold text-2xl text-center text-white mb-1">Activities near my trip</div>
+    <div class="font-bold text-md text-center text-white mb-1">
+      Activities near my trip
+    </div>
     <div class="profiles">
       <% @activities.each do |activity| %>
         <div class="profile" data-activity-id="<%= activity.id %>">

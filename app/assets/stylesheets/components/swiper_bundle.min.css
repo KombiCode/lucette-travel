@@ -1,6 +1,6 @@
 .swiper-button-next,
 .swiper-button-prev {
-
+    flex-shrink: 1;
     color: #fff !important;
     fill: white !important;
     stroke: white !important;
