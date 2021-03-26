@@ -39,7 +39,7 @@
                 collection: (6..20).map {|n| ["#{n}:00","#{n}:30"]}.flatten,
                 wrapper_html: { class: 'flex flex-col items-center justify-center mx-auto w-32' },
                 input_html: { type: :date,
-                              class: 'm-2 pl-4 pr-1 py-2 border-gray-300 focus:outline-none sm:text-sm rounded-md' }%>
+                              class: 'm-2 pl-4 pr-1 py-2 border-gray-300 focus:outline-none sm:text-sm rounded-md mx-auto' }%>
 
     <%#= f.input :trip_id, as: :hidden, value: @current_trip%>
     <%= f.input :activity_id, as: :hidden, value: nil %>
