@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   resources :tasks, only: [ :show, :update, :destroy ]
 
   resources :activities, only: [ :new, :create ]
+
+  # Special routes for notifs stuff
+  get "/check_for_notif", to: "notifications#check_for_notif"
+  get "/hide_notif_empty_activities", to: "notifications#hide_notif_empty_activities"
+  get "/hide_notif_new_booking", to: "notifications#hide_notif_new_booking"
 end

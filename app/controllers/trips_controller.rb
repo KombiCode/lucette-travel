@@ -19,7 +19,6 @@ class TripsController < ApplicationController
     if @trip.save
       redirect_to root_path
     else
-      raise
       render :new
     end
   end
