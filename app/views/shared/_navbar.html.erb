@@ -1,5 +1,10 @@
-<% hide_notif_empty_activities = $hide_notif_empty_activities || false %>
-<% hide_notif_new_booking = $hide_notif_new_booking || false %>
+<% if current_user %>
+  <% hide_notif_empty_activities = $hide_notif_empty_activities || false %>
+  <% hide_notif_new_booking = $hide_notif_new_booking || false %>
+<% else %>
+  <% hide_notif_empty_activities = false %>
+  <% hide_notif_new_booking = false %>
+<% end %>
 
 <nav class="w-screen container justify-between sticky top-0 z-10">
   <ul>
