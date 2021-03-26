@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   resources :tasks, only: [ :show, :update, :destroy ]
 
   resources :activities, only: [ :new, :create ]
+
+
+  get  "/hide_notif_empty_activities", to: "notifications#hide_notif_empty_activities"
+  get  "/hide_notif_new_booking", to: "notifications#hide_notif_new_booking"
 end

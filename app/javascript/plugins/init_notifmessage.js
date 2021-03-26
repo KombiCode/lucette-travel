@@ -9,7 +9,11 @@ const displayMessage = (e) => {
       const message = notifMsgElement.innerText;
       const type = notifTypeElement.innerText;
       if (message != "") {
-        if (type == 'newBooking') {  
+        let neaCheckedElement = document.getElementById('notif-ea-checked');
+        let nnbCheckedElement = document.getElementById('notif-nb-checked');
+        let neaChecked = neaCheckedElement.innerText == "true";
+        let nnbChecked = nnbCheckedElement.innerText == "true";
+        if (type == 'newBooking' && !nnbChecked) {  
             Swal.fire({
                 title: 'Lucette message!',
                 text: message,
@@ -20,7 +24,7 @@ const displayMessage = (e) => {
             if (nnbCheckedElement) {
               nnbCheckedElement.innerHTML = "<div id=\"notif-nb-checked\" hidden>true</div>";
             }
-        } else if (type == 'emptyActivities') {
+        } else if (type == 'emptyActivities' && !neaChecked) {
             Swal.fire({
                 title: 'Lucette message!',
                 text: message,
@@ -29,6 +33,7 @@ const displayMessage = (e) => {
             })
             const neaCheckedElement = document.getElementById('notif-ea-checked');
             if (neaCheckedElement) {
+              fetch('/hide_notif_empty_activities')
               neaCheckedElement.innerHTML = "<div id=\"notif-ea-checked\" hidden>true</div>";
             }
         }
