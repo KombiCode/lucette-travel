@@ -100,7 +100,7 @@ task4 = Task.create(
 
 task5 = Task.create(
   name: "Luggage",
-  description: "Smartphone charger, headphones, tablet",
+  description: "Smartphone charger, headphones",
   done: true,
   trip: trip1
   )
@@ -178,7 +178,7 @@ athenes2 = Activity.create(
   },
   price: 13,
   rating: 5,
-  address: "Dionysiou Areopagitou str, Athens Greece",
+  address: "Dionysiou Areopagitou str, Athens, Greece",
   photo_title: "acropole"
   )
 
@@ -205,7 +205,7 @@ athenes3 = Activity.create(
   },
   price: 0,
   rating: 4.5,
-  address: "Leof. Vasileos Konstantinou, Athina 116 35, Grèce",
+  address: "Leof. Vasileos Konstantinou, Athens, Greece",
   photo_title: "panathenaic"
     )
 
@@ -232,7 +232,7 @@ athenes4 = Activity.create(
   },
   price: 7.50,
   rating: 4,
-  address: "Dionysiou Areopagitou 15, Athina 117 42, Grèce",
+  address: "Dionysiou Areopagitou 15, Athens, Greece",
   photo_title: "acropolismuseum"
     )
 
@@ -306,7 +306,7 @@ athenes7 = Activity.create(
   },
   price: 0,
   rating: 3,
-  address: "Mount Lycabettus, Athens 114 71, Greece",
+  address: "Mount Lycabettus, Athens, Greece",
   photo_title: "lycabette"
     )
 
@@ -360,7 +360,7 @@ athenes9 = Activity.create(
   },
   price: 12,
   rating: 3,
-  address: "28is Oktovriou 44, Athina 106 82, Grèce",
+  address: "28is Oktovriou 44, Athens, Greece",
   photo_title: "archaeologicalmuseum"
     )
 
@@ -400,7 +400,7 @@ athenes11 = Activity.create(
   },
   price: 0,
   rating: 4.5,
-  address: "A24 Adrianou St. Ancient Agora of Athens, Athens 105 55 Greece",
+  address: "A24 Adrianou St. Ancient Agora of Athens, Athens, Greece",
   photo_title: "hephaestus"
     )
 
@@ -420,7 +420,7 @@ athenes12 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Leoforos Amalias 1, Athens 10557 Greece",
+  address: "Leoforos Amalias 1, Athens Greece",
   photo_title: "nationalgarden"
     )
 
@@ -440,7 +440,7 @@ athenes13 = Activity.create(
     },
   price: 0,
   rating: 4,
-  address: "Athinas, Athina 105 51, Greece",
+  address: "Athinas, Athens, Greece",
   photo_title: "marketmunicipal"
     )
 
@@ -460,7 +460,7 @@ athenes14 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Eschilou 12, Athina 105 54, Grèce",
+  address: "Eschilou 12, Athens, Greece",
   photo_title: "psirri"
   )
 
@@ -481,7 +481,7 @@ Begun in the 6th century BC by Peisistratos, the temple was abandoned for lack o
   },
   price: 8,
   rating: 4,
-  address: "Athens 105 57, Grèce",
+  address: "Athens, Grèce",
   photo_title: "zeus"
 )
 
@@ -501,7 +501,7 @@ athenes16 = Activity.create(
   },
   price: 8.50,
   rating: 4.5,
-  address: "Adrianou 24, Athina 105 55, Grèce",
+  address: "Adrianou 24, Athens, Greece",
   photo_title: "agora"
     )
 
@@ -542,7 +542,7 @@ athenes18 = Activity.create(
   },
   price: 0,
   rating: 4.5,
-  address: "Theorias 21, Athina 105 55, Grèce",
+  address: "Theorias 21,  Athens, Greece",
   photo_title: "aeropagus"
     )
 
@@ -562,7 +562,7 @@ athenes19 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Plateia Syntagmatos Athens - Greece",
+  address: "Plateia Syntagmatos Athens, Greece",
   photo_title: "plateia"
     )
 
@@ -584,7 +584,7 @@ There's also kids' play areas, an outdoor gym and much more. A variety of free a
   },
   price: 0,
   rating: 4.5,
-  address: " Leof. Andrea Siggrou 364, Kallithea 176 74, Greece",
+  address: " Leof. Andrea Siggrou 364, Kallithea, Greece",
   photo_title: "stavros"
     )
 
@@ -604,7 +604,7 @@ athenes22 = Activity.create(
   },
   price: 14.5,
   rating: 4.5,
-  address: "Mitseon 25, Athina 117 42, Grèce",
+  address: "Mitseon 25, Athens, Greece",
   photo_title: "dionysus"
   )
 
@@ -624,7 +624,7 @@ athenes23 = Activity.create(
   },
   price: 4,
   rating: 4.5,
-  address: "Leof. Vasilissis Sofias 22, Athina 106 75, Grèce",
+  address: "Leof. Vasilissis Sofias 22, Athens, Greece",
   photo_title: "byzantine"
   )
 
@@ -644,7 +644,7 @@ athenes24 = Activity.create(
   },
   price: 14.5,
   rating: 4.5,
-  address: "Acropolis, Dionysiou Areopagitou Acropolis, Athènes 10558 Grèce",
+  address: "Acropolis, Dionysiou Areopagitou Acropolis, Athens, Greece",
   photo_title: "athena"
   )
 
@@ -666,7 +666,7 @@ paros1 = Activity.create(
   },
   price: 0,
   rating: 4.5,
-  address: "Lefkes , Paros 84400 ,Cyclades , GREECE",
+  address: "Lefkes , Paros, Cyclades, Greece",
   photo_title: "lefkes"
     )
 
@@ -707,7 +707,7 @@ paros3 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Lageri Beach, Paros 844 01, Greece",
+  address: "Lageri Beach, Paros, Greece",
   photo_title: "lageri"
   )
 
@@ -854,7 +854,7 @@ paros10 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Monastiri beach, Paros Grèce",
+  address: "Monastiri beach, Paros, Greece",
   photo_title: "monastiribeach"
   )
 
@@ -899,25 +899,25 @@ paros12 = Activity.create(
   )
 
 
-paros13 = Activity.create(
-  category: "Beach",
-  name: "Martselo Beach",
-  description: "Easily accessible by bus and water taxi from the Naousa port. Hi Bigla is a perfect tavern for a lunch during your beach day.",
-  duration: "02:00",
-  opening_hours: {
-    monday: [{open: "00:00", close: "23:59"}],
-    tuesday: [{open: "00:00", close: "23:59"}],
-    wednesday: [{open: "00:00", close: "23:59"}],
-    thursday: [{open: "00:00", close: "23:59"}],
-    friday: [{open: "00:00", close: "23:59"}],
-    saturday: [{open: "00:00", close: "23:59"}],
-    sunday: [{open: "00:00", close: "23:59"}]
-  },
-  price: 0,
-  rating: 4,
-  address: "Paros, Grèce",
-  photo_title: "martselo"
-  )
+# paros13 = Activity.create(
+#   category: "Beach",
+#   name: "Martselo Beach",
+#   description: "Easily accessible by bus and water taxi from the Naousa port. Hi Bigla is a perfect tavern for a lunch during your beach day.",
+#   duration: "02:00",
+#   opening_hours: {
+#     monday: [{open: "00:00", close: "23:59"}],
+#     tuesday: [{open: "00:00", close: "23:59"}],
+#     wednesday: [{open: "00:00", close: "23:59"}],
+#     thursday: [{open: "00:00", close: "23:59"}],
+#     friday: [{open: "00:00", close: "23:59"}],
+#     saturday: [{open: "00:00", close: "23:59"}],
+#     sunday: [{open: "00:00", close: "23:59"}]
+#   },
+#   price: 0,
+#   rating: 4,
+#   address: "Paros, Greece",
+#   photo_title: "martselo"
+#   )
 
 paros14 = Activity.create(
   category: "Beach",
@@ -975,7 +975,7 @@ paros16 = Activity.create(
   },
   price: 0,
   rating: 4,
-  address: "Epar.Od. Parikias-Marpissas, Paros, Grèce",
+  address: "Epar.Od. Parikias-Marpissas, Paros, Greece",
   photo_title: "marathi"
   )
 
@@ -1033,7 +1033,7 @@ paros18 = Activity.create(
     },
   price: 0,
   rating: 4,
-  address: "Potami, Naousa, Grèce",
+  address: "KapopoulosFineArts Paros Gallery, Potami, Naousa, Greece",
   photo_title: "kapopoulos"
   )
 
