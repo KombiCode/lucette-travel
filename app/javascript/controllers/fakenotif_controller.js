@@ -4,12 +4,15 @@ export default class extends Controller {
   static targets = [ 'count' ];
 
   connect() {
-    this.refresh();
     const interval = 5 * 1000;
-    setInterval(this.refresh, interval);
+    if (!window.setIntervalIsSet) {
+      this.refresh();
+      setInterval(this.refresh, interval);
+      window.setIntervalIsSet = true  
+    }
   }
 
-  refresh = () => {
+  refresh = () => { 
     fetch('/check_for_notif', { headers: { accept: "application/json" }})
       .then(response => response.json())
       .then((data) => {
