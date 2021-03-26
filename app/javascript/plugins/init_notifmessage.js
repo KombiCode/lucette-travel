@@ -5,14 +5,14 @@ const displayMessage = (e) => {
     e.preventDefault();
     const notifMsgElement = document.getElementById('notif-message');
     const notifTypeElement = document.getElementById('notif-type');
-    if (notifMsgElement) {
+    if (notifMsgElement && notifTypeElement) {
       const message = notifMsgElement.innerText;
       const type = notifTypeElement.innerText;
       if (message != "") {
-        let neaCheckedElement = document.getElementById('notif-ea-checked');
-        let nnbCheckedElement = document.getElementById('notif-nb-checked');
-        let neaChecked = neaCheckedElement.innerText == "true";
-        let nnbChecked = nnbCheckedElement.innerText == "true";
+        const nnbCheckedElement = document.getElementById('notif-nb-checked');
+        const neaCheckedElement = document.getElementById('notif-ea-checked');
+        const nnbChecked = nnbCheckedElement ? nnbCheckedElement.innerText == "true" : true;
+        const neaChecked = neaCheckedElement ? neaCheckedElement.innerText == "true" : true;
         if (type == 'newBooking' && !nnbChecked) {  
             Swal.fire({
                 title: 'Lucette message!',
@@ -20,8 +20,8 @@ const displayMessage = (e) => {
                 icon: 'info',
                 confirmButtonText: 'Ok'
             })
-            const nnbCheckedElement = document.getElementById('notif-nb-checked');
             if (nnbCheckedElement) {
+              fetch('/hide_notif_new_booking')
               nnbCheckedElement.innerHTML = "<div id=\"notif-nb-checked\" hidden>true</div>";
             }
         } else if (type == 'emptyActivities' && !neaChecked) {
@@ -31,7 +31,6 @@ const displayMessage = (e) => {
                 icon: 'warning',
                 confirmButtonText: 'Ok'
             })
-            const neaCheckedElement = document.getElementById('notif-ea-checked');
             if (neaCheckedElement) {
               fetch('/hide_notif_empty_activities')
               neaCheckedElement.innerHTML = "<div id=\"notif-ea-checked\" hidden>true</div>";

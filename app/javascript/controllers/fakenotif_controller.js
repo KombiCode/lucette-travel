@@ -10,7 +10,7 @@ export default class extends Controller {
   }
 
   refresh = () => {
-    fetch('/', { headers: { accept: "application/json" }})
+    fetch('/check_for_notif', { headers: { accept: "application/json" }})
       .then(response => response.json())
       .then((data) => {
         // TODO put what we want to display here
