@@ -1,8 +1,9 @@
 <div class="img-background absolute top-0 right-0 left-0">
   <!-- <div class="w-screen border-2 border-yellow-400"> -->
     <div class="flex items-center justify-center h-screen">
-      <% if current_user %>
-        <%= link_to Trip.first, class: "bg-gray-200 bg-opacity-50 px-4 py-2 text-gray-200 rounded-lg border-2 shadow-lg font-bold" do %>
+      <% # below should be current_user but we use our $elodie_user %>
+      <% if $elodie_user %>
+        <%= link_to trip_path(Trip.first), class: "bg-gray-200 bg-opacity-50 px-4 py-2 text-gray-200 rounded-lg border-2 shadow-lg font-bold" do %>
           My current trip
         <% end %>
       <% else %>

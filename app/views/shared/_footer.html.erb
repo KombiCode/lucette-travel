@@ -15,12 +15,13 @@
         <i class="fas fa-home text-gray-200 text-2xl"></i>
       <% end %>
     <% end %>
-    <%= link_to user_session_path do %>
-      <% if current_user %>
+    <!-- <%= link_to user_session_path do %> -->
+      <% # below should be current_user but we use our $elodie_user %>
+      <% if $elodie_user %> 
         <i class="fas fa-user text-gray-200 text-2xl"></i>
       <% else %>
         <i class="far fa-user text-gray-200 text-2xl"></i>
       <% end %>
-    <% end %>
+    <!-- <% end %> -->
   </div>
 </footer>
