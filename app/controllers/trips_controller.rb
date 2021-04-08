@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :check_user, only: [:new]
   before_action :find_trip, only: [:show]
 
   def index
@@ -29,6 +29,12 @@ class TripsController < ApplicationController
 
   def find_trip
     @trip = Trip.find(params[:id])
+  end
+
+  def check_user
+    if !$elodie_user
+      authenticate_user!
+    end
   end
 
   def trip_params
