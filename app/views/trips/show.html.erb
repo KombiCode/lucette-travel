@@ -27,12 +27,12 @@
             <div class="text-white mr-24 my-4 pl-2 text-md -mt-3">
               <%= "#{@trip.date_for_day(index).to_formatted_s(:long) }" %>
             </div>
-            <div class="right-4 top-2 absolute text-gray-200 text-6xl">
+            <div class="right-4 top-0 pb-3 px-2 absolute text-gray-200 text-6xl border-2 rounded-2xl mt-4 text-center">
               <%= link_to "+", new_trip_trip_activity_path(@trip, planned_at: @trip.date_for_day(index)) %>
             </div>
           </div>
 
-          <div class="wrapper-booking mb-4">
+          <div class="wrapper-booking mb-4 mt-7">
             <% @trip.day_bookings(index).each do |booking| %>
               <%= link_to trip_booking_path(@trip.id, booking.id) do %>
                 <div class="flex p-2 border-2 text-white rounded-2xl mt-4 text-center justify-between align-middle">
