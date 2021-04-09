@@ -5,6 +5,7 @@
 <div class="wrapper-header flex justify-center bg-custom-title text-gray-200 pt-2 pb-2 mb-1">
   <div class="wrapper-title px-2 text-center">
     <div class="px-2 text-4xl">
+    <!-- </br> -->
       <h1>~ <%= @trip.name %> ~</h1>
     </div>
     <div class="text-md italic">
@@ -17,7 +18,6 @@
   <div data-controller="carousel" class="swiper-container rounded-2xl"
        data-carousel-options-value='{"initialSlide": <%= "#{@trip.index_for_today}" %>}' >
     <div class="swiper-wrapper">
-      <!-- Should have n swiper-slide corresponding to the number of days of the trip -->
       <% @trip.number_of_days.times do |index| %>
         <div class="swiper-slide px-4">
           <div class="container">
@@ -43,7 +43,7 @@
                       <i class="fas fa-plane mr-4"></i>
                     <% else %>
                       <i class="fas fa-ship mr-4"></i>
-                    <% end %> <!-- Icone Transport -->
+                    <% end %>
                   </div>
                   <div class="text-center mx-auto pr-4">
                     <%= "#{booking.name}" %></br>
@@ -58,14 +58,14 @@
             <% activity = trip_activity.activity %>
             <%= link_to trip_activity_path(@trip, activity.id) do %>
 
-              <div class="wrapper-image relative justify-between rounded-2xl mb-6 shadow-custom-card">
+              <div class="wrapper-image relative rounded-2xl mb-6 shadow-custom-card">
                 <% if activity.photo_title.present? %>
-                  <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "static" %>
+                  <%= image_tag "#{activity.photo_title}.jpg", alt: "#{activity.name}", class: "" %>
                 <% end %>
 
                   <div class="border-2 border-white w-24 h-14 absolute top-0 right-0 -m-3 -mr-3 rounded-bl-xl bg-white bg-opacity-40">
                   </div>
-                  <div class="border-2 border-white w-32 h-12 absolute bottom-0 -m-1 rounded-tr-2xl">
+                  <div class="border-2 border-white w-32 h-12 absolute bottom-0 left-0 -m-1 rounded-tr-2xl">
                   </div>
                 <div class="box-content container absolute top-2 flex justify-between"> <!-- --------- Name + Hour --------- -->
                   <div class="leading-8 w-60 pl-3 text-lg text-white font-bold">
@@ -88,7 +88,6 @@
                     <i class="far fa-star"></i>
                   <% end %>
                 </div>
-
               </div>
 
             <% end %>
