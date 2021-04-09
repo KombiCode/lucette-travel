@@ -9,17 +9,6 @@
 <nav class="container sticky top-0 z-10 shadow-custom-navbar">
   <ul>
     <li>
-      <div class="padding-bell pl-3 pt-2 pb-2">
-        <%= link_to "#", id: "notifBell" do %>
-          <div data-controller="fakenotif" data-fakenotif-target="count">
-            <div id="notif-ea-checked" hidden><%= hide_notif_empty_activities %></div>
-            <div id="notif-nb-checked" hidden><%= hide_notif_new_booking %></div>
-            <i class="far fa-bell text-gray-200 text-2xl text-left"></i>
-          </div>
-        <% end %>
-      </div>
-    </li>
-    <li>
       <!-- Start Burger menu -->
       <div class="burger-toggle">   <!-- Button to toggle -->
         <div class="burger-toggle-bar"></div>
@@ -70,9 +59,17 @@
       </div>
     </li>
 
-
-
-
+    <li>
+      <div class="padding-bell pt-2 pb-2">
+        <%= link_to "#", id: "notifBell" do %>
+          <div data-controller="fakenotif" data-fakenotif-target="count">
+            <div id="notif-ea-checked" hidden><%= hide_notif_empty_activities %></div>
+            <div id="notif-nb-checked" hidden><%= hide_notif_new_booking %></div>
+            <i class="far fa-bell text-gray-200 text-2xl text-left"></i>
+          </div>
+        <% end %>
+      </div>
+    </li>
   </ul>
       <!-- End Burger menu -->
 </nav>

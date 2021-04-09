@@ -98,14 +98,6 @@
   font-size: 1rem;
 }
 
-nav ul:nth {
-  justify-content: space-between;
-}
-
-.padding-bell {
-  text-align: end;
-  padding-right: 20px;
-}
 
 .body-black-toggle {
   background-color: rgba(0, 0, 0, .8);
@@ -126,3 +118,12 @@ nav ul:nth {
   font-size: 1.5rem;
 }
 
+nav ul:nth {
+  justify-content: space-between;
+}
+
+.padding-bell {
+  text-align: end;
+  padding-right: 20px;
+  padding-left: 325px;
+}
