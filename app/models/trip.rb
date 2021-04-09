@@ -31,6 +31,10 @@ class Trip < ApplicationRecord
   end
 
   def index_for_today()
-    it = (Date.current - begin_date.to_date).to_i
+    it = 0
+    if begin_date <= Date.current && end_date >= Date.current
+      it = (Date.current - begin_date.to_date).to_i
+    end
+    it
   end
 end
