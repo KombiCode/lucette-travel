@@ -13,6 +13,10 @@ body {
   background-color: $lucette-dark-gray;
 }
 
+/*.main-wrapper { ici
+  height: 667px;
+  width: 375px;
+}*/
 
 h1 {
   color: white;
@@ -63,6 +67,15 @@ hr {
   margin-right: 70px;
 }
 
+@media (min-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+  .img-background {
+    background-position: center;
+  }
+}
+
 nav {
   background-color: $lucette-middle-gray;
 }
@@ -86,10 +99,21 @@ footer {
   width: auto;
 }*/
 
+
 .wrapper-image {
   width: auto;
   height: 175px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-image > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;  /* optional */
 }
 
 .box-shadow {

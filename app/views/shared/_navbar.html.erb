@@ -6,10 +6,10 @@
   <% hide_notif_new_booking = false %>
 <% end %>
 
-<nav class="w-screen container justify-between sticky top-0 z-10">
+<nav class="container sticky top-0 z-10 shadow-custom-navbar">
   <ul>
     <li>
-      <div class="padding-bell pl-3 pt-2 pb-2 shadow-custom-navbar">
+      <div class="padding-bell pl-3 pt-2 pb-2">
         <%= link_to "#", id: "notifBell" do %>
           <div data-controller="fakenotif" data-fakenotif-target="count">
             <div id="notif-ea-checked" hidden><%= hide_notif_empty_activities %></div>
