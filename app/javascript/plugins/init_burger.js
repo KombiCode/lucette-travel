@@ -9,7 +9,7 @@ const doToggle = (e) => {
   navToggle.classList.toggle('expanded');
   nav.classList.toggle('expanded');
   blackScreen.classList.toggle('hidden');
-  footer.classList.toggle('footer-move-bot');
+  if (footer) footer.classList.toggle('footer-move-bot');
 }
 
 const initBurger = () => {
