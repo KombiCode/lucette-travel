@@ -1,4 +1,4 @@
-<div class="bg-gray-200 p-4 rounded-lg text-gray-700 text-center mt-16 m-4">
+<div class="p-4 rounded-lg text-gray-200 text-center mt-16 m-4 left-11 border-2 rounded-xl">
   <%= form_for @trip, url: {action: "create"} do |f| %>
     <div class="field">
       <%= f.label :name %><br />
@@ -25,9 +25,11 @@
       <%= f.text_field :photo_title %>
     </div>
 
-    <div class = "button mt-4 text-gray-700">
-    <%= f.submit "Create" %>
+    <div>
+    <%= f.submit "Create", class: "text-gray-200 text-md font-bold my-3 bg-transparent" %>
     </div>
   <% end %>
 </div>
+
+
 
