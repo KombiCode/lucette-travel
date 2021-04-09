@@ -5,6 +5,11 @@ end
 
 RailsAdmin.config do |config|
 
+  ## == Automatic load seed in case Trip.first begin_date is not as we want ==
+  if (Trip.first.begin_date + 3 != Date.current)
+    Rails.application.load_seed
+  end
+ 
   ### Popular gems integration
 
   ## == Devise ==

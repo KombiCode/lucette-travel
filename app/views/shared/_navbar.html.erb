@@ -7,6 +7,8 @@
 <% end %>
 
 <nav class="container sticky top-0 z-10 shadow-custom-navbar">
+  <!-- Hidden div where we need to store slide index to use with swiper carousel -->
+  <div id="slideindex-for-current-trip" hidden><%= @trip ? @trip.index_for_today : Trip.first.index_for_today %></div>
   <ul>
     <li>
       <div class="padding-bell pl-3 pt-2 pb-2">
