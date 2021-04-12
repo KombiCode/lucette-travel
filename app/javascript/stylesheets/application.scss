@@ -13,10 +13,10 @@ body {
   background-color: $lucette-dark-gray;
 }
 
-/*.main-wrapper { ici
-  height: 667px;
-  width: 375px;
-}*/
+nav,
+footer {
+  background-color: $lucette-middle-gray;
+}
 
 h1 {
   color: white;
@@ -67,38 +67,14 @@ hr {
   margin-right: 70px;
 }
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 100%;
-  }
-  .img-background {
-    background-position: center;
-  }
-}
-
-nav {
-  background-color: $lucette-middle-gray;
-}
-
-footer {
-  background-color: $lucette-middle-gray;
-}
-
 #wrapper-day {
-  /*height: 500px;*/
-  width: 100vw;
+  flex-grow: 4;
+  width: 375px;
 }
 
 #text-trip {
-  /*height: 500px;*/
   font-size: 1.5rem;
 }
-
-/*.wrapper-activity {
-  height: 250px;
-  width: auto;
-}*/
-
 
 .wrapper-image {
   width: auto;
@@ -113,7 +89,7 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;  /* optional */
+  width: 100%;
 }
 
 .box-shadow {
@@ -137,19 +113,12 @@ footer {
 
 .shadow-custom-card {
   box-shadow: 0 0 8px rgba(0, 0, 0, 1);
-  border-radius: 9px;
+  border-radius: 8px;
 }
 
-.shadow-custom-navbar {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 1);
-}
-
+.shadow-custom-navbar,
 .shadow-custom-footer {
   box-shadow: 0 0 8px rgba(0, 0, 0, 1);
-}
-
-.shadow-custom-arrow {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 1);
 }
 
 .footer-move-bot {
@@ -158,19 +127,37 @@ footer {
 }
 
 .bg-custom-title {
-  background-color: rgba(160, 160, 160, .5);
+  background-color: $lucette-gray;
 }
 
 .swiper-container .custom-position-arrow {
   position: fixed;
-  top: 50vh;
+  top: 50%;
+}
+
+.main_container_first {
+  display: flex;
+  flex-direction: column;
+  height: 667px;
+  width: 375px;
 }
 
 .swiper-container {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
+  min-height: 100%;
+  width: 375px;
 }
 
-.button-tasks {
-  background-color: $lucette-dark-gray;
+@media (min-width: 640px) {
+  .shadow-custom-main {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    border: 4px solid $lucette-dark-gray;
+    border-radius: 8px;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .img-background {
+    background-position: center;
+  }
 }
-/* hover sur la div toute la hauteur du caroussel */

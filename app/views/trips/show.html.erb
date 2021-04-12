@@ -14,12 +14,13 @@
   </div>
 </div>
 
-<div id="wrapper-day" style="z-index: -5555;">
+<div id="wrapper-day">
   <div data-controller="carousel" class="swiper-container rounded-2xl"
        data-carousel-options-value='{"initialSlide": <%= "#{@trip.index_for_today}" %>}' >
     <div class="swiper-wrapper">
       <% @trip.number_of_days.times do |index| %>
         <div class="swiper-slide px-4">
+
           <div class="container">
             <div class="relative font-bold text-white mr-24 my-4 pl-2 text-2xl">
               <%= "Day #{index + 1}" %>
@@ -53,6 +54,7 @@
               <% end %>
             <% end %>
           </div>
+
           </br>
           <% @trip.day_activities(@trip.date_for_day(index)).each do |trip_activity| %>
             <% activity = trip_activity.activity %>
@@ -92,13 +94,12 @@
 
             <% end %>
           <% end %>
+
         </div>
       <% end %>
     </div>
-    <div class="h-5">
     <div class="swiper-button-next custom-position-arrow"></div>
     <div class="swiper-button-prev custom-position-arrow"></div>
-    </div>
   </div>
 </div>
 

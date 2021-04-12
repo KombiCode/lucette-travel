@@ -34,12 +34,10 @@
   </head>
 
   <body class="min-h-screen flex flex-col justify-center">
-    <!-- <div class="main-wrapper flex flex-col border-2 border-red-500"> -->
-      <%= render 'shared/navbar' %>
-      <div class="main_container flex-grow">
-        <%= yield %>
-      </div>
-      <%= render 'shared/footer' unless @hide_footer %>
+    <div class="main_container_first mx-auto overflow-auto shadow-custom-main">
+    <%= render 'shared/navbar' %>
+      <%= yield %>
+    <%= render 'shared/footer' unless @hide_footer %>
     </div>
   </body>
 </html>
