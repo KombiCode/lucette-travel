@@ -1,13 +1,13 @@
 <div class="img-background">
   <!-- <div class="w-screen border-2 border-yellow-400"> -->
-    <div class="flex items-center justify-center h-screen">
+    <div class="flex items-center justify-center custom-size-background">
       <% # below should be current_user but we use our $elodie_user %>
       <% if $elodie_user %>
-        <%= link_to trip_path(Trip.first), class: "bg-gray-200 bg-opacity-50 px-4 py-2 text-gray-200 rounded-lg border-2 shadow-lg font-bold" do %>
+        <%= link_to trip_path(Trip.first), class: "bg-gray-200 bg-opacity-50 mt-10 px-4 py-2 text-gray-200 rounded-lg border-2 shadow-lg font-bold" do %>
           My current trip
         <% end %>
       <% else %>
-        <%= link_to new_user_session_path, class: "bg-gray-200 bg-opacity-50 px-4 py-2 text-gray-200 rounded-lg border-2 shadow-lg font-bold" do %>
+        <%= link_to new_user_session_path, class: "bg-gray-200 bg-opacity-50 mt-10 px-4 py-2 text-gray-200 rounded-lg border-2 shadow-lg font-bold" do %>
           Login
         <% end %>
       <% end %>
