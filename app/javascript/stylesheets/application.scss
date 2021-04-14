@@ -116,7 +116,7 @@ hr {
   border-radius: 8px;
 }
 
-.shadow-custom-navbar,
+.form-custom-navbar,
 .shadow-custom-footer {
   box-shadow: 0 0 8px rgba(0, 0, 0, 1);
 }
@@ -140,6 +140,7 @@ hr {
   flex-direction: column;
   height: 667px;
   width: 375px;
+  overflow-y: auto;
 }
 
 .swiper-container {
@@ -169,4 +170,13 @@ hr {
   .img-background {
     /*background-position: center;*/
   }
+  .swiper-slide-active {
+  width: 367px !important;
+  }
+
+  .form-custom-navbar {
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  }
 }
+

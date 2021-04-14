@@ -6,7 +6,7 @@
   <% hide_notif_new_booking = false %>
 <% end %>
 
-<nav class="container sticky top-0 z-10 shadow-custom-navbar">
+<nav class="container sticky top-0 z-10 custom-custom-navbar">
   <!-- Hidden div where we need to store slide index to use with swiper carousel -->
   <% if @trip.nil? || @trip.id.nil? %>
     <div id="slideindex-for-current-trip" hidden><%= Trip.first.index_for_today %></div>
